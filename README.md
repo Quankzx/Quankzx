@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is ... and I'm a ..., from ....</h2>
+<h2 align="left">Hi 👋! My name is Quankz and I'm a Backend Developer, from VietNam</h2>
 
 ###
 
@@ -34,3 +34,8 @@
 </div>
 
 ###
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Quankzx/Quankzx/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Quankzx/Quankzx/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/Quankzx/Quankzx/output/github-snake.svg" />
+</picture>
