@@ -18,11 +18,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="30" alt="csharp logo"  />
 </div>
 
-###
-
-<img align="right" height="150" src="[[https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExajJlZXk5aDdnZ2hvbjRwNzRrbTcza2xmcnJuamdzYTllc3dqdXB6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oFYKw5OTZBZzVONpUh/giphy.gif](https://i.imgflip.com/65efzo.gif)](https://i.imgflip.com/65efzo.gif)"/>
-
-###
+##
 
 <div align="left">
   <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
