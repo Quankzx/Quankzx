@@ -1,0 +1,18 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # Cập nhật mỗi 6 giờ
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub Stats
+        uses: anuraghazra/github-readme-stats@master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
