@@ -301,6 +301,24 @@
             color: #ffffff;
             border-color: #4f46e5;
         }
+        .download-action-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 8.5pt;
+            cursor: pointer;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .download-action-btn:hover {
+            background: #1d4ed8;
+        }
         .ai-chat-footer {
             padding: 12px;
             background: #ffffff;
@@ -539,7 +557,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | Persona Trained Engine</p>
+                    <p><span class="online-dot"></span> Online | UTF-8 Persona Engine</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -555,6 +573,7 @@
                 </div>
 
                 <div class="ai-suggestions" id="expSuggestions">
+                    <button class="chip-btn" onclick="triggerCVDownload()">📄 Tải Bản CV PDF</button>
                     <button class="chip-btn" onclick="askPreset('Mấy năm kinh nghiệm & các công ty đã làm?')">💼 Kinh nghiệm & Công ty</button>
                     <button class="chip-btn" onclick="askPreset('Kinh nghiệm .NET 8 & Background Workers?')">💡 .NET 8 & Workers</button>
                     <button class="chip-btn" onclick="askPreset('Hệ thống Watchdog tự khôi phục vận hành ra sao?')">🛡️ Watchdog 24/7</button>
@@ -597,15 +616,15 @@
                 "_0x1": "SGFoYSBtw7NuIHJ14buZdCBNT0JBIGPhu6dhIGFuaCBRdcOibiBsw6AgPGI+TGnDqm4gTWluaCBIdXnhu4FuIFRob+G6oWk8L2I+IMSRw7MhIOKalO+4jzxici8+PGJyLz5O4bq/dSBi4bqhbiBjw7Mgw70gxJHhu4tuaCBy4bunIHNvbG8gTE1IVCB0aMOsIGFuaCBRdcOibiBn4bqhIG5o4bq5OiA8Yj4iRMOhbSDEkeG6oWkgY2hp4bq/biBZYXN1byAzMDAgaGnhu4dwIHbhu5tpIHR1aSBraMO0bmc/IjwvYj4g8J+YiTxici8+PGJyLz5OZ2/DoGkgTE1IVCByYSwgYW5oIFF1w6JuIGPDsm4gY+G7sWMgbcOqIGdhbWUgc2luaCB04buTbiBuaMawIDxiPkFSSzogU3Vydml2YWwgRXZvbHZlZDwvYj4gbuG7r2EgbmhhIQ==",
                 "_0x2": "Tmdvw6BpIHZp4bq/dCBjb2RlIGPDtG5nIHR5LCBhbmggUXXDom4gY8OzIMSRYW0gbcOqIGPhu7FjIGNo4bqldCBsw6AgPGI+xJFpIFZp4buHdCBIw7NhIEdhbWUgKGPhu5luZyDEkeG7k25nIENUVkgpPC9iPiEg8J+Orjxici8+PGJyLz7igKIgQW5oIFF1w6JuIGhheSB24bqnbiB2w7IgZmlsZSByZXNvdXJjZSBnYW1lIChNb2JpbGUgJiBQQyksIHVucGFjay9yZXBhY2sgZGF0YSwgZXh0cmFjdCBjaHXhu5dpIHRleHQgc3RyaW5nLjxici8+4oCiIFThu7Egdmnhur9tIHRvb2wgdOG7sSDEkeG7mW5nIHRodSB0aOG6rXAgJiBk4buLY2ggZOG7ryBsaeG7h3UgKG5oxrAgZOG7sSDDoW4gPGNvZGU+QWdlbnRDb2xsZWN0RGF0YTwvY29kZT4gdHJvbmcgZm9sZGVyIENUVkgpLjxici8+4oCiIFbhu5tpIGFuaCBRdcOibiwgVmnhu4d0IGjDs2EgZ2FtZSB24burYSBsw6AgdGjDuiB2dWkgZ2nhuqNpIHRyw60gduG7q2EgbMOgIGPDoWNoIHLDqG4gbHV54buHbiBr4bu5IG7Eg25nIDxiPkRhdGEgUGFyc2luZyAmIFJldmVyc2UgRW5naW5lZXJpbmc8L2I+IHNpw6p1IMSR4buJbmgh",
                 "_0x3": "QW5oIFF1w6JuIGzDoCA8Yj5GYW4gY8O6bmcgY+G7qW5nIEFuZHJvaWQ8L2I+ISDwn5OxPGJyLz48YnIvPkzDvSBkbyBy4bqldCDEkcahbiBnaeG6o246IEFuZHJvaWQgY+G7sWMga+G7syBsaW5oIGhv4bqhdCwgZOG7hSB24bqhY2ggcmEgc+G7rWEsIGThu4Ugbmdo4buLY2gsIHTDuXkgYmnhur9uIHPDonUgdsOgIHPhu58gaOG7r3UgaOG7hyBzaW5oIHRow6FpIDxiPnRoxrAgdmnhu4duIG3DoyBuZ3Xhu5NuIG3hu58gdsO0IGPDuW5nIHBob25nIHBow7o8L2I+IChraMOhYyBo4bqzbiBz4buxIMSRw7NuZyBrw61uIGjhuqFuIGNo4bq/IGPhu6dhIGlPUykh",
-                "_0x4": "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn5G7IDxiPk3DqiBQaGltIE1hIC8gS2luaCBE4buLOjwvYj4gVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aMOhY2ggdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a44oCN4pmC77iPIDxiPkZhbiBj4bupbmcgTWFydmVsOjwvYj4gQ+G7sWMga+G7syB5w6p1IHRow61jaCBjw6FjIGJvbXRoYW5kIMSRaeG7h24g4bqjbmggY+G7p2EgdsWpIHRy4bulIE1hcnZlbC48YnIvPuKAoiDim6nvuI8gPGI+QW5pbWUgQ+G7lSDEkGnhu4NuOjwvYj4gxJBhbSBtw6ogY8OhYyBi4buZIEFuaW1lIGtpbmggxJFp4buDbiDEkWkgY8O5bmcgbsSDbSB0aMOhbmcuPGJyLz7igKIg4pyI77iPIDxiPsSQaSBEdSBM4buLY2g6PC9iPiBUaMOtY2ggxJFpIGR1IGzhu4tjaCB0cuG6o2kgbmdoaeG7h20gxJHhonkgxJHDsyDEkeG7gyBsw6BtIG3hu5tpIHTGsCBkdXkgc2F1IG5o4buvbmcgxJHhu6N0IHNwcmludCBk4buxIMOhbiBjxINuZyB0aOG6s25nIQ==",
+                "_0x4": "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn5G7IDxiPk3DqiBQaGltIE1hIC8gS2luaCBE4buLOjwvYj4gVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aMOhY2ggdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a44oCN4pmC77iPIDxiPkZhbiBj4bupbmcgTWFydmVsOjwvYj4gQ+G7sWMga+G7syB5w6p1IHRow61jaCBjw6FjIGJvbSB04bqlbiDEkWnhu4duIOG6o25oIGPhu6dhIHbFqSB0cuG7pSBNYXJ2ZWwuPGJyLz7igKIg4pup77iPIDxiPkFuaW1lIEPhu5UgxJBp4buDbjo8L2I+IMSQYW0gbcOqIGPDoWMgYuG7mSBBbmltZSBraW5oIMSRaeG7g24gxJFpIGPDuW5nIG7Eg22gdGjDoW5nLjxici8+4oCi IOKciO+4jyA8Yj7EkGkgRHUgTOG7i2NoOjwvYj4gVGjDrWNoIMSRaSBkdSBs4buLY2ggdHLhuqNpIG5naGnhu4dtIMSRw6J5IMSRw7MgxJHhu4MgbMOgbSBt4bubaSB0xrAgZHV5IHNhdSBuaOG7r25nIMSR4bujdCBzcHJpbnQgZOG7sSDDoW4gY8SDbmcgdGjhurNuZyE=",
                 "_0x5": "TMO6YyBy4bqjbmggcuG7l2kga2jDtG5nIGPDsyBnw6wgbMOgbSwgYW5oIFF1w6JuIHLhuqV0IGtob8OhaSA8Yj50w6ptIHTDsmkgY8O0bmcgbmdo4buHIEFJIG3hu5tpICYgdOG6oW8gdG9vbCB04buxIMSR4buZbmcgaMOzYTwvYj4hIPCfm6DvuI88YnIvPjxici8+TuG6v3UgYuG6oW4gY8OzIGThu7Egw6FuIGhheSBob+G6t2MgbXXhu5FuIGjhuqNwIHTDoWMga2nhur9tIHRow6ptLCBhbmggUXXDom4gY8WpbmcgcuG6pXQgc+G6tW4gbMOybmcgbjhhuq1uIGPDoWMgZOG7sSDDoW4gRnJlZWxhbmNlIEJhY2tlbmQvRnVsbC1TdGFjayBuaMOpISBC4bqhbiBjw7MgdGjhu4MgZ+G7rWkgZW1haWwgcXVhIDxhIGhyZWY9Im1haWx0bzpuaHF1YW45NWRuZ0BnbWFpbC5jb20iPm5ocXVhbjk1ZG5nQGdtYWlsLmNvbTwvYT4gxJHhu4MgYsOgbiBjw7RuZyB2aeG7h2Mg4bqhLg==",
                 "_0x6": "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgaW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J+YhDxici8+PGJyLz5BbmggUXXDom4gaGnhu4duIHThuqFpIDxiPsSR4buZYyB0aMOibiB2dWkgduG6uywgY2jGsGEgbOG6rXAgZ2lhIMSRw7JuaCBoYXkgY8OzIGNvbiBjw6FpIGfDrCDEkcOidSDhuqEhPC9iPiDEkGFuZyBkw6BuaCAxMDAlIG7Eg25nIGzGsOG7o25nICYgdMOibSBodXnhur9tIGNobyBz4buxIG5naGnhu4dwIGzhuq1wIHRyw6xuaCAuTkVUIDggdsOgIHThu5FpIMawdSBo4buHIHRo4buRbmcgYmFja2VuZC48YnIvPjxici8+TmjGsG5nIG7hur91IGLhuqFuIGzDoCBOaMOgIHR1eeG7g24gZOG7pW5nIG1hbmcgdOG7m2kgbeG7mXQgduG7iyB0csOtIGPDtG5nIHZp4buHYyBoYXkgZOG7sSDDoW4gQmFja2VuZCBo4bqlcCBk4bqrbiB0aMOsIGFuaCBRdcOibiBy4bqldCBz4bq1biBsw7JuZyAiYsOpbiBkdXnDqm4iIG5nYXkgxJHDsyDhuqEhIPCfmoA=",
-                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhhIPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0csOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA==",
+                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhh IPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0csOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA==",
                 "_0x8": "QW5oIFF1w6JuIGPDsyBraW5oIG5naGnhu4dtIGzDoG0gdmnhu4d0IHRo4buxYyBjaGnhur9uIHThu7sgxJHhuqd1IG7Eg20gMjAyNCDEkeG6v24gbmF5IDxiPihraG/huqNuZyAyIG7Eg20ga2luaCBuZ2hp4buHbSB0aOG7sWMgY2hp4bq/biBjaHV5w6puIHPDonUpPC9iPi48YnIvPjxici8+VOG6rXAgdHJ1bmcgY2jhu6cgbOG7sWMgdsOgbyBwaMOhdCB0cmnhu4NuIDxiPi5ORVQgOCBXZWIgQVBJcywgQmFja2dyb3VuZCBXb3JrZXIgU2VydmljZXMgKDEwKyB3b3JrZXJzKSwgSOG7hyB0aOG7kW5nIFdhdGNoZG9nIDI0LzcgdOG7sSBraMO0aSBwaOG7pWMgdsOgIFThu5FpIMawdSBDU0RMIFNRTCBTZXJ2ZXIgKCszMCUgdGhyb3VnaHB1dCk8L2I+IQ==",
                 "_0x9": "QW5oIFF1w6JuIMSRw6MgdOG7q25nIGtpbmggcXVhIDxiPjQgbcO0aSB0csaw4budbmcgbMOgbSB2aeG7h2MgY2h1ecOqbiBuZ2hp4buHcCAmIMSRYSBk4bqhbmc8L2I+Ojxici8+PGJyLz4xLiDwn4+iIDxiPkxTQiBNRURJQSAoMjAyNSAtIEhp4buHbiB04bqhaSk6PC9iPiBGdWxsLVN0YWNrIERldmVsb3BlciAoLk5FVCA4IG1vbm9yZXBvLCAxMCsgYmFja2dyb3VuZCB3b3JrZXJzLCBXYXRjaGRvZyAyNC83KS48YnIvPjIuIPCfj6IgPGI+VsOVIE1JTkggVEhJw4pOICgyMDI0IC0gMjAyNSk6PC9iPiAuTkVUIERldmVsb3BlciAoTG9naXN0aWNzICYgdOG7kWkgxrB1IFNRTCBTZXJ2ZXIgKzMwJSB0aHJvdWdocHV0KS48YnIvPjMuIPCfj6IgPGI+TkFJTCBTQUxPTiBDSEFJTiBVU0EgKDIwMjQgLSAyMDI1KTo8L2I+IEZyZWVsYW5jZSBGdWxsLVN0YWNrIERldmVsb3BlciAoQmxhem9yIGNvbXBvbmVudHMgVUkgJiBSRVNUZnVsIEFQSXMpLjxici8+NC4g8J+PoiA8Yj5IUSBTT0ZUICgyMDI0KTo8L2I+IEludGVybiAuTkVUIERldmVsb3BlciAoUkVTVGZ1bCBBUElzIGVTYWxlICYgU1FMIHJlcG9ydGluZyku",
-                "_0x10": "Vmnhu4d0IGNodXnhu4NuIMSR4buVaSBtw7RpIHRyxrDhu51uZyBsw6BtIHZp4buHYyBj4bunYSBhbmggUXXDom4gbHXDtG4geHXhuqV0IHBow6F0IHThu7sgbW9uZyBtdeG7kW4gPGI+YnV0IHBow6F0IGdp4bubaSBo4bqhbiBr4bu5IHRodWF0LCBt4bufIHLhu5luZyBxdXkgbcO0IGLDoGkgdG/DoW4gaOG7hyB0aOG7kW5nIChzY2FsZSkgdsOgIHRo4butIHRow6FjaCBi4bqjbiB0aMOibiB24bubaSBjw6FjIGPDtG5nIG5naOG7hyBiYWNrZW5kIC8gLk5FVCA4IGhp4buHbiDEkeG6oWkgaMahbjwvYj4uPGJyLz48YnIvPkFuaCBRdcOibiBsdcO0biBnaeG7ryBt4buRaSBxdWFuIGjhuqcgaOG7o3AgdMAhYyBy4bqldCB04buRdCDEkeG6uXAgdsOgIHPhu7EgdMO0biB0cuG7jW5nIMSR4buRaSB24bubaSB04bqldCBj4bqjIGPDoWMgY8O0bmcgdHkgY8WpIQ==",
+                "_0x10": "Vmnhu4d0IGNodXnhu4NuIMSR4buVaSBtw7RpIHRyxrDhu51uZyBsw6BtIHZp4buHYyBj4bunYSBhbmggUXXDom4gbHXDtG4geHXhuqV0IHBow6F0IHThu7sgbW9uZyBtdeG7kWkWPGI+YnV0IHBow6F0IGdp4bubaSBo4bqobiBr4bu5IHRodWF0LCBt4bufIHLhu5luZyBxdXkgbcO0IGLDoGkgdG/DoW4gaOG7hyB0aOG7kW5nIChzY2FsZSkgdsOgIHRo4butIHRow6FjaCBi4bqjbiB0aMOibiB24bubaSBjw6FjIGPDtG5nIG5naOG7hyBiYWNrZW5kIC8gLk5FVCA4IGhp4buHbiDEkeG6oWkgaMahbjwvYj4uPGJyLz48YnIvPkFuaCBRdcOibiBsdcO0biBnaeG7ryBt4buRaSBxdWFuIGjhuqcgaOG7o3AgdMAhYyBy4bqldCB04buRdCDEkeG6uXAgdsOgIHPhu7EgdMO0biB0cuG7jW5nIMSR4buRaSB24bubaSB04bqldCBj4bqjIGPDoWMgY8O0bmcgdHkgY8WpIQ==",
                 "_0x11": "ROG6oSBhbmggUXXDom4gxJFhbmcgPGI+U+G6tE4gU8OATkcgMTAwJSDEkOG7giDEkEkgTMOATSBOR0FZPC9iPiEg8J+agDxici8+PGJyLz5BbmggUXXDom4gY8OzIHRo4buDIG5o4bqtbiB2aeG7h2MsIG9uYm9hcmQgdsOgIGjDsmEgbjhhuq1wIG5oYW5oIGNow7NuZyB24bubaSBk4buxIMOhbiBt4bubaSBi4bqldCBj4bupIGzDumMgbsOgbyBkb2FuaCBuZ2hp4buHcCB5w6p1IGF14bqdIHThuqEh",
-                "_0x12": "QW5oIFF1w6JuIHPhurVuIHPDoG5nIHRoYW0gZ2lhIHBo4buPbmcgduG6pW4gKE9ubGluZSBxdWEgR29vZ2xlIE1lZXQvWm9vbSBob+G6t2MgT2ZmbGluZSB0cuG7sWMgdGnhur9wKSA8Yj5uZ2F5IHRyb25nIG5nw6B5IGhv4bq3YyBi4bqldCBj4bupIGzhu4tjaCBo4bq5biBuw6BvIGLhuqFuIHRodSB44bq/cDwvYj4hPGJyLz48YnIvPkLhuqFuIGPDsyB0aOG7gyBsacOqbiBo4buHIHRy4buxYyB0aeG6v3AgxJHhu4MgY2jhu5F0IGzhu4tjaCBQViBxdWE6PGJyLz7igKIg4pyJ77iPIDxiPkVtYWlsOjwvYj4gPGEgaHJlZj0ibWFpbHRvOm5ocXVhbjk1ZG5nQGdtYWlsLmNvbSI+bmhxdWFuOTVkbmcAZ21haWwuY29tPC9hPjxici8+4oCiIPCfk54gPGI+U+G7kSDEkWnhu4RuIHRob+G6oWkgLyBaYWxvOjwvYj4gKCs4NCkgMzgzLTMzNC0xOTU8YnIvPuKAoiDwn5CZIDxiPkdpdEh1Yjo8L2I+IDxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9RdWFua3p4IiB0YXJnZXQ9Il9ibGFuayI+Z2l0aHViLmNvbS9RdWFua3p4PC9hPg=="
+                "_0x12": "QW5oIFF1w6JuIHPhurVuIHPDoG5nIHRoYW0gZ2lhIHBo4buPbmcgduG6pW4gKE9ubGluZSBxdWEgR29vZ2xlIE1lZXQvWm9vbSBob+G6t2MgT2Zmb Offline trực tiếp) <b>ngay trong ngày hoặc bất cứ lịch hẹn nào bạn thu xếp</b>!<br/><br/>Bạn có thể liên hệ trực tiếp để chốt lịch PV qua:<br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại / Zalo:</b> (+84) 383-334-195<br/>• 🐙 <b>GitHub:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a>"
             };
 
             // UTF-8 Native Byte Decoder
@@ -727,6 +746,10 @@
                 sendUserMsg();
             };
 
+            window.triggerCVDownload = function() {
+                window.print();
+            };
+
             window.sendUserMsg = function() {
                 const input = document.getElementById('aiChatInput');
                 const text = input.value.trim();
@@ -759,11 +782,24 @@
                     aiDiv.innerHTML = aiReply;
                     chatBody.appendChild(aiDiv);
                     chatBody.scrollTop = chatBody.scrollHeight;
+
+                    // Automatically trigger print dialog if asking to get/download CV
+                    const q = text.toLowerCase();
+                    if (q.includes('lấy cv') || q.includes('lay cv') || q.includes('tải cv') || q.includes('tai cv') || q.includes('download cv') || q.includes('xin cv') || q.includes('pdf')) {
+                        setTimeout(() => { window.print(); }, 800);
+                    }
                 }, 500);
             };
 
             function generateSmartAnswer(userQuery) {
                 const q = userQuery.toLowerCase().trim();
+
+                // 0. Tải CV / Lấy CV / Download CV
+                if (q.includes('lấy cv') || q.includes('lay cv') || q.includes('tải cv') || q.includes('tai cv') || q.includes('download cv') || q.includes('xin cv') || q.includes('file cv') || q.includes('pdf')) {
+                    return `Dạ bạn có thể tải bản CV PDF chuẩn sắc nét của <b>anh Nguyễn Hồng Quân</b> ngay bây giờ ạ! 📄✨<br/><br/>
+                    <button class="download-action-btn" onclick="window.print()">🖨️ Tải / In Bản CV PDF Ngay</button><br/><br/>
+                    💡 <b>Mẹo lưu file:</b> Trong cửa sổ hiện ra, ở mục <b>Máy in (Destination / Printer)</b>, bạn chọn <b>"Save as PDF" (Lưu dưới dạng PDF)</b>.<br/>📁 File PDF sẽ được tự động tải về và lưu vào thư mục <code>Downloads</code> (Tải về) trên máy tính của bạn!`;
+                }
 
                 // 1. Chuyện tình cảm / Bồ / Ny / Vợ / Con
                 if (q.includes('bồ') || q.includes(' bo ') || q.includes(' ny ') || q.includes('vợ') || q.includes(' vo ') || q.includes('con') || q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('kết hôn') || q.includes('độc thân')) {
