@@ -159,9 +159,9 @@
             position: fixed;
             bottom: 84px;
             right: 24px;
-            width: 410px;
+            width: 420px;
             max-width: calc(100vw - 32px);
-            height: 550px;
+            height: 560px;
             max-height: calc(100vh - 120px);
             background: #ffffff;
             border-radius: 16px;
@@ -257,11 +257,34 @@
             align-self: flex-end;
             border-bottom-right-radius: 2px;
         }
+        .ai-tab-header {
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 6px;
+        }
+        .ai-tab-btn {
+            background: #e2e8f0;
+            border: none;
+            font-size: 8pt;
+            font-weight: 600;
+            color: #475569;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .ai-tab-btn.active {
+            background: #4f46e5;
+            color: #ffffff;
+        }
         .ai-suggestions {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 10px;
+            margin-top: 4px;
         }
         .chip-btn {
             background: #f1f5f9;
@@ -447,8 +470,22 @@
         
         <div class="ai-chat-body" id="aiChatBody">
             <div class="chat-msg ai">
-                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Hỏi mình bất kỳ điều gì nhé — từ chuyên môn kỹ thuật đến các câu hỏi vui lề lối! 😊
-                <div class="ai-suggestions">
+                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Bạn có thể chọn chủ đề quan tâm bên dưới hoặc hỏi mình bất kỳ câu hỏi nào nhé! 😊
+                
+                <div class="ai-tab-header">
+                    <button class="ai-tab-btn active" id="tabExpBtn" onclick="switchCategoryTab('exp')">💼 Kinh Nghiệm & Kỹ Thuật</button>
+                    <button class="ai-tab-btn" id="tabHobbyBtn" onclick="switchCategoryTab('hobby')">🎯 Sở Thích & Đời Sống</button>
+                </div>
+
+                <div class="ai-suggestions" id="expSuggestions">
+                    <button class="chip-btn" onclick="askPreset('Kinh nghiệm .NET 8 & Background Workers?')">💡 .NET 8 & Workers</button>
+                    <button class="chip-btn" onclick="askPreset('Hệ thống Watchdog tự khôi phục vận hành ra sao?')">🛡️ Watchdog 24/7</button>
+                    <button class="chip-btn" onclick="askPreset('Kinh nghiệm tối ưu CSDL SQL Server?')">🛢️ Tối ưu SQL Server</button>
+                    <button class="chip-btn" onclick="askPreset('Kỹ năng AI & MCP Protocol?')">🤖 Kỹ năng AI & MCP</button>
+                    <button class="chip-btn" onclick="askPreset('Thông tin liên hệ trực tiếp với Quân?')">✉️ Liên hệ ngay</button>
+                </div>
+
+                <div class="ai-suggestions" id="hobbySuggestions" style="display: none;">
                     <button class="chip-btn" onclick="askPreset('Sở thích chơi game & Việt hóa game?')">🎮 Game & Việt Hóa</button>
                     <button class="chip-btn" onclick="askPreset('Dám đại chiến Yasuo 300 hiệp không?')">⚔️ Solo Yasuo</button>
                     <button class="chip-btn" onclick="askPreset('Sở thích tạo Tool & nhận dự án?')">🛠️ Tool & Freelance</button>
@@ -499,6 +536,25 @@
                 modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
                 if (modal.style.display === 'flex') {
                     document.getElementById('aiChatInput').focus();
+                }
+            };
+
+            window.switchCategoryTab = function(category) {
+                const expTab = document.getElementById('tabExpBtn');
+                const hobbyTab = document.getElementById('tabHobbyBtn');
+                const expSugg = document.getElementById('expSuggestions');
+                const hobbySugg = document.getElementById('hobbySuggestions');
+
+                if (category === 'exp') {
+                    expTab.classList.add('active');
+                    hobbyTab.classList.remove('active');
+                    expSugg.style.display = 'flex';
+                    hobbySugg.style.display = 'none';
+                } else {
+                    hobbyTab.classList.add('active');
+                    expTab.classList.remove('active');
+                    hobbySugg.style.display = 'flex';
+                    expSugg.style.display = 'none';
                 }
             };
 
@@ -555,10 +611,7 @@
                 }
 
                 // 2. Yasuo / Solo LMHT / Liên Minh / ARK
-                if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo') || q.includes('ark') || q.includes('game')) {
-                    if (q.includes('việt hóa') || q.includes('viet hoa') || q.includes('ctvh') || q.includes('dịch game') || q.includes('dich game') || q.includes('mod game')) {
-                        return _dec(_KB._0x2);
-                    }
+                if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo') || q.includes('ark')) {
                     return _dec(_KB._0x1);
                 }
 
@@ -599,7 +652,7 @@
 
                 // 10. Chào hỏi
                 if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
-                    return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể hỏi mình từ kỹ năng .NET 8, hệ thống Watchdog đến sở thích chơi game (LMHT/ARK), Việt hóa game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI nhé! 😊`;
+                    return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể chọn 2 Tab chủ đề bên dưới (<b>💼 Kinh Nghiệm</b> hoặc <b>🎯 Sở Thích</b>) hoặc hỏi mình bất kỳ câu hỏi nào nhé! 😊`;
                 }
 
                 // 11. .NET 8 / C# / Backend
