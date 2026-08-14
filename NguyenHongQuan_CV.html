@@ -464,6 +464,12 @@
     </div>
 
     <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '#ai-chat' || window.location.search.includes('chat=true')) {
+                toggleAIChat();
+            }
+        });
+
         function toggleAIChat() {
             const modal = document.getElementById('aiChatModal');
             modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
