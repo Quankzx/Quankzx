@@ -159,9 +159,9 @@
             position: fixed;
             bottom: 84px;
             right: 24px;
-            width: 400px;
+            width: 410px;
             max-width: calc(100vw - 32px);
-            height: 540px;
+            height: 550px;
             max-height: calc(100vh - 120px);
             background: #ffffff;
             border-radius: 16px;
@@ -439,7 +439,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | Smart Conversational AI</p>
+                    <p><span class="online-dot"></span> Online | Smart Persona NLP Engine</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -447,19 +447,19 @@
         
         <div class="ai-chat-body" id="aiChatBody">
             <div class="chat-msg ai">
-                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Hỏi mình bất kỳ điều gì nhé — từ chuyên môn kỹ thuật đến các câu hỏi vui lề lối! 😊
+                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Mình nắm rất rõ từ kỹ năng chuyên môn .NET 8, SQL Server đến sở thích chơi game (LMHT/ARK), Việt hóa Game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI!
                 <div class="ai-suggestions">
-                    <button class="chip-btn" onclick="askPreset('Tóm tắt điểm mạnh kỹ thuật của Quân?')">💡 Điểm mạnh kỹ thuật</button>
-                    <button class="chip-btn" onclick="askPreset('Anh Quân có người yêu chưa?')">❤️ Chuyện tình cảm</button>
-                    <button class="chip-btn" onclick="askPreset('Hệ thống Watchdog hoạt động thế nào?')">⚙️ Watchdog System</button>
-                    <button class="chip-btn" onclick="askPreset('Kinh nghiệm tối ưu CSDL SQL Server?')">🛢️ Tối ưu SQL Server</button>
-                    <button class="chip-btn" onclick="askPreset('Thông tin liên hệ trực tiếp với Quân?')">✉️ Liên hệ ngay</button>
+                    <button class="chip-btn" onclick="askPreset('Sở thích chơi game & Việt hóa game?')">🎮 Game & Việt Hóa</button>
+                    <button class="chip-btn" onclick="askPreset('Dám đại chiến Yasuo 300 hiệp không?')">⚔️ Solo Yasuo</button>
+                    <button class="chip-btn" onclick="askPreset('Sở thích tạo Tool & nhận dự án?')">🛠️ Tool & Freelance</button>
+                    <button class="chip-btn" onclick="askPreset('Tại sao thích Android hơn iOS?')">📱 Fan Android</button>
+                    <button class="chip-btn" onclick="askPreset('Gout phim & Phim Ma / Marvel / Anime?')">🎬 Phim & Anime</button>
                 </div>
             </div>
         </div>
 
         <div class="ai-chat-footer">
-            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Hỏi AI bất kỳ điều gì tự nhiên..." onkeypress="handleEnter(event)" />
+            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Hỏi AI bất kỳ điều gì về anh Quân..." onkeypress="handleEnter(event)" />
             <button class="ai-send-btn" onclick="sendUserMsg()">➔</button>
         </div>
     </div>
@@ -522,74 +522,84 @@
                 aiDiv.innerHTML = aiReply;
                 chatBody.appendChild(aiDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;
-            }, 550);
+            }, 500);
         }
 
         function generateSmartAnswer(userQuery) {
             const q = userQuery.toLowerCase().trim();
 
-            // 1. Chuyện tình cảm / Người yêu / Kết hôn (Hóm hỉnh, thông minh)
+            // 1. Yasuo / Solo LMHT / Liên Minh
+            if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo')) {
+                return `Haha món ruột MOBA của anh Quân là <b>Liên Minh Huyền Thoại</b> đó! ⚔️<br/><br/>Nếu bạn có ý định rủ solo LMHT thì anh Quân gạ nhẹ: <b>"Dám đại chiến Yasuo 300 hiệp với tui không?"</b> 😉<br/><br/>Ngoài LMHT ra, anh Quân còn cực mê thể loại game sinh tồn như <b>ARK: Survival Evolved</b> nữa nha!`;
+            }
+
+            // 2. Việt Hóa Game / CTVH / Modding
+            if (q.includes('việt hóa') || q.includes('viet hoa') || q.includes('ctvh') || q.includes('dịch game') || q.includes('dich game') || q.includes('mod game')) {
+                return `Ngoài viết code công ty, anh Quân có đam mê cực chất là <b>đi Việt Hóa Game (cộng đồng CTVH)</b>! 🎮<br/><br/>• Anh Quân hay vần vò file resource game (Mobile & PC), unpack/repack data, extract chuỗi text string.<br/>• Tự viết tool tự động thu thập & dịch dữ liệu (như dự án <code>AgentCollectData</code> trong folder CTVH).<br/>• Với anh Quân, Việt hóa game vừa là thú vui giải trí vừa là cách rèn luyện kỹ năng <b>Data Parsing & Reverse Engineering</b> siêu đỉnh!`;
+            }
+
+            // 3. Android vs iOS
+            if (q.includes('android') || q.includes('ios') || q.includes('iphone') || q.includes('điện thoại') || q.includes('dien thoai')) {
+                return `Anh Quân là <b>Fan cứng của Android</b>! 📱<br/><br/>Lý do rất đơn giản: Android cực kỳ linh hoạt, dễ vạch ra sửa, dễ nghịch, tùy biến sâu và sở hữu hệ sinh thái <b>thư viện mã nguồn mở vô cùng phong phú</b> (khác hẳn sự đóng kín hạn chế của iOS)!`;
+            }
+
+            // 4. Phim Ma / Marvel / Anime / Du Lịch
+            if (q.includes('phim') || q.includes('marvel') || q.includes('anime') || q.includes('du lịch') || q.includes('du lich') || q.includes('kinh dị') || q.includes('ma')) {
+                return `Gout giải trí của anh Quân rất chất và cá tính:<br/><br/>• 👻 **Mê Phim Ma / Kinh Dị:** Tối tối ngồi cày phim ma thử thách tinh thần là cách xả stress cực phiêu!<br/>• 🦸‍♂️ **Fan cứng Marvel:** Cực kỳ yêu thích các bom tấn điện ảnh của vũ trụ Marvel.<br/>• ⛩️ **Anime Cổ Điển:** Đam mê các bộ Anime kinh điển đi cùng năm tháng.<br/>• ✈️ **Đi Du Lịch:** Thích đi du lịch trải nghiệm đây đó để làm mới tư duy sau những đợt sprint dự án căng thẳng!`;
+            }
+
+            // 5. Tạo Tool AI / Freelance / Rảnh rỗi
+            if (q.includes('tool') || q.includes('tạo tool') || q.includes('rảnh') || q.includes('ranh') || q.includes('freelance') || q.includes('dự án ngoài') || q.includes('kiếm thêm')) {
+                return `Lúc rảnh rỗi không có gì làm, anh Quân rất khoái <b>tìm tòi công nghệ AI mới & tạo tool tự động hóa</b>! 🛠️<br/><br/>Nếu bạn có dự án hay hoặc muốn hợp tác kiếm thêm, anh Quân cũng rất sẵn lòng nhận các dự án Freelance Backend/Full-Stack nhé! Bạn có thể gửi email qua <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> để bàn công việc ạ.`;
+            }
+
+            // 6. Chuyện tình cảm / Người yêu / Kết hôn
             if (q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('ban gai') || q.includes('kết hôn') || q.includes('ket hon') || q.includes('ế') || q.includes('độc thân')) {
                 return `Dạ chuyện tình cảm riêng tư thì anh Quân giữ bí mật nha 😄<br/><br/>Hiện tại anh Quân đang dành <b>100% năng lượng và tâm huyết cho sự nghiệp lập trình, viết code .NET 8 và tối ưu hóa hệ thống backend!</b><br/><br/>Nhưng nếu bạn là Nhà tuyển dụng mang tới một vị trí công việc hay dự án Backend hấp dẫn thì anh Quân rất sẵn lòng "bén duyên" ngay đó ạ! 🚀`;
             }
 
-            // 2. Sở thích / Giải trí / Game / Thể thao
-            if (q.includes('sở thích') || q.includes('so thich') || q.includes('game') || q.includes('chơi') || q.includes('choi') || q.includes('rảnh') || q.includes('uống') || q.includes('nhậu')) {
-                return `Ngoài giờ làm việc và tối ưu code, anh Quân có sở thích:<br/><br/>• 💻 **Tìm hiểu công nghệ mới:** Nghiên cứu AI, Model Context Protocol (MCP) & kiến trúc hệ thống hiện đại.<br/>• 🎮 **Giải trí:** Chơi game nhẹ nhàng để xả stress sau những giờ debug căng thẳng.<br/>• 🍻 **Gắn kết đồng nghiệp:** Anh Quân rất hòa đồng, sẵn sàng tham gia Teambuilding và giao lưu cùng anh em đồng nghiệp!`;
-            }
-
-            // 3. Mức lương / Deal lương / Lương mong muốn
+            // 7. Mức lương / Deal lương / Lương mong muốn
             if (q.includes('lương') || q.includes('luong') || q.includes('mức lương') || q.includes('salary') || q.includes('deal') || q.includes('thu nhập')) {
                 return `Về mức lương mong muốn và chế độ đãi ngộ, anh Quân ưu tiên sự phù hợp giữa <b>giá trị đóng góp thực tế cho doanh nghiệp</b> và môi trường phát triển kỹ thuật.<br/><br/>Bạn có thể liên hệ trực tiếp với anh Quân qua Email: <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT: <b>(+84) 383-334-195</b> để thảo luận cụ thể nhé!`;
             }
 
-            // 4. Tuổi / Năm sinh / Quê quán
+            // 8. Tuổi / Năm sinh / Quê quán
             if (q.includes('tuổi') || q.includes('tuoi') || q.includes('năm sinh') || q.includes('nam sinh') || q.includes('quê') || q.includes('que') || q.includes('ở đâu')) {
                 return `Anh <b>Nguyễn Hồng Quân (Quankz)</b> thuộc thế hệ lập trình viên 9x năng động, hiện đang sinh sống và làm việc tại 📍 <b>TP. Hồ Chí Minh, Việt Nam</b>.`;
             }
 
-            // 5. Tính cách / Phong cách làm việc
-            if (q.includes('tính cách') || q.includes('tinh cach') || q.includes('phong cách') || q.includes('con người') || q.includes('thế nào')) {
-                return `Về phong cách làm việc, anh Quân là người:<br/><br/>• 🎯 **Thực tế & Trách nhiệm:** Luôn ưu tiên giải quyết đúng bản chất vấn đề kỹ thuật, không chém gió, không vá lỗi bề nổi.<br/>• 🤝 **Hòa đồng & Khiêm tốn:** Luôn lắng nghe góp ý từ đồng nghiệp, sẵn sàng chia sẻ kiến thức.<br/>• 🚀 **Chủ động học hỏi:** Nắm bắt rất nhanh các công nghệ mới như .NET 8, Polly v8 hay AI Tooling.`;
-            }
-
-            // 6. Chào hỏi
+            // 9. Chào hỏi
             if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
-                return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Recruiter Assistant riêng của anh Quân</b>. Bạn có thể thoải mái hỏi mình từ kỹ năng chuyên môn .NET 8, CSDL SQL Server đến các câu hỏi giao lưu thoải mái nhé! 😊`;
+                return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể hỏi mình từ kỹ năng .NET 8, hệ thống Watchdog đến sở thích chơi game (LMHT/ARK), Việt hóa game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI nhé! 😊`;
             }
 
-            // 7. .NET 8 / C# / Backend
+            // 10. .NET 8 / C# / Backend
             if (q.includes('.net') || q.includes('backend') || q.includes('c#') || q.includes('clean architecture') || q.includes('worker')) {
                 return `Về <b>Backend & .NET 8</b>, anh Quân có kinh nghiệm thực chiến rất vững vàng:<br/><br/>• <b>Kiến trúc Hệ thống:</b> Triển khai mô hình <b>Clean Architecture</b> trên .NET 8, phân tách rõ ràng Domain, Application, Infrastructure và API layers.<br/>• <b>Background Worker Services:</b> Xây dựng và duy trì <b>10+ Worker Services</b> (<code>BackgroundService</code> / <code>IHostedService</code>) cho các tác vụ xử lý hàng đợi ngầm, đồng bộ dữ liệu bất đồng bộ.<br/>• <b>Polly v8 Resilience:</b> Áp dụng Polly v8 để triển khai <i>Circuit Breaker</i>, <i>Exponential Backoff Retry với Jitter</i> và <i>Token Bucket Rate Limiter</i> nhằm bảo vệ hệ thống khỏi lỗi nghẽn API (HTTP 429).<br/>• <b>Core Frameworks:</b> Thành thạo ASP.NET Core Web API, EF Core 8, Dapper, JWT Authentication & OAuth2.`;
             }
 
-            // 8. Watchdog / Auto-Recovery / Services
+            // 11. Watchdog / Auto-Recovery / Services
             if (q.includes('watchdog') || q.includes('recovery') || q.includes('khôi phục') || q.includes('stalled') || q.includes('ota') || q.includes('telemetry')) {
                 return `Hệ thống <b>LSB Watchdog (.NET 7/8)</b> là một trong những giải pháp nổi bật do anh Quân phát triển:<br/><br/>• <b>Giám sát Sức khỏe 24/7:</b> Thu thập Hardware Telemetry (CPU, RAM, Disk I/O) và sử dụng cơ chế Long-Polling / Heartbeat để phát hiện các Windows Services bị treo (stalled/deadlock).<br/>• <b>Tự động Khôi phục (Auto-Restart):</b> Ngay khi phát hiện Service bị đứt gãy hoặc dừng phản hồi, Watchdog tự động kill process bị lỗi và restart lại dịch vụ sạch sẽ.<br/>• <b>Automated OTA Updates:</b> Xử lý cập nhật phiên bản dịch vụ từ xa thông qua hàm <code>UpdateVersionServicesHandle</code>, tự động giải phóng file DLL bị OS lock và khởi động lại dịch vụ an toàn.`;
             }
 
-            // 9. SQL Server / Database / Performance Tuning
+            // 12. SQL Server / Database / Performance Tuning
             if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('index') || q.includes('tối ưu') || q.includes('query')) {
                 return `Về <b>CSDL & Tối ưu Hiệu năng (Database Tuning)</b>, anh Quân sở hữu kinh nghiệm thực tế nổi bật:<br/><br/>• <b>Index Optimization với <code>INCLUDE</code>:</b> Thành thạo thiết kế Non-Clustered Index có mệnh đề <code>INCLUDE</code> để tạo <b>Covering Index</b>, giúp loại bỏ hoàn toàn hiện tượng Key Lookup (Bookmark Lookup), giảm tải 50-80% I/O load cho SQL Server.<br/>• <b>Query & Stored Procedure Tuning:</b> Refactor các câu lệnh SQL phức tạp, phân tích Execution Plan giúp <b>tăng 30% throughput</b> xử lý đơn hàng/logistics trong đợt cao điểm.<br/>• <b>Phối hợp EF Core & Dapper:</b> Dùng EF Core cho tác vụ nghiệp vụ chính (CRUD, Migration) và Dapper cho các câu query báo cáo/thống kê đòi hỏi tốc độ tối đa.<br/>• <b>PostgreSQL & Security:</b> Kinh nghiệm với PostgreSQL 16 và mã hóa dữ liệu nhạy cảm bằng AES-256 & GZip.`;
             }
 
-            // 10. Experience / Companies / History
+            // 13. Experience / Companies / History
             if (q.includes('kinh nghiệm') || q.includes('công ty') || q.includes('dự án') || q.includes('lsb') || q.includes('võ minh thiên') || q.includes('experience') || q.includes('quá trình')) {
                 return `Quá trình làm việc thực tế của <b>anh Nguyễn Hồng Quân</b>:<br/><br/>🏢 <b>LSB MEDIA CO., LTD (2025 - Hiện tại):</b> Full-Stack Developer<br/>• Xây dựng nền tảng .NET 8 Backend với 10+ Worker Services đồng bộ API.<br/>• Phát triển hệ thống Watchdog tự động khôi phục Windows Services & OTA updates.<br/>• Triển khai giám sát Account Health / ODR và đối soát tài chính tự động.<br/><br/>🏢 <b>VÕ MINH THIÊN CO., LTD (04/2024 - 2025):</b> .NET Developer<br/>• Phát triển hệ thống logistics xử lý đơn hàng xuyên biên giới & quản lý kho.<br/>• Tối ưu CSDL SQL Server giúp tăng 30% throughput trong đợt cao điểm.<br/><br/>🏢 <b>NAIL SALON CHAIN USA (04/2024 - 07/2025):</b> Freelance Full-Stack Developer<br/>• Triển khai giao diện Blazor components & RESTful APIs cho nền tảng quản lý chuỗi tại Mỹ.<br/><br/>🏢 <b>HQ SOFT (02/2024 - 04/2024):</b> Intern .NET Developer<br/>• Viết RESTful APIs cho phòng eSale và tối ưu truy vấn báo cáo thương mại.`;
             }
 
-            // 11. AI & MCP Protocol
-            if (q.includes('ai') || q.includes('mcp') || q.includes('claude') || q.includes('copilot') || q.includes('prompt')) {
-                return `Về <b>Kỹ năng AI & Tự động hóa Workflow</b>:<br/><br/>• <b>LLM-Assisted Engineering:</b> Thành thạo ứng dụng AI (Claude 3.5, ChatGPT, GitHub Copilot) vào quy trình lập trình hằng ngày để tăng tốc độ phát triển.<br/>• <b>Model Context Protocol (MCP):</b> Tích hợp và khai thác giao thức MCP để kết nối các công cụ dev với AI.<br/>• <b>AI Code Review & Verification:</b> Có năng lực thẩm định, kiểm tra độ an toàn (Security), phát hiện edge-cases và tối ưu hiệu năng đối với code do AI sinh ra.`;
-            }
-
-            // 12. Contact / Info / Hiring
+            // 14. Contact / Info / Hiring
             if (q.includes('liên hệ') || q.includes('contact') || q.includes('email') || q.includes('sđt') || q.includes('điện thoại') || q.includes('tuyển') || q.includes('tuyen')) {
                 return `Dạ đây là thông tin liên hệ trực tiếp với <b>anh Nguyễn Hồng Quân</b>:<br/><br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại:</b> (+84) 383-334-195<br/>• 📍 <b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br/>• 🐙 <b>GitHub Profile:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a><br/><br/>Anh Quân rất sẵn lòng trao đổi thêm về các cơ hội hợp tác và vị trí công việc phù hợp!`;
             }
 
-            // Intelligent Conversational Fallback (Chăm sóc câu hỏi ngoài lề ngẫu nhiên)
-            return `Dạ câu hỏi <i>"${userQuery}"</i> rất thú vị ạ! 😊<br/><br/>Mình là AI Assistant chuyên biệt về thông tin sự nghiệp của <b>anh Nguyễn Hồng Quân (.NET / Full-Stack Developer)</b>. Mình có thể chia sẻ chi tiết về chuyên môn .NET 8, tối ưu SQL Server, Watchdog auto-recovery hay thông tin liên hệ của anh Quân.<br/><br/>Nếu bạn muốn trao đổi sâu hơn về câu hỏi này, bạn có thể liên hệ trực tiếp với anh Quân qua Email <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT <b>(+84) 383-334-195</b> nhé!`;
+            // Intelligent Conversational Fallback
+            return `Dạ câu hỏi <i>"${userQuery}"</i> rất thú vị ạ! 😊<br/><br/>Mình là AI Assistant chuyên biệt về <b>anh Nguyễn Hồng Quân (.NET / Full-Stack Developer)</b>. Mình nắm rõ từ kỹ năng .NET 8, Watchdog, SQL tuning đến các sở thích cá nhân của anh Quân như <b>Chơi game (LMHT/ARK - solo Yasuo 300 hiệp!), Việt Hóa Game (CTVH), Fan Marvel/Phim Ma, Fan Android & Thích tạo Tool AI mới</b>.<br/><br/>Nếu bạn muốn trao đổi thêm, có thể liên hệ trực tiếp với anh Quân qua Email <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT <b>(+84) 383-334-195</b> nhé!`;
         }
     </script>
 </body>
