@@ -539,7 +539,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | Anti-Deletable Protection</p>
+                    <p><span class="online-dot"></span> Online | Persona Trained Engine</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -555,14 +555,16 @@
                 </div>
 
                 <div class="ai-suggestions" id="expSuggestions">
+                    <button class="chip-btn" onclick="askPreset('Mấy năm kinh nghiệm & các công ty đã làm?')">💼 Kinh nghiệm & Công ty</button>
                     <button class="chip-btn" onclick="askPreset('Kinh nghiệm .NET 8 & Background Workers?')">💡 .NET 8 & Workers</button>
                     <button class="chip-btn" onclick="askPreset('Hệ thống Watchdog tự khôi phục vận hành ra sao?')">🛡️ Watchdog 24/7</button>
                     <button class="chip-btn" onclick="askPreset('Kinh nghiệm tối ưu CSDL SQL Server?')">🛢️ Tối ưu SQL Server</button>
-                    <button class="chip-btn" onclick="askPreset('Kỹ năng AI & MCP Protocol?')">🤖 Kỹ năng AI & MCP</button>
-                    <button class="chip-btn" onclick="askPreset('Thông tin liên hệ trực tiếp với Quân?')">✉️ Liên hệ ngay</button>
+                    <button class="chip-btn" onclick="askPreset('Anh Quân có sẵn sàng đi làm ngay không?')">🚀 Sẵn sàng đi làm ngay</button>
+                    <button class="chip-btn" onclick="askPreset('Lịch phỏng vấn PV chốt khi nào được?')">📅 Lịch Phỏng Vấn (PV)</button>
                 </div>
 
                 <div class="ai-suggestions" id="hobbySuggestions" style="display: none;">
+                    <button class="chip-btn" onclick="askPreset('Anh Quân có bồ, có người yêu hay lập gia đình chưa?')">❤️ Chuyện tình cảm</button>
                     <button class="chip-btn" onclick="askPreset('Sở thích chơi game & Việt hóa game?')">🎮 Game & Việt Hóa</button>
                     <button class="chip-btn" onclick="askPreset('Dám đại chiến Yasuo 300 hiệp không?')">⚔️ Solo Yasuo</button>
                     <button class="chip-btn" onclick="askPreset('Sở thích tạo Tool & nhận dự án?')">🛠️ Tool & Freelance</button>
@@ -583,7 +585,7 @@
         <div class="f12-modal-card">
             <img src="./dog_f12.png" alt="Biting Shiba Inu Dog Warning" class="f12-dog-img" />
             <h3>🐕 CẤM F12 BỊ CHÓ CẮN NHA! 🐶</h3>
-            <p>Định ấn <b>F12 / View Source</b> soi code bí mật đúng không? Chó cắn đấy nha! 🤣<br/>Source code và tri thức AI đã được anh Quân mã hóa Cipher 100% rồi bạn ơi!</p>
+            <p>Định xóa HTML Element hoặc ấn <b>F12 / View Source</b> đúng không? Chó cắn đấy nha! 🤣<br/>Source code và tri thức AI đã được anh Quân mã hóa Cipher 100% rồi bạn ơi!</p>
             <button class="f12-close-btn" onclick="closeF12Modal()">Tắt đi tui chừa rồi! 😅</button>
         </div>
     </div>
@@ -597,8 +599,13 @@
                 "_0x3": "QW5oIFF1w6JuIGzDoCA8Yj5GYW4gY8O6bmcgY+G7qW5nIEFuZHJvaWQ8L2I+ISDwn5OxPGJyLz48YnIvPkzDvSBkbyBy4bqldCDEkcahbiBnaeG6o246IEFuZHJvaWQgY+G7sWMga+G7syBsaW5oIGhv4bqhdCwgZOG7hSB24bqhY2ggcmEgc+G7rWEsIGThu4Ugbmdo4buLY2gsIHTDuXkgYmnhur9uIHPDonUgdsOgIHPhu58gaOG7r3UgaOG7hyBzaW5oIHRow6FpIDxiPnRoxrAgdmnhu4duIG3DoyBuZ3Xhu5NuIG3hu58gdsO0IGPDuW5nIHBob25nIHBow7o8L2I+IChraMOhYyBo4bqzbiBz4buxIMSRw7NuZyBrw61uIGjhuqFuIGNo4bq/IGPhu6dhIGlPUykh",
                 "_0x4": "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn5G7IDxiPk3DqiBQaGltIE1hIC8gS2luaCBE4buLOjwvYj4gVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aMOhY2ggdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a44oCN4pmC77iPIDxiPkZhbiBj4bupbmcgTWFydmVsOjwvYj4gQ+G7sWMga+G7syB5w6p1IHRow61jaCBjw6FjIGJvbXRoYW5kIMSRaeG7h24g4bqjbmggY+G7p2EgdsWpIHRy4bulIE1hcnZlbC48YnIvPuKAoiDim6nvuI8gPGI+QW5pbWUgQ+G7lSDEkGnhu4NuOjwvYj4gxJBhbSBtw6ogY8OhYyBi4buZIEFuaW1lIGtpbmggxJFp4buDbiDEkWkgY8O5bmcgbsSDbSB0aMOhbmcuPGJyLz7igKIg4pyI77iPIDxiPsSQaSBEdSBM4buLY2g6PC9iPiBUaMOtY2ggxJFpIGR1IGzhu4tjaCB0cuG6o2kgbmdoaeG7h20gxJHhonkgxJHDsyDEkeG7gyBsw6BtIG3hu5tpIHTGsCBkdXkgc2F1IG5o4buvbmcgxJHhu6N0IHNwcmludCBk4buxIMOhbiBjxINuZyB0aOG6s25nIQ==",
                 "_0x5": "TMO6YyBy4bqjbmggcuG7l2kga2jDtG5nIGPDsyBnw6wgbMOgbSwgYW5oIFF1w6JuIHLhuqV0IGtob8OhaSA8Yj50w6ptIHTDsmkgY8O0bmcgbmdo4buHIEFJIG3hu5tpICYgdOG6oW8gdG9vbCB04buxIMSR4buZbmcgaMOzYTwvYj4hIPCfm6DvuI88YnIvPjxici8+TuG6v3UgYuG6oW4gY8OzIGThu7Egw6FuIGhheSBob+G6t2MgbXXhu5FuIGjhuqNwIHTDoWMga2nhur9tIHRow6ptLCBhbmggUXXDom4gY8WpbmcgcuG6pXQgc+G6tW4gbMOybmcgbjhhuq1uIGPDoWMgZOG7sSDDoW4gRnJlZWxhbmNlIEJhY2tlbmQvRnVsbC1TdGFjayBuaMOpISBC4bqhbiBjw7MgdGjhu4MgZ+G7rWkgZW1haWwgcXVhIDxhIGhyZWY9Im1haWx0bzpuaHF1YW45NWRuZ0BnbWFpbC5jb20iPm5ocXVhbjk1ZG5nQGdtYWlsLmNvbTwvYT4gxJHhu4MgYsOgbiBjw7RuZyB2aeG7h2Mg4bqhLg==",
-                "_0x6": "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgaW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J+YhDxici8+PGJyLz5IaeG7h24gdOG6oWkgYW5oIFF1w6JuIMSRYW5nIGTDoG5oIDxiPjEwMCUgbsSDbmcgbMaw4bujbmcgdsOgIHTDom0gaHV54bq/dCBjaG8gc+G7sSBuZ2hp4buHcCBs4bqtcCB0csOsbmgsIHZp4bq/dCBjb2RlIC5ORVQgOCB2w6AgdOG7kWkgxrB1IGjDs2EgaOG7hyB0aOG7kW5nIGJhY2tlbmQhPC9iPjxici8+PGJyLz5OaMawbmcgbuG6v3UgYuG6oW4gbMOgIE5ow6AgdHV54buDbiBk4bulbmcgbWFuZyB04bubaSBt4buZdCB24buLIHRyw6EgY8O0bmcgdmnhu4djIGhheSBk4buxIMOhbiBCYWNrZW5kIGjhuqVwIGThuqtuIHRow6AgaW5oIFF1w6JuIHLhuqV0IHPhurVuIGzDsm5nICJiw6luIGR1ecOqbiIgbmdheSDEkcOzIOG6oSEg8J+agA==",
-                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhhIPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0rsOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA=="
+                "_0x6": "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgaW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J+YhDxici8+PGJyLz5BbmggUXXDom4gaGnhu4duIHThuqFpIDxiPsSR4buZYyB0aMOibiB2dWkgduG6uywgY2jGsGEgbOG6rXAgZ2lhIMSRw7JuaCBoYXkgY8OzIGNvbiBjw6FpIGfDrCDEkcOidSDhuqEhPC9iPiDEkGFuZyBkw6BuaCAxMDAlIG7Eg25nIGzGsOG7o25nICYgdMOibSBodXnhur9tIGNobyBz4buxIG5naGnhu4dwIGzhuq1wIHRyw6xuaCAuTkVUIDggdsOgIHThu5FpIMawdSBo4buHIHRo4buRbmcgYmFja2VuZC48YnIvPjxici8+TmjGsG5nIG7hur91IGLhuqFuIGzDoCBOaMOgIHR1eeG7g24gZOG7pW5nIG1hbmcgdOG7m2kgbeG7mXQgduG7iyB0csOtIGPDtG5nIHZp4buHYyBoYXkgZOG7sSDDoW4gQmFja2VuZCBo4bqlcCBk4bqrbiB0aMOsIGFuaCBRdcOibiBy4bqldCBz4bq1biBsw7JuZyAiYsOpbiBkdXnDqm4iIG5nYXkgxJHDsyDhuqEhIPCfmoA=",
+                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhhIPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0csOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA==",
+                "_0x8": "QW5oIFF1w6JuIGPDsyBraW5oIG5naGnhu4dtIGzDoG0gdmnhu4d0IHRo4buxYyBjaGnhur9uIHThu7sgxJHhuqd1IG7Eg20gMjAyNCDEkeG6v24gbmF5IDxiPihraG/huqNuZyAyIG7Eg20ga2luaCBuZ2hp4buHbSB0aOG7sWMgY2hp4bq/biBjaHV5w6puIHPDonUpPC9iPi48YnIvPjxici8+VOG6rXAgdHJ1bmcgY2jhu6cgbOG7sWMgdsOgbyBwaMOhdCB0cmnhu4NuIDxiPi5ORVQgOCBXZWIgQVBJcywgQmFja2dyb3VuZCBXb3JrZXIgU2VydmljZXMgKDEwKyB3b3JrZXJzKSwgSOG7hyB0aOG7kW5nIFdhdGNoZG9nIDI0LzcgdOG7sSBraMO0aSBwaOG7pWMgdsOgIFThu5FpIMawdSBDU0RMIFNRTCBTZXJ2ZXIgKCszMCUgdGhyb3VnaHB1dCk8L2I+IQ==",
+                "_0x9": "QW5oIFF1w6JuIMSRw6MgdOG7q25nIGtpbmggcXVhIDxiPjQgbcO0aSB0csaw4budbmcgbMOgbSB2aeG7h2MgY2h1ecOqbiBuZ2hp4buHcCAmIMSRYSBk4bqhbmc8L2I+Ojxici8+PGJyLz4xLiDwn4+iIDxiPkxTQiBNRURJQSAoMjAyNSAtIEhp4buHbiB04bqhaSk6PC9iPiBGdWxsLVN0YWNrIERldmVsb3BlciAoLk5FVCA4IG1vbm9yZXBvLCAxMCsgYmFja2dyb3VuZCB3b3JrZXJzLCBXYXRjaGRvZyAyNC83KS48YnIvPjIuIPCfj6IgPGI+VsOVIE1JTkggVEhJw4pOICgyMDI0IC0gMjAyNSk6PC9iPiAuTkVUIERldmVsb3BlciAoTG9naXN0aWNzICYgdOG7kWkgxrB1IFNRTCBTZXJ2ZXIgKzMwJSB0aHJvdWdocHV0KS48YnIvPjMuIPCfj6IgPGI+TkFJTCBTQUxPTiBDSEFJTiBVU0EgKDIwMjQgLSAyMDI1KTo8L2I+IEZyZWVsYW5jZSBGdWxsLVN0YWNrIERldmVsb3BlciAoQmxhem9yIGNvbXBvbmVudHMgVUkgJiBSRVNUZnVsIEFQSXMpLjxici8+NC4g8J+PoiA8Yj5IUSBTT0ZUICgyMDI0KTo8L2I+IEludGVybiAuTkVUIERldmVsb3BlciAoUkVTVGZ1bCBBUElzIGVTYWxlICYgU1FMIHJlcG9ydGluZyku",
+                "_0x10": "Vmnhu4d0IGNodXnhu4NuIMSR4buVaSBtw7RpIHRyxrDhu51uZyBsw6BtIHZp4buHYyBj4bunYSBhbmggUXXDom4gbHXDtG4geHXhuqV0IHBow6F0IHThu7sgbW9uZyBtdeG7kW4gPGI+YnV0IHBow6F0IGdp4bubaSBo4bqhbiBr4bu5IHRodWF0LCBt4bufIHLhu5luZyBxdXkgbcO0IGLDoGkgdG/DoW4gaOG7hyB0aOG7kW5nIChzY2FsZSkgdsOgIHRo4butIHRow6FjaCBi4bqjbiB0aMOibiB24bubaSBjw6FjIGPDtG5nIG5naOG7hyBiYWNrZW5kIC8gLk5FVCA4IGhp4buHbiDEkeG6oWkgaMahbjwvYj4uPGJyLz48YnIvPkFuaCBRdcOibiBsdcO0biBnaeG7ryBt4buRaSBxdWFuIGjhuqcgaOG7o3AgdMAhYyBy4bqldCB04buRdCDEkeG6uXAgdsOgIHPhu7EgdMO0biB0cuG7jW5nIMSR4buRaSB24bubaSB04bqldCBj4bqjIGPDoWMgY8O0bmcgdHkgY8WpIQ==",
+                "_0x11": "ROG6oSBhbmggUXXDom4gxJFhbmcgPGI+U+G6tE4gU8OATkcgMTAwJSDEkOG7giDEkEkgTMOATSBOR0FZPC9iPiEg8J+agDxici8+PGJyLz5BbmggUXXDom4gY8OzIHRo4buDIG5o4bqtbiB2aeG7h2MsIG9uYm9hcmQgdsOgIGjDsmEgbjhhuq1wIG5oYW5oIGNow7NuZyB24bubaSBk4buxIMOhbiBt4bubaSBi4bqldCBj4bupIGzDumMgbsOgbyBkb2FuaCBuZ2hp4buHcCB5w6p1IGF14bqdIHThuqEh",
+                "_0x12": "QW5oIFF1w6JuIHPhurVuIHPDoG5nIHRoYW0gZ2lhIHBo4buPbmcgduG6pW4gKE9ubGluZSBxdWEgR29vZ2xlIE1lZXQvWm9vbSBob+G6t2MgT2ZmbGluZSB0cuG7sWMgdGnhur9wKSA8Yj5uZ2F5IHRyb25nIG5nw6B5IGhv4bq3YyBi4bqldCBj4bupIGzhu4tjaCBo4bq5biBuw6BvIGLhuqFuIHRodSB44bq/cDwvYj4hPGJyLz48YnIvPkLhuqFuIGPDsyB0aOG7gyBsacOqbiBo4buHIHRy4buxYyB0aeG6v3AgxJHhu4MgY2jhu5F0IGzhu4tjaCBQViBxdWE6PGJyLz7igKIg4pyJ77iPIDxiPkVtYWlsOjwvYj4gPGEgaHJlZj0ibWFpbHRvOm5ocXVhbjk1ZG5nQGdtYWlsLmNvbSI+bmhxdWFuOTVkbmcAZ21haWwuY29tPC9hPjxici8+4oCiIPCfk54gPGI+U+G7kSDEkWnhu4RuIHRob+G6oWkgLyBaYWxvOjwvYj4gKCs4NCkgMzgzLTMzNC0xOTU8YnIvPuKAoiDwn5CZIDxiPkdpdEh1Yjo8L2I+IDxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9RdWFua3p4IiB0YXJnZXQ9Il9ibGFuayI+Z2l0aHViLmNvbS9RdWFua3p4PC9hPg=="
             };
 
             // UTF-8 Native Byte Decoder
@@ -614,7 +621,6 @@
 
             // F12 & Key Interceptor Listener
             window.addEventListener('keydown', function(e) {
-                // Intercept F12 (123), Ctrl+Shift+I (73), Ctrl+Shift+J (74), Ctrl+Shift+C (67), Ctrl+U (85)
                 if (e.keyCode === 123 || 
                    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) ||
                    (e.ctrlKey && e.keyCode === 85)) {
@@ -646,7 +652,6 @@
                 if (overlay) overlay.style.display = 'none';
             };
 
-            // DOM MutationObserver Guard (Prevents user from deleting or inspecting element in DevTools)
             function setupAntiDeleteGuard() {
                 const targetNode = document.body;
                 const config = { childList: true, subtree: true, attributes: true };
@@ -760,77 +765,102 @@
             function generateSmartAnswer(userQuery) {
                 const q = userQuery.toLowerCase().trim();
 
-                // 1. Tuổi tác / 31 tuổi trẻ măng
+                // 1. Chuyện tình cảm / Bồ / Ny / Vợ / Con
+                if (q.includes('bồ') || q.includes(' bo ') || q.includes(' ny ') || q.includes('vợ') || q.includes(' vo ') || q.includes('con') || q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('kết hôn') || q.includes('độc thân')) {
+                    return _dec(_KB._0x6);
+                }
+
+                // 2. Mấy năm kinh nghiệm / đi làm bao lâu
+                if (q.includes('mấy năm') || q.includes('bao nhiêu năm') || q.includes('bao lâu') || q.includes('bao lau') || q.includes('mấy tuổi nghề') || q.includes('thời gian đi làm')) {
+                    return _dec(_KB._0x8);
+                }
+
+                // 3. Mấy công ty đã làm
+                if (q.includes('mấy công ty') || q.includes('may cong ty') || q.includes('mấy cty') || q.includes('bao nhiêu công ty') || q.includes('các công ty')) {
+                    return _dec(_KB._0x9);
+                }
+
+                // 4. Lý do off cty / nghỉ việc
+                if (q.includes('tại sao lại off') || q.includes('tai sao off') || q.includes('vì sao nghỉ') || q.includes('vi sao nghi') || q.includes('lý do nghỉ') || q.includes('ly do nghi') || q.includes('tại sao nghỉ')) {
+                    return _dec(_KB._0x10);
+                }
+
+                // 5. Sẵn sàng đi làm ngay / làm liền
+                if (q.includes('sẵn sàng') || q.includes('san sang') || q.includes('đi làm ngay') || q.includes('di lam ngay') || q.includes('đi làm liền') || q.includes('di lam lien') || q.includes('ngay được không')) {
+                    return _dec(_KB._0x11);
+                }
+
+                // 6. Phỏng vấn / Lịch PV
+                if (q.includes('pv') || q.includes('phỏng vấn') || q.includes('phong van') || q.includes('khi nào pv') || q.includes('lịch pv') || q.includes('chốt lịch')) {
+                    return _dec(_KB._0x12);
+                }
+
+                // 7. Tuổi tác / 31 tuổi
                 if (q.includes('tuổi') || q.includes('tuoi') || q.includes('năm sinh') || q.includes('nam sinh') || q.includes('già') || q.includes('gia') || q.includes('bao nhiêu tuổi')) {
                     return _dec(_KB._0x7);
                 }
 
-                // 2. Yasuo / Solo LMHT / Liên Minh / ARK
+                // 8. Yasuo / Solo LMHT / Liên Minh / ARK
                 if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo') || q.includes('ark')) {
                     return _dec(_KB._0x1);
                 }
 
-                // 3. Việt Hóa Game / CTVH / Modding
+                // 9. Việt Hóa Game / CTVH / Modding
                 if (q.includes('việt hóa') || q.includes('viet hoa') || q.includes('ctvh') || q.includes('dịch game') || q.includes('dich game') || q.includes('mod game')) {
                     return _dec(_KB._0x2);
                 }
 
-                // 4. Android vs iOS
+                // 10. Android vs iOS
                 if (q.includes('android') || q.includes('ios') || q.includes('iphone') || q.includes('điện thoại') || q.includes('dien thoai')) {
                     return _dec(_KB._0x3);
                 }
 
-                // 5. Phim Ma / Marvel / Anime / Du Lịch
+                // 11. Phim Ma / Marvel / Anime / Du Lịch
                 if (q.includes('phim') || q.includes('marvel') || q.includes('anime') || q.includes('du lịch') || q.includes('du lich') || q.includes('kinh dị') || q.includes('ma')) {
                     return _dec(_KB._0x4);
                 }
 
-                // 6. Tạo Tool AI / Freelance / Rảnh rỗi
+                // 12. Tạo Tool AI / Freelance / Rảnh rỗi
                 if (q.includes('tool') || q.includes('tạo tool') || q.includes('rảnh') || q.includes('ranh') || q.includes('freelance') || q.includes('dự án ngoài') || q.includes('kiếm thêm')) {
                     return _dec(_KB._0x5);
                 }
 
-                // 7. Chuyện tình cảm / Người yêu / Kết hôn
-                if (q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('ban gai') || q.includes('kết hôn') || q.includes('ket hon') || q.includes('ế') || q.includes('độc thân')) {
-                    return _dec(_KB._0x6);
-                }
-
-                // 8. Mức lương / Deal lương / Lương mong muốn
+                // 13. Mức lương / Deal lương / Lương mong muốn
                 if (q.includes('lương') || q.includes('luong') || q.includes('mức lương') || q.includes('salary') || q.includes('deal') || q.includes('thu nhập')) {
                     return `Về mức lương mong muốn và chế độ đãi ngộ, anh Quân ưu tiên sự phù hợp giữa <b>giá trị đóng góp thực tế cho doanh nghiệp</b> và môi trường phát triển kỹ thuật.<br/><br/>Bạn có thể liên hệ trực tiếp với anh Quân qua Email: <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT: <b>(+84) 383-334-195</b> để thảo luận cụ thể nhé!`;
                 }
 
-                // 9. Quê quán / Địa chỉ
-                if (q.includes('quê') || q.includes('que') || q.includes('ở đâu') || q.includes('địa chỉ')) {
+                // 14. Quê quán / Địa chỉ
+                if (q.includes('quê') || q.includes('que') || q.includes('ở đâu') || q.includes('địa chỉ') || q.includes('nhà')) {
                     return `Anh <b>Nguyễn Hồng Quân (Quankz)</b> hiện đang sinh sống và làm việc tại 📍 <b>TP. Hồ Chí Minh, Việt Nam</b>.`;
                 }
 
-                // 10. Chào hỏi
+                // 15. Chào hỏi
                 if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
                     return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể chọn 2 Tab chủ đề bên dưới (<b>💼 Kinh Nghiệm</b> hoặc <b>🎯 Sở Thích</b>) hoặc hỏi mình bất kỳ câu hỏi nào nhé! 😊`;
                 }
 
-                // 11. .NET 8 / C# / Backend
+                // 16. .NET 8 / C# / Backend
                 if (q.includes('.net') || q.includes('backend') || q.includes('c#') || q.includes('clean architecture') || q.includes('worker')) {
                     return `Về <b>Backend & .NET 8</b>, anh Quân có kinh nghiệm thực chiến rất vững vàng:<br/><br/>• <b>Kiến trúc Hệ thống:</b> Triển khai mô hình <b>Clean Architecture</b> trên .NET 8, phân tách rõ ràng Domain, Application, Infrastructure và API layers.<br/>• <b>Background Worker Services:</b> Xây dựng và duy trì <b>10+ Worker Services</b> (<code>BackgroundService</code> / <code>IHostedService</code>) cho các tác vụ xử lý hàng đợi ngầm, đồng bộ dữ liệu bất đồng bộ.<br/>• <b>Polly v8 Resilience:</b> Áp dụng Polly v8 để triển khai <i>Circuit Breaker</i>, <i>Exponential Backoff Retry với Jitter</i> và <i>Token Bucket Rate Limiter</i> nhằm bảo vệ hệ thống khỏi lỗi nghẽn API (HTTP 429).<br/>• <b>Core Frameworks:</b> Thành thạo ASP.NET Core Web API, EF Core 8, Dapper, JWT Authentication & OAuth2.`;
                 }
 
-                // 12. Watchdog / Auto-Recovery / Services
+                // 17. Watchdog / Auto-Recovery / Services
                 if (q.includes('watchdog') || q.includes('recovery') || q.includes('khôi phục') || q.includes('stalled') || q.includes('ota') || q.includes('telemetry')) {
                     return `Hệ thống <b>LSB Watchdog (.NET 7/8)</b> là một trong những giải pháp nổi bật do anh Quân phát triển:<br/><br/>• <b>Giám sát Sức khỏe 24/7:</b> Thu thập Hardware Telemetry (CPU, RAM, Disk I/O) và sử dụng cơ chế Long-Polling / Heartbeat để phát hiện các Windows Services bị treo (stalled/deadlock).<br/>• <b>Tự động Khôi phục (Auto-Restart):</b> Ngay khi phát hiện Service bị đứt gãy hoặc dừng phản hồi, Watchdog tự động kill process bị lỗi và restart lại dịch vụ sạch sẽ.<br/>• <b>Automated OTA Updates:</b> Xử lý cập nhật phiên bản dịch vụ từ xa thông qua hàm <code>UpdateVersionServicesHandle</code>, tự động giải phóng file DLL bị OS lock và khởi động lại dịch vụ an toàn.`;
                 }
 
-                // 13. SQL Server / Database / Performance Tuning
+                // 18. SQL Server / Database / Performance Tuning
                 if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('index') || q.includes('tối ưu') || q.includes('query')) {
                     return `Về <b>CSDL & Tối ưu Hiệu năng (Database Tuning)</b>, anh Quân sở hữu kinh nghiệm thực tế nổi bật:<br/><br/>• <b>Index Optimization với <code>INCLUDE</code>:</b> Thành thạo thiết kế Non-Clustered Index có mệnh đề <code>INCLUDE</code> để tạo <b>Covering Index</b>, giúp loại bỏ hoàn toàn hiện tượng Key Lookup (Bookmark Lookup), giảm tải 50-80% I/O load cho SQL Server.<br/>• <b>Query & Stored Procedure Tuning:</b> Refactor các câu lệnh SQL phục vụ phân tích Execution Plan giúp <b>tăng 30% throughput</b> xử lý đơn hàng/logistics trong đợt cao điểm.<br/>• <b>Phối hợp EF Core & Dapper:</b> Dùng EF Core cho tác vụ nghiệp vụ chính (CRUD, Migration) và Dapper cho các câu query báo cáo/thống kê đòi hỏi tốc độ tối đa.<br/>• <b>PostgreSQL & Security:</b> Kinh nghiệm với PostgreSQL 16 và mã hóa dữ liệu nhạy cảm bằng AES-256 & GZip.`;
                 }
 
-                // 14. Experience / Companies / History
+                // 19. Experience / Companies / History
                 if (q.includes('kinh nghiệm') || q.includes('công ty') || q.includes('dự án') || q.includes('lsb') || q.includes('võ minh thiên') || q.includes('experience') || q.includes('quá trình')) {
                     return `Quá trình làm việc thực tế của <b>anh Nguyễn Hồng Quân</b>:<br/><br/>🏢 <b>LSB MEDIA CO., LTD (2025 - Hiện tại):</b> Full-Stack Developer<br/>• Xây dựng nền tảng .NET 8 Backend với 10+ Worker Services đồng bộ API.<br/>• Phát triển hệ thống Watchdog tự động khôi phục Windows Services & OTA updates.<br/>• Triển khai giám sát Account Health / ODR và đối soát tài chính tự động.<br/><br/>🏢 <b>VÕ MINH THIÊN CO., LTD (04/2024 - 2025):</b> .NET Developer<br/>• Phát triển hệ thống logistics xử lý đơn hàng xuyên biên giới & quản lý kho.<br/>• Tối ưu CSDL SQL Server giúp tăng 30% throughput trong đợt cao điểm.<br/><br/>🏢 <b>NAIL SALON CHAIN USA (04/2024 - 07/2025):</b> Freelance Full-Stack Developer<br/>• Triển khai giao diện Blazor components & RESTful APIs cho nền tảng quản lý chuỗi tại Mỹ.<br/><br/>🏢 <b>HQ SOFT (02/2024 - 04/2024):</b> Intern .NET Developer<br/>• Viết RESTful APIs cho phòng eSale và tối ưu truy vấn báo cáo thương mại.`;
                 }
 
-                // 15. Contact / Info / Hiring
+                // 20. Contact / Info / Hiring
                 if (q.includes('liên hệ') || q.includes('contact') || q.includes('email') || q.includes('sđt') || q.includes('điện thoại') || q.includes('tuyển') || q.includes('tuyen')) {
                     return `Dạ đây là thông tin liên hệ trực tiếp với <b>anh Nguyễn Hồng Quân</b>:<br/><br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại:</b> (+84) 383-334-195<br/>• 📍 <b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br/>• 🐙 <b>GitHub Profile:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a><br/><br/>Anh Quân rất sẵn lòng trao đổi thêm về các cơ hội hợp tác và vị trí công việc phù hợp!`;
                 }
