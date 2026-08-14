@@ -738,24 +738,60 @@
                 return 'en';
             }
 
+
+            // Advanced Multi-Layer DevTools & Source Protection Engine
+            let isDevToolsOpen = false;
+
+            function checkDevTools() {
+                const widthDiff = window.outerWidth - window.innerWidth;
+                const heightDiff = window.outerHeight - window.innerHeight;
+                const threshold = 160;
+
+                // Detect docked devtools on right, bottom, or left
+                if (widthDiff > threshold || heightDiff > threshold) {
+                    if (!isDevToolsOpen) {
+                        isDevToolsOpen = true;
+                        showF12Modal();
+                    }
+                }
+
+                // Timing & Debugger Trap
+                const start = performance.now();
+                (function() {
+                    return function() {};
+                })().constructor("debugger")();
+                if (performance.now() - start > 100) {
+                    if (!isDevToolsOpen) {
+                        isDevToolsOpen = true;
+                        showF12Modal();
+                    }
+                }
+            }
+
+            // Continuous background monitor
+            setInterval(checkDevTools, 500);
+            window.addEventListener('resize', checkDevTools);
+
             // F12 & Key Interceptor Listener
             window.addEventListener('keydown', function(e) {
+                // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, Ctrl+S
                 if (e.keyCode === 123 || 
-                   (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) ||
-                   (e.ctrlKey && e.keyCode === 85)) {
+                   (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 75)) ||
+                   (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) {
                     e.preventDefault();
                     e.stopPropagation();
                     showF12Modal();
                     return false;
                 }
-            });
+            }, true);
 
             // Intercept Right-Click Context Menu
             window.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
                 showF12Modal();
                 return false;
-            });
+            }, true);
+
 
             function showF12Modal() {
                 let overlay = document.getElementById('f12ModalOverlay');
