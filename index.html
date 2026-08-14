@@ -850,7 +850,10 @@
                 window.print();
             };
 
-            window.sendUserMsg = function() {
+            // Cloudflare Worker Live Gemini LLM Endpoint URL (Fill in when deployed)
+            window.WORKER_URL = window.WORKER_URL || "";
+
+            window.sendUserMsg = async function() {
                 const input = document.getElementById('aiChatInput');
                 const text = input.value.trim();
                 if (!text) return;
@@ -868,27 +871,48 @@
                 const typingDiv = document.createElement('div');
                 typingDiv.className = 'chat-msg ai';
                 typingDiv.id = 'typingIndicator';
-                typingDiv.innerHTML = '🤖 <i>AI đang suy nghĩ và gõ câu trả lời...</i>';
+                typingDiv.innerHTML = '🤖 <i>Gemini AI đang suy luận và gõ câu trả lời...</i>';
                 chatBody.appendChild(typingDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;
 
-                setTimeout(() => {
-                    const indicator = document.getElementById('typingIndicator');
-                    if (indicator) indicator.remove();
+                let aiReply = "";
 
-                    const aiReply = generateSmartAnswer(text);
-                    const aiDiv = document.createElement('div');
-                    aiDiv.className = 'chat-msg ai';
-                    aiDiv.innerHTML = aiReply;
-                    chatBody.appendChild(aiDiv);
-                    chatBody.scrollTop = chatBody.scrollHeight;
-
-                    // Automatically trigger print dialog if asking for CV / Tải CV / In CV
-                    const q = text.toLowerCase();
-                    if (q.includes('cv') || q.includes('lấy') || q.includes('tải') || q.includes('in') || q.includes('download') || q.includes('hồ sơ')) {
-                        setTimeout(() => { window.print(); }, 800);
+                // Attempt Live Generative AI Call via Cloudflare Worker Proxy if WORKER_URL is set
+                if (window.WORKER_URL && window.WORKER_URL.trim().length > 0) {
+                    try {
+                        const res = await fetch(window.WORKER_URL, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ message: text })
+                        });
+                        const data = await res.json();
+                        if (data && data.reply) {
+                            aiReply = data.reply;
+                        }
+                    } catch (err) {
+                        console.warn("Live LLM Worker call failed, switching to local Smart Engine fallback:", err);
                     }
-                }, 500);
+                }
+
+                // Fallback to local Encrypted Smart Engine if LLM Worker unavailable or offline
+                if (!aiReply) {
+                    aiReply = generateSmartAnswer(text);
+                }
+
+                const indicator = document.getElementById('typingIndicator');
+                if (indicator) indicator.remove();
+
+                const aiDiv = document.createElement('div');
+                aiDiv.className = 'chat-msg ai';
+                aiDiv.innerHTML = aiReply;
+                chatBody.appendChild(aiDiv);
+                chatBody.scrollTop = chatBody.scrollHeight;
+
+                // Automatically trigger print dialog if asking for CV / Tải CV / In CV
+                const q = text.toLowerCase();
+                if (q.includes('cv') || q.includes('lấy') || q.includes('tải') || q.includes('in') || q.includes('download') || q.includes('hồ sơ')) {
+                    setTimeout(() => { window.print(); }, 800);
+                }
             };
 
             // Smart Semantic & Strict Language Matching Engine
