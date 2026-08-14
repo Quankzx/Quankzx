@@ -4,7 +4,7 @@
   <h3>.NET / Full-Stack Developer | Backend Systems & Software Engineering</h3>
 
   <p>
-    <a href="https://github.com/Quankzx/Quankzx/issues/new?template=ask_ai.yml&title=%5BAsk+AI%5D+Hi+Quan%2C+tell+me+about...">
+    <a href="https://quankzx.github.io/Quankzx/" target="_blank">
       <img src="https://img.shields.io/badge/🤖%20Ask%20My%20AI%20Assistant-Click%20To%20Chat%20about%20Quan-8A2BE2?style=for-the-badge&logo=openai&logoColor=white" alt="Ask AI Assistant" />
     </a>
   </p>
