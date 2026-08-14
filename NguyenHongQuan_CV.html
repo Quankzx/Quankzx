@@ -131,6 +131,187 @@
             color: #0f172a;
         }
 
+        /* AI Floating Chatbot Widget Styling */
+        .ai-chat-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 10pt;
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .ai-chat-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.45);
+        }
+        .ai-chat-modal {
+            position: fixed;
+            bottom: 84px;
+            right: 24px;
+            width: 380px;
+            max-width: calc(100vw - 32px);
+            height: 520px;
+            max-height: calc(100vh - 120px);
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+            border: 1px solid #e2e8f0;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 9999;
+            animation: modalSlideUp 0.3s ease-out forwards;
+        }
+        @keyframes modalSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ai-chat-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .ai-chat-header-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ai-avatar {
+            width: 34px;
+            height: 34px;
+            background: #7c3aed;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .ai-header-text h4 {
+            margin: 0;
+            font-size: 10.5pt;
+            font-weight: 600;
+        }
+        .ai-header-text p {
+            margin: 0;
+            font-size: 7.5pt;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .online-dot {
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+        .ai-close-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .ai-close-btn:hover { color: #ffffff; }
+        .ai-chat-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .chat-msg {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 9pt;
+            line-height: 1.45;
+        }
+        .chat-msg.ai {
+            background: #ffffff;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+        .chat-msg.user {
+            background: #4f46e5;
+            color: #ffffff;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+        .ai-suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+        .chip-btn {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 8pt;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chip-btn:hover {
+            background: #4f46e5;
+            color: #ffffff;
+            border-color: #4f46e5;
+        }
+        .ai-chat-footer {
+            padding: 12px;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 8px;
+        }
+        .ai-chat-input {
+            flex: 1;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-size: 9pt;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .ai-chat-input:focus {
+            border-color: #4f46e5;
+        }
+        .ai-send-btn {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .ai-send-btn:hover { background: #4338ca; }
+
         /* Print Styles */
         @media print {
             body {
@@ -143,8 +324,8 @@
                 border: none;
                 padding: 0;
             }
-            .header-actions {
-                display: none;
+            .header-actions, .ai-chat-btn, .ai-chat-modal {
+                display: none !important;
             }
             h1 { color: #000000; }
             .subtitle { color: #222222; }
@@ -247,5 +428,120 @@
         </div>
     </div>
 
+    <!-- AI Floating Chatbot Widget -->
+    <button class="ai-chat-btn" onclick="toggleAIChat()">
+        🤖 <span>Ask Quan's AI Assistant</span>
+    </button>
+
+    <div class="ai-chat-modal" id="aiChatModal">
+        <div class="ai-chat-header">
+            <div class="ai-chat-header-info">
+                <div class="ai-avatar">🤖</div>
+                <div class="ai-header-text">
+                    <h4>Quan's AI Recruiter Assistant</h4>
+                    <p><span class="online-dot"></span> Online | Instant Answers</p>
+                </div>
+            </div>
+            <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
+        </div>
+        
+        <div class="ai-chat-body" id="aiChatBody">
+            <div class="chat-msg ai">
+                Hi! 👋 I'm Quan's AI Recruiter Assistant. Ask me anything about Quan's .NET 8 experience, SQL optimization, Watchdog auto-recovery, or tech stack!
+                <div class="ai-suggestions">
+                    <button class="chip-btn" onclick="askPreset('Core .NET 8 & Backend Skills?')">💡 .NET 8 Skills</button>
+                    <button class="chip-btn" onclick="askPreset('Watchdog & Auto-Recovery system?')">⚙️ Watchdog System</button>
+                    <button class="chip-btn" onclick="askPreset('SQL Server optimization experience?')">🛢️ SQL Optimization</button>
+                    <button class="chip-btn" onclick="askPreset('How to contact Quan?')">✉️ Contact Info</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-chat-footer">
+            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Ask about Quan's background..." onkeypress="handleEnter(event)" />
+            <button class="ai-send-btn" onclick="sendUserMsg()">➔</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleAIChat() {
+            const modal = document.getElementById('aiChatModal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+            if (modal.style.display === 'flex') {
+                document.getElementById('aiChatInput').focus();
+            }
+        }
+
+        function handleEnter(e) {
+            if (e.key === 'Enter') sendUserMsg();
+        }
+
+        function askPreset(promptText) {
+            document.getElementById('aiChatInput').value = promptText;
+            sendUserMsg();
+        }
+
+        function sendUserMsg() {
+            const input = document.getElementById('aiChatInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const chatBody = document.getElementById('aiChatBody');
+            
+            // Append User Message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'chat-msg user';
+            userDiv.innerText = text;
+            chatBody.appendChild(userDiv);
+
+            input.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // Typing indicator
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'chat-msg ai';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerText = '🤖 AI is thinking...';
+            chatBody.appendChild(typingDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            setTimeout(() => {
+                const indicator = document.getElementById('typingIndicator');
+                if (indicator) indicator.remove();
+
+                const aiReply = generateAIAnswer(text);
+                const aiDiv = document.createElement('div');
+                aiDiv.className = 'chat-msg ai';
+                aiDiv.innerHTML = aiReply;
+                chatBody.appendChild(aiDiv);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 600);
+        }
+
+        function generateAIAnswer(query) {
+            const q = query.toLowerCase();
+
+            if (q.includes('.net') || q.includes('backend') || q.includes('c#')) {
+                return `<b>🟣 .NET 8 & Backend Experience:</b><br/>• Architected .NET 8 Clean Architecture platforms with 10+ Background Worker Services.<br/>• Proficient in ASP.NET Core Web API, EF Core 8, Dapper & RESTful APIs.<br/>• Applied Polly v8 resilience pipelines (Circuit Breaker, Exponential Backoff Retry with Jitter).`;
+            }
+            if (q.includes('watchdog') || q.includes('recovery') || q.includes('service')) {
+                return `<b>🛡️ Watchdog & Service Auto-Recovery:</b><br/>• Developed .NET 7/8 Watchdog platform with hardware telemetry (CPU/RAM/Disk).<br/>• Automated detection and restart for stalled Windows Services 24/7.<br/>• Zero-touch OTA deployment updates via <code>UpdateVersionServicesHandle</code>.`;
+            }
+            if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('query')) {
+                return `<b>🛢️ SQL & Database Optimization:</b><br/>• High expertise in MS SQL Server & PostgreSQL 16.<br/>• Index Optimization using <code>INCLUDE</code> clause (Covering Index) to eliminate Key Lookups.<br/>• Increased order processing throughput by 30% through query & stored procedure tuning.`;
+            }
+            if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
+                return `<b>✉️ Contact Information:</b><br/>• <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• <b>Phone:</b> (+84) 383-334-195<br/>• <b>Location:</b> Ho Chi Minh City, Vietnam<br/>• <b>GitHub:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a>`;
+            }
+            if (q.includes('ai') || q.includes('mcp') || q.includes('claude')) {
+                return `<b>🤖 AI & MCP Integration:</b><br/>• Experienced in LLM-Assisted Engineering (Claude, ChatGPT, Copilot).<br/>• Model Context Protocol (MCP) integration for automated dev tools.<br/>• AI-driven code review, security auditing & unit test generation.`;
+            }
+            if (q.includes('react') || q.includes('frontend') || q.includes('blazor')) {
+                return `<b>🎨 Frontend & UI Skills:</b><br/>• Skilled in React 18, TypeScript, Vite, TailwindCSS & JsonForms.<br/>• Blazor component development for business management portals.`;
+            }
+
+            return `<b>🤖 Quan's AI Assistant:</b><br/>Quan is a <b>Full-Stack / .NET Developer</b> specializing in .NET 8 Web APIs, Background Worker Services, Watchdog Auto-Recovery, and SQL Server optimization.<br/><br/>Feel free to ask about his .NET 8 experience, SQL tuning, or contact info!`;
+        }
+    </script>
 </body>
 </html>
