@@ -11,8 +11,8 @@
 
   <p>
     📄 <b>View My Resume / CV:</b> 
-    <a href="./NguyenHongQuan_CV_Harvard_Format.md"><b>Markdown Version</b></a> | 
-    <a href="https://htmlpreview.github.io/?https://github.com/Quankzx/Quankzx/blob/main/NguyenHongQuan_CV_Harvard_Format.html" target="_blank"><b>Web HTML Render</b></a>
+    <a href="./NguyenHongQuan_CV.md"><b>Markdown Version</b></a> | 
+    <a href="https://htmlpreview.github.io/?https://github.com/Quankzx/Quankzx/blob/main/NguyenHongQuan_CV.html" target="_blank"><b>Web HTML Render</b></a>
   </p>
 
 </div>
