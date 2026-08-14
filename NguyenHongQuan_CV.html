@@ -4,173 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyen Hong Quan - Full-Stack & .NET Developer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @page {
             size: A4;
-            margin: 15mm 15mm 15mm 15mm;
+            margin: 12mm 15mm 12mm 15mm;
+        }
+        * {
+            box-sizing: border-box;
         }
         body {
-            font-family: 'Calibri', 'Georgia', 'Times New Roman', serif;
-            color: #111111;
-            line-height: 1.4;
-            font-size: 10.5pt;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1f2c;
+            line-height: 1.5;
+            font-size: 10pt;
             margin: 0 auto;
-            max-width: 800px;
-            padding: 20px;
+            max-width: 850px;
+            padding: 30px 20px;
+            background: #f8fafc;
+        }
+        .cv-card {
             background: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        .btn-print {
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 9pt;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .btn-print:hover {
+            background: #1d4ed8;
         }
         h1 {
-            font-size: 20pt;
+            font-size: 22pt;
+            font-weight: 700;
             text-transform: uppercase;
             text-align: center;
-            margin: 0 0 4px 0;
+            margin: 0 0 6px 0;
             letter-spacing: 1px;
-            color: #000000;
+            color: #0f172a;
         }
         .subtitle {
             text-align: center;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 11pt;
-            margin-bottom: 6px;
-            color: #222222;
+            margin-bottom: 8px;
+            color: #2563eb;
         }
         .contact-info {
             text-align: center;
             font-size: 9.5pt;
-            margin-bottom: 14px;
-            border-bottom: 2px solid #333333;
-            padding-bottom: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+            color: #475569;
         }
         .contact-info a {
-            color: #111111;
+            color: #2563eb;
             text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
         h2 {
             font-size: 11pt;
+            font-weight: 700;
             text-transform: uppercase;
-            border-bottom: 1px solid #444444;
-            margin: 14px 0 6px 0;
-            padding-bottom: 2px;
+            border-bottom: 1.5px solid #0f172a;
+            margin: 18px 0 10px 0;
+            padding-bottom: 4px;
             letter-spacing: 0.5px;
-            color: #000000;
+            color: #0f172a;
         }
         .job-header {
             display: flex;
             justify-content: space-between;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 10.5pt;
-            margin-top: 8px;
+            margin-top: 10px;
+            color: #0f172a;
         }
         .job-sub {
             display: flex;
             justify-content: space-between;
             font-style: italic;
-            font-size: 10pt;
-            margin-bottom: 4px;
+            font-size: 9.5pt;
+            margin-bottom: 6px;
+            color: #475569;
         }
         ul {
-            margin: 3px 0 8px 18px;
+            margin: 4px 0 10px 18px;
             padding: 0;
         }
         li {
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             text-align: justify;
+            color: #334155;
         }
         .skills-list p {
-            margin: 3px 0;
+            margin: 4px 0;
+            color: #334155;
         }
         strong {
-            color: #000000;
+            color: #0f172a;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+                max-width: 100%;
+            }
+            .cv-card {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+            .header-actions {
+                display: none;
+            }
+            h1 { color: #000000; }
+            .subtitle { color: #222222; }
+            h2 { border-bottom-color: #333333; color: #000000; }
+            .contact-info { border-bottom-color: #333333; }
         }
     </style>
 </head>
 <body>
 
-    <h1>NGUYEN HONG QUAN</h1>
-    <div class="subtitle">.NET / Full-Stack Developer | E-Commerce & Backend Systems</div>
-    <div class="contact-info">
-        Ho Chi Minh City, Vietnam &nbsp;|&nbsp; (+84) 383-334-195 &nbsp;|&nbsp; nhquan95dng@gmail.com &nbsp;|&nbsp; <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a>
+    <div class="header-actions">
+        <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
     </div>
 
-    <h2>PROFESSIONAL SUMMARY</h2>
-    <p style="margin: 4px 0; text-align: justify;">
-        Full-Stack / .NET Developer specializing in e-commerce automation and backend systems. Experienced in building <strong>.NET 8 Web APIs</strong>, <strong>Background Worker Services</strong>, <strong>Amazon SP-API integrations</strong>, <strong>watchdog services</strong>, and <strong>asynchronous data-processing workflows</strong>. Strong experience with <strong>SQL Server / PostgreSQL</strong>, API integration, system reliability, and production support.
-    </p>
+    <div class="cv-card">
+        <h1>NGUYEN HONG QUAN</h1>
+        <div class="subtitle">.NET / Full-Stack Developer | Backend Systems & Software Engineering</div>
+        <div class="contact-info">
+            Ho Chi Minh City, Vietnam &nbsp;|&nbsp; (+84) 383-334-195 &nbsp;|&nbsp; <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> &nbsp;|&nbsp; <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a>
+        </div>
 
-    <h2>TECHNICAL & DOMAIN SKILLS</h2>
-    <div class="skills-list">
-        <p><strong>E-Commerce & Amazon Domain:</strong> Amazon SP-API & Ads API, FBA / AWD Inventory Replenishment, Account Health (ODR / AHR Monitoring), Finance Refund Reconciliation, PDT Timezone Offset Alignment.</p>
-        <p><strong>Backend Development:</strong> .NET 8 / .NET 7, ASP.NET Core Web API, Clean Architecture, Background Worker Services, Entity Framework Core, Dapper, RESTful APIs, OAuth2, JWT.</p>
-        <p><strong>Service Monitoring & Auto-Recovery:</strong> Windows Services Control, Long Polling, Automated OTA Remote Updates, Hardware Telemetry (CPU/RAM/Disk), Serilog Log Aggregation, Polly v8 (Circuit Breaker, Retry, Timeout).</p>
-        <p><strong>Frontend & UI Engineering:</strong> React 18, TypeScript, Vite, TailwindCSS, JsonForms, Blazor, Dynamic Schema Form Rendering.</p>
-        <p><strong>Databases & Performance:</strong> PostgreSQL 16, MS SQL Server, Index Optimization (Covering Index), Query Optimization, AES-256 / GZip Credential Encryption.</p>
-        <p><strong>AI & Workflow Automation:</strong> LLM-Assisted Development (Claude, ChatGPT, Copilot), Model Context Protocol (MCP) Integration, AI Code Review & Verification (Auditing Security & Edge Cases), AI-Driven Refactoring & Test Generation.</p>
-        <p><strong>DevOps & Operations:</strong> Docker, Git/GitHub, Nginx, IIS, Postman, Linux/Windows Server.</p>
-    </div>
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p style="margin: 4px 0; text-align: justify;">
+            Full-Stack / .NET Developer specializing in e-commerce automation and backend systems. Experienced in building <strong>.NET 8 Web APIs</strong>, <strong>Background Worker Services</strong>, <strong>API integrations</strong>, <strong>watchdog services</strong>, and <strong>asynchronous data-processing workflows</strong>. Strong experience with <strong>SQL Server / PostgreSQL</strong>, API integration, system reliability, and production support.
+        </p>
 
-    <h2>PROFESSIONAL EXPERIENCE</h2>
+        <h2>TECHNICAL & DOMAIN SKILLS</h2>
+        <div class="skills-list">
+            <p><strong>Backend Development:</strong> .NET 8 / .NET 7, ASP.NET Core Web API, Clean Architecture, Background Worker Services, Entity Framework Core, Dapper, RESTful APIs, OAuth2, JWT.</p>
+            <p><strong>Service Monitoring & Auto-Recovery:</strong> Windows Services Control, Long Polling, Automated OTA Remote Updates, Hardware Telemetry (CPU/RAM/Disk), Serilog Log Aggregation, Polly v8 (Circuit Breaker, Retry, Timeout).</p>
+            <p><strong>Frontend & UI Engineering:</strong> React 18, TypeScript, Vite, TailwindCSS, JsonForms, Blazor, Dynamic Schema Form Rendering.</p>
+            <p><strong>Databases & Performance:</strong> PostgreSQL 16, MS SQL Server, Index Optimization (Covering Index), Query Optimization, AES-256 / GZip Credential Encryption.</p>
+            <p><strong>AI & Workflow Automation:</strong> LLM-Assisted Development (Claude, ChatGPT, Copilot), Model Context Protocol (MCP) Integration, AI Code Review & Verification (Auditing Security & Edge Cases), AI-Driven Refactoring & Test Generation.</p>
+            <p><strong>DevOps & Operations:</strong> Docker, Git/GitHub, Nginx, IIS, Postman, Linux/Windows Server.</p>
+        </div>
 
-    <div class="job-header">
-        <span>LSB MEDIA CO., LTD</span>
-        <span>Ho Chi Minh City, Vietnam</span>
-    </div>
-    <div class="job-sub">
-        <span>Full-Stack Developer</span>
-        <span>2025 – Present</span>
-    </div>
-    <ul>
-        <li><strong>Enterprise E-Commerce Platform (.NET 8):</strong> Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services for Amazon SP-API synchronization across FBA/AWD inventory and Orders.</li>
-        <li><strong>Watchdog & Automated Service Updates:</strong> Developed the LSB Watchdog platform using .NET 7/8, including long-polling workers, hardware telemetry, Windows Service monitoring/restart, and automated OTA service updates (<code>UpdateVersionServicesHandle</code>).</li>
-        <li><strong>Account Health & Finance Automation:</strong> Implemented Account Health / ODR monitoring and automated Finance API refund reconciliation to identify account issues and support recovery of lost seller revenue.</li>
-    </ul>
+        <h2>PROFESSIONAL EXPERIENCE</h2>
 
-    <div class="job-header">
-        <span>VÕ MINH THIÊN CO., LTD</span>
-        <span>Ho Chi Minh City, Vietnam</span>
-    </div>
-    <div class="job-sub">
-        <span>.NET Developer</span>
-        <span>Apr 2024 – Early 2025</span>
-    </div>
-    <ul>
-        <li><strong>Logistics & Order Fulfillment Automation:</strong> Developed and maintained a high-throughput logistics management platform handling end-to-end order processing, cross-border shipping workflows, and warehouse inventory tracking.</li>
-        <li><strong>Database & Throughput Optimization:</strong> Optimized SQL Server database schemas, stored procedures, and indexes, increasing overall order processing throughput by 30% and eliminating bottlenecks during peak shipping cycles.</li>
-        <li><strong>System Modernization:</strong> Refactored legacy logistics modules into modern ASP.NET Core APIs, reducing system downtime, improving API response latency, and enhancing operational workflow stability.</li>
-    </ul>
+        <div class="job-header">
+            <span>LSB MEDIA CO., LTD</span>
+            <span>Ho Chi Minh City, Vietnam</span>
+        </div>
+        <div class="job-sub">
+            <span>Full-Stack Developer</span>
+            <span>2025 – Present</span>
+        </div>
+        <ul>
+            <li><strong>Enterprise Backend Platform (.NET 8):</strong> Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services for asynchronous API synchronization and high-throughput data processing.</li>
+            <li><strong>Watchdog & Automated Service Updates:</strong> Developed the LSB Watchdog platform using .NET 7/8, including long-polling workers, hardware telemetry, Windows Service monitoring/restart, and automated OTA service updates (<code>UpdateVersionServicesHandle</code>).</li>
+            <li><strong>Account Health & Finance Automation:</strong> Implemented Account Health / ODR monitoring and automated Finance API refund reconciliation to identify system issues and support revenue recovery workflows.</li>
+        </ul>
 
-    <div class="job-header">
-        <span>NAIL SALON CHAIN (USA)</span>
-        <span>Freelance / Part-time</span>
-    </div>
-    <div class="job-sub">
-        <span>Full-Stack Developer</span>
-        <span>Apr 2024 – July 2025</span>
-    </div>
-    <ul>
-        <li><strong>Business Management Platform:</strong> Built and maintained a comprehensive web management platform for U.S.-based nail salon chains to streamline customer appointment booking, staff scheduling, customer profiles, and promotional campaigns.</li>
-        <li><strong>Client Engagement & UI Development:</strong> Implemented responsive user interfaces using <strong>Blazor components</strong> and RESTful APIs, enabling salon owners to increase appointment retention rates and streamline daily front-desk operations.</li>
-    </ul>
+        <div class="job-header">
+            <span>VÕ MINH THIÊN CO., LTD</span>
+            <span>Ho Chi Minh City, Vietnam</span>
+        </div>
+        <div class="job-sub">
+            <span>.NET Developer</span>
+            <span>Apr 2024 – Early 2025</span>
+        </div>
+        <ul>
+            <li><strong>Logistics & Order Fulfillment Automation:</strong> Developed and maintained a high-throughput logistics management platform handling end-to-end order processing, cross-border shipping workflows, and warehouse inventory tracking.</li>
+            <li><strong>Database & Throughput Optimization:</strong> Optimized SQL Server database schemas, stored procedures, and indexes, increasing overall order processing throughput by 30% and eliminating bottlenecks during peak shipping cycles.</li>
+            <li><strong>System Modernization:</strong> Refactored legacy logistics modules into modern ASP.NET Core APIs, reducing system downtime, improving API response latency, and enhancing operational workflow stability.</li>
+        </ul>
 
-    <div class="job-header">
-        <span>HQ SOFT</span>
-        <span>Ho Chi Minh City, Vietnam</span>
-    </div>
-    <div class="job-sub">
-        <span>Intern .NET Developer (Back Office)</span>
-        <span>Feb 2024 – Apr 2024</span>
-    </div>
-    <ul>
-        <li><strong>Back-Office & Sales API Support:</strong> Handled business feature requirements for back-office enterprise software, writing RESTful APIs for the eSale department and optimizing database queries to support daily commercial sales reporting.</li>
-    </ul>
+        <div class="job-header">
+            <span>NAIL SALON CHAIN (USA)</span>
+            <span>Freelance / Part-time</span>
+        </div>
+        <div class="job-sub">
+            <span>Full-Stack Developer</span>
+            <span>Apr 2024 – July 2025</span>
+        </div>
+        <ul>
+            <li><strong>Business Management Platform:</strong> Built and maintained a comprehensive web management platform for U.S.-based business chains to streamline customer appointment booking, staff scheduling, customer profiles, and promotional campaigns.</li>
+            <li><strong>Client Engagement & UI Development:</strong> Implemented responsive user interfaces using <strong>Blazor components</strong> and RESTful APIs, enabling store owners to increase appointment retention rates and streamline daily front-desk operations.</li>
+        </ul>
 
-    <h2>EDUCATION</h2>
-    <div class="job-header">
-        <span>FPT APTECH ACADEMY</span>
-        <span>Ho Chi Minh City, Vietnam</span>
-    </div>
-    <div class="job-sub">
-        <span>Higher Diploma in Software Engineering (International Programmer)</span>
-        <span>Jan 2022 – Dec 2023</span>
+        <div class="job-header">
+            <span>HQ SOFT</span>
+            <span>Ho Chi Minh City, Vietnam</span>
+        </div>
+        <div class="job-sub">
+            <span>Intern .NET Developer (Back Office)</span>
+            <span>Feb 2024 – Apr 2024</span>
+        </div>
+        <ul>
+            <li><strong>Back-Office & Sales API Support:</strong> Handled business feature requirements for back-office enterprise software, writing RESTful APIs for the eSale department and optimizing database queries to support daily commercial sales reporting.</li>
+        </ul>
+
+        <h2>EDUCATION</h2>
+        <div class="job-header">
+            <span>FPT APTECH ACADEMY</span>
+            <span>Ho Chi Minh City, Vietnam</span>
+        </div>
+        <div class="job-sub">
+            <span>Higher Diploma in Software Engineering (International Programmer)</span>
+            <span>Jan 2022 – Dec 2023</span>
+        </div>
     </div>
 
 </body>

@@ -1,0 +1,126 @@
+name: 🤖 AI Recruiter Assistant Bot
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  ai-respond:
+    if: contains(github.event.issue.labels.*.name, 'ask-ai') || startsWith(github.event.issue.title, '[Ask AI]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate AI Response
+        uses: actions/github-script@v7
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+            const questionText = (issue.title + "\n" + (issue.body || "")).toLowerCase();
+            const rawQuestion = issue.title.replace("[Ask AI]", "").trim() || issue.body || "tell me about Quan";
+
+            const cvContext = `
+            FULL NAME: NGUYEN HONG QUAN (Quankz)
+            TITLE: .NET / Full-Stack Developer | Backend Systems & Software Engineering
+            LOCATION: Ho Chi Minh City, Vietnam
+            EMAIL: nhquan95dng@gmail.com
+            GITHUB: https://github.com/Quankzx
+
+            SUMMARY:
+            Full-Stack / .NET Developer specializing in e-commerce automation and backend systems. Experienced in building .NET 8 Web APIs, Background Worker Services, API integrations, watchdog services, and asynchronous data-processing workflows. Strong technical foundation in system reliability, SQL Server / PostgreSQL query optimization, asynchronous processing, and production support.
+
+            KEY SKILLS:
+            - Backend: .NET 8, .NET 7, ASP.NET Core Web API, Clean Architecture, Background Worker Services, EF Core, Dapper, RESTful APIs, OAuth2, JWT.
+            - Monitoring & Auto-Recovery: Windows Services Control, Long Polling, Automated OTA Remote Updates, Hardware Telemetry (CPU/RAM/Disk), Serilog, Polly v8 (Circuit Breaker, Retry, Timeout).
+            - Frontend: React 18, TypeScript, Vite, TailwindCSS, JsonForms, Blazor.
+            - Databases: PostgreSQL 16, MS SQL Server, Index Optimization (INCLUDE), Query Optimization, AES-256 / GZip Encryption.
+            - AI & Automation: LLM-Assisted Development (Claude, ChatGPT, Copilot), Model Context Protocol (MCP) Integration, AI Code Review & Verification, AI-Driven Refactoring.
+            - DevOps: Docker, Git/GitHub, Nginx, IIS, Postman, Linux/Windows Server.
+
+            EXPERIENCE:
+            1. LSB MEDIA CO., LTD (2025 - Present) - Full-Stack Developer:
+               - Built .NET 8 Clean Architecture platform with 10+ Background Worker Services for asynchronous API sync.
+               - Developed LSB Watchdog platform (.NET 7/8) with long-polling workers, hardware telemetry, Windows Service monitoring/restart, and automated OTA updates.
+               - Implemented Account Health / ODR monitoring and automated Finance API refund reconciliation.
+
+            2. VÕ MINH THIÊN CO., LTD (Apr 2024 - Early 2025) - .NET Developer:
+               - Developed logistics management platform for end-to-end order processing, cross-border shipping, and warehouse tracking.
+               - Optimized SQL Server schemas, stored procedures, and indexes, increasing throughput by 30%.
+               - Refactored legacy modules into modern ASP.NET Core APIs.
+
+            3. NAIL SALON CHAIN (USA) (Apr 2024 - July 2025) - Full-Stack Developer:
+               - Built web management platform for U.S.-based chains (appointment booking, staff scheduling, promotional campaigns).
+               - Implemented responsive UI using Blazor components and RESTful APIs.
+
+            4. HQ SOFT (Feb 2024 - Apr 2024) - Intern .NET Developer:
+               - Back-Office enterprise software RESTful APIs and SQL query optimization.
+            `;
+
+            let responseBody = "";
+
+            // Check if GEMINI_API_KEY or OPENAI_API_KEY secret exists
+            const apiKey = process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
+
+            if (apiKey) {
+              try {
+                // Call Gemini API if key is configured
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    contents: [{
+                      parts: [{
+                        text: `You are Quan's AI Recruiter Assistant. Answer the recruiter's question professionally, concisely, and accurately based on Quan's CV background:\n\n${cvContext}\n\nRECRUITER QUESTION:\n${rawQuestion}`
+                      }]
+                    }]
+                  })
+                });
+                const data = await response.json();
+                responseBody = data.candidates?.[0]?.content?.parts?.[0]?.text;
+              } catch (err) {
+                console.log("API Call error, falling back to smart responder:", err);
+              }
+            }
+
+            if (!responseBody) {
+              // Smart built-in responder
+              responseBody = `### 🤖 Quan's AI Assistant Response
+
+Hello! Thank you for asking about **Nguyen Hong Quan (Quankz)**.
+
+Based on Quan's official CV and technical profile:
+
+- **Core Stack:** .NET 8 / ASP.NET Core Web API, Clean Architecture, Background Worker Services, EF Core & Dapper.
+- **Backend & Reliability:** Specialized in asynchronous processing, Polly v8 resilience pipelines (Circuit Breaker/Retry), and Service Auto-Recovery Watchdogs (.NET 7/8).
+- **Databases:** High proficiency in MS SQL Server & PostgreSQL 16 (Index tuning \`INCLUDE\`, Query Optimization).
+- **Frontend & AI:** Experience with React 18, TypeScript, Blazor, and LLM/MCP Protocol integration.
+- **Contact:** You can reach Quan directly via email at [nhquan95dng@gmail.com](mailto:nhquan95dng@gmail.com) or connect on [GitHub](https://github.com/Quankzx).
+
+---
+*💡 Tip: For full dynamic LLM reasoning, add \`GEMINI_API_KEY\` to your Repository Secrets.*`;
+            }
+
+            // Post comment
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: responseBody
+            });
+
+            // Add label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: ['ai-answered']
+            });

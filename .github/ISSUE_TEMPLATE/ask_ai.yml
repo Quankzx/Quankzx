@@ -1,0 +1,18 @@
+name: 🤖 Ask Quan's AI Assistant
+description: Ask any question about Quan's background, .NET experience, projects, or technical skills!
+title: "[Ask AI] "
+labels: ["ask-ai"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 👋 Welcome! Ask Quan's AI Recruiter Assistant Anything.
+        Our AI bot will analyze Quan's CV & technical background and reply to your question automatically within seconds!
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know about Quan?
+      placeholder: e.g. What is Quan's experience with .NET 8, SQL Server optimization, or background worker services?
+    validations:
+      required: true

@@ -4,6 +4,12 @@
   <h3>.NET / Full-Stack Developer | Backend Systems & Software Engineering</h3>
 
   <p>
+    <a href="https://github.com/Quankzx/Quankzx/issues/new?template=ask_ai.yml&title=%5BAsk+AI%5D+Hi+Quan%2C+tell+me+about...">
+      <img src="https://img.shields.io/badge/🤖%20Ask%20My%20AI%20Assistant-Click%20To%20Chat%20about%20Quan-8A2BE2?style=for-the-badge&logo=openai&logoColor=white" alt="Ask AI Assistant" />
+    </a>
+  </p>
+
+  <p>
     <a href="https://github.com/Quankzx"><img src="https://img.shields.io/badge/Location-Ho%20Chi%20Minh%20City%2C%20Vietnam-blue?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" /></a>
     <a href="mailto:nhquan95dng@gmail.com"><img src="https://img.shields.io/badge/Gmail-nhquan95dng%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
     <a href="https://github.com/Quankzx"><img src="https://komarev.com/ghpvc/?username=Quankzx&color=007ec6&style=for-the-badge&label=Profile+Views" alt="Profile Views" /></a>
@@ -12,7 +18,7 @@
   <p>
     📄 <b>View My Resume / CV:</b> 
     <a href="./NguyenHongQuan_CV.md"><b>Markdown Version</b></a> | 
-    <a href="https://htmlpreview.github.io/?https://github.com/Quankzx/Quankzx/blob/main/NguyenHongQuan_CV.html" target="_blank"><b>Web HTML Render</b></a>
+    <a href="https://quankzx.github.io/NguyenHongQuan_CV.html" target="_blank"><b>Web HTML Render</b></a>
   </p>
 
 </div>
