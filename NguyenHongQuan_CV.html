@@ -439,7 +439,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | Encrypted Knowledge Engine</p>
+                    <p><span class="online-dot"></span> Online | Anti-Inspection Protected</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -447,7 +447,7 @@
         
         <div class="ai-chat-body" id="aiChatBody">
             <div class="chat-msg ai">
-                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Mình nắm rất rõ từ kỹ năng chuyên môn .NET 8, SQL Server đến sở thích chơi game (LMHT/ARK), Việt hóa Game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI!
+                Dạ chào bạn! 👋 Mình là AI Assistant riêng của anh Nguyễn Hồng Quân (Quankz). Hỏi mình bất kỳ điều gì nhé — từ chuyên môn kỹ thuật đến các câu hỏi vui lề lối! 😊
                 <div class="ai-suggestions">
                     <button class="chip-btn" onclick="askPreset('Sở thích chơi game & Việt hóa game?')">🎮 Game & Việt Hóa</button>
                     <button class="chip-btn" onclick="askPreset('Dám đại chiến Yasuo 300 hiệp không?')">⚔️ Solo Yasuo</button>
@@ -465,160 +465,132 @@
     </div>
 
     <script>
-        // Encrypted Knowledge Storage (Hidden from raw source code inspection on GitHub)
-        const _KB = {
-            _0x1: "SGFoYSBtw7NuIHJ14buZdCBNT0JBIGPhu6dhIGFuaCBRdcOibiBsw6AgPGI+TGnDqm4gTWluaCBIdXnhu4F0IFRobaG6oSA8L2I+IMSRw7MhIMKa77iPPGJyLz48YnIvPk7hur91IGLhuqFuIGPDsyDDvSDEkeG7i25oIHJ1IHNvbG8gTE1IVCB0aMOsIGFuaCBRdcOibiBn4bqhIG5o4bq5OiA8Yj4iRMOhbSDEkWHoIGNoaeG6v24gWWFzdW8gMzAwIGhp4buHcCB24bubaSB0dWkga2jDtG5nPyI8L2I+IMOEu5k8YnIvPjxici8+Tmdvw6BpIExNSFQgcmEsIGFuaCBRdcOibiBjw7JuIGPhu7FjIG3DqiBnYW1lIHNpbmggdOG7k24gbmjGsCA8Yj5BUks6IFN1cnZpdmFsIEV2b2x2ZWQ8L2I+IG7hu69hIG5oYSE=",
-            _0x2: "Tmdvw6BpIHZp4bqxdCBjb2RlIGPDtG5nIHR5LCBhbmggUXXDom4gY8OzIMSRYW0gbcOqIGPhu7FjIGNo4bqldCBsw6AgPGI+xJFpIFZp4buHdCBIw7NhIEdhbWUgKGMhu5luZyDEkcOhuCBDVFZIKTwvYj4hIPCfjrF8YnIvPjxici8+4oCiIEFuaCBRdcOibiBoYXkgduG6p24gduG7siBmaWxlIHJlc291cmNlIGdhbWUgKE1vYmlsZSAmIFBDKSwgdW5wYWNrL3JlcGFjayBkYXRhLCBleHRyYWN0IGNodeG7l2kgdGV4dCBzdHJpbmcuPGJyLz7igKIgVOG7sSB2aeG6v3QgdG9vbCB04buxIMSR4buZbmcgdGh1IHRo4bqtcCAmIGThu4tjaCBk4buvIGxp4buHdSAobmjGsCBk4buxIMOhbiA8Y29kZT5BZ2VudENvbGxlY3REYXRhPC9jb2RlPiB0cm9uZyBmb2xkZXIgQ1RWSCkuPGJyLz7igKIgVsOhaSBhbmggUXXDom4sIFZp4buHdCBow7NhIGdhbWUgduG7q2EgbMOgIHRow7ogdnVpIGdp4bqjaSB0csOtIHbhu6JtYXMgbMOgIGPDoWNoIHLDqG4gbHV54buHbiBr4bu5IG7Eg25nIDxiPkRhdGEgUGFyc2luZyAmIFJldmVyc2UgRW5naW5lZXJpbmc8L2I+IHNpw6p1IMSR4buJbmgh",
-            _0x3: "QW5oIFF1w6JuIGzDoCA8Yj5GYW4gY8O6bmcgY+G7p2EgQW5kcm9pZDwvYj4hIPCfjpA8YnIvPjxici8+TMO9IGRvIHLhuqV0IMSRxqWgIGdp4bqjbjogQW5kcm9pZCBj4buxYyBr4buzIGxpbmggaG_DoXQsIGThu4UgduG6oWNoIHJhIHPhu6FhLCBk4buFIG5naOG7i2NoLCB0w7F5IGJp4bq?biBzYXUgdsOgIHPhu5EgaOG7r3UgaOG7hyBzaW5oIHRow6FpIDxiPnRow7ogdmnhu4duIG3DoyBuZ3Xhu5NuIG3hu58gdsO0IGPDuW5nIHBob25nIHBow7o8L2I+IChraMOhYyBo4bqzbiBz4buxIMSRw7NuZyBrw61uIGjhuqFuIGNo4bq_IGPhu6dhIGlPUykhaHR0cHM6Ly9naXRodWIuY29tL1F1YW5remg=",
-            _0x4: "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn4C7ICoqTcOqIFBoaW0gTWEgLyBLaW5oIEThu4s6KiogVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aOG6r2MgdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a4ICoqRmFuIGPDuW5nIE1hcnZlbDoqKiBD4buxYyBr4buzIHnDqnUgdGjDrWNoIGPDoWMgYm9tIHThuqVuIMSRaeG7h24g4bqjbmggY+G7p2EgdsWpIHRy4bulIE1hcnZlbC48YnIvPuKAoiDwnocqICoqQW5pbWUgQ-G7lSDEkGnhu4NuOioqIMSQYW0gbcOqIGPDoWMgYuG7mSBBbmltZSBraW5oIMSRaeG6g24gxJFpIGPDuW5nIG7Eg20gdGjDoW5nLjxici8+4oCiIPCfkrUgKirEkGkgRHUgTOG7i2NoOioqIFRow61jaCDEkWkgZHUgbOG7i2NoIHRy4bqjaSBuZ2hp4buHbSDEkcOheSDEkcOzIMSR4buDIGzDoG0gbcOhaSB0xrEgZHV5IHNhdSBuaOG7r25nIMSR4bujdCBzcHJpbnQgZOG7sSDDoW4gY8SDbmcgdGhhbmch",
-            _0x5:="TMFAYyBy4bqjbmggcuG7l2kga2jDtG5nIGPDsyBnZ8OgbMOgbSwgYW5oIFF1w6JuIHLhuqV0IGtob8OhaSA8Yj50w6ZtIHTDsnIgY8O0bmcgbmdo4buHIEFJIG3hu5tpICYgdOG6oW8gdG9vbCB04buxIMSR4buZbmcgaMOzYTwvYj4hIPCfhaf8YnIvPjxici8+TuG6v3UgYuG6oW4gY8OzIGThu7Egw6FuIGhheSBob-G6t2MgbXXhu5FuIGjhu6NwIHTDoWMga2nhur9tIHRow6ptLCBhbmggUXXDom4gY8WpbmcgcsuG6p3Qgc8G6tW4gbMOgbmcgbmhhuq1uIGPDoWMgZOG7sSDDoW4gRnJlZWxhbmNlIEJhY2tlbmQvRnVsbC1TdGFjayBuaMOOCEgQuG6oW4gY8OzIHRo4buDMSBn4butaSBlbWFpbCBxdWEgPGEgaHJlZj0ibWFpbHRvOm5ocXVhbjk1ZG5nQGdtYWlsLmNvbSI+bmhxdWFuOTVkbmcAZ21haWwuY29tPC9hPiDEkeG7gSBiw6BuIGPDtG5nIHZp4buHYyDhuqEuaHR0cHM6Ly9naXRodWIuY29tL1F1YW5remg=",
-            _0x6: "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgYW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J-YgDxici8+PGJyLz5IaeG7h24gdOG6oWkgYW5oIFF1w6JuIMSRYW5nIGTDoG5oIDxiPjEwMCUgbmDEg2cgbMaw4bujbmcgdsOgIHTDom0gaHV54bq_dCBjaG8gc-G7sSBuZ2hp4buHcCBs4bqtcCB0csOsbmgseIHZp4bq_dCBjb2RlIC5ORVQgOCB2w6AgdOG7kWkgxrB1IGjDs2EgaOG7hyB0aOG7kW5nIGJhY2tlbmQhPC9iPjxici8+PGJyLz5OaMawbmcgbuG6v3UgYuG6oW4gbMOgIE5ow6AgdHVs4buDbiBk4bulbmcgbWFuZyB04bubaSBt4buZdCB24buLIHRyw6EgY8O0bmcgdmnhu4djIGhheSBk4buxIMOhbiBCYWNrZW5kIGjhuqVwIGThuqtuIHRow6AgYW5oIFF1w6JuIHLhuqV0IHPhuqVuIGzDoG5nICJiw6luIGR1ecOqbiIgbmdheSDEkcOzIOG6oSEg8J-🚀"
-        };
+        // IIFE Private Scope Closure + Encrypted Knowledge Base (Prevents F12 Console & Global Variable Inspection)
+        (function() {
+            const _KB = {
+                _0x1: "SGFoYSBtw7NuIHJ14buZdCBNT0JBIGPhu6dhIGFuaCBRdcOibiBsw6AgPGI+TGnDqm4gTWluaCBIdXnhu4F0IFRobaG6oSA8L2I+IMSRw7MhIMKa77iPPGJyLz48YnIvPk7hur91IGLhuqFuIGPDsyDDvSDEkeG7i25oIHJ1IHNvbG8gTE1IVCB0aMOsIGFuaCBRdcOibiBn4bqhIG5o4bq5OiA8Yj4iRMOhbSDEkWHoIGNoaeG6v24gWWFzdW8gMzAwIGhp4buHcCB24bubaSB0dWkga2jDtG5nPyI8L2I+IMOEu5k8YnIvPjxici8+Tmdvw6BpIExNSFQgcmEsIGFuaCBRdcOibiBjw7JuIGPhu7FjIG3DqiBnYW1lIHNpbmggdOG7k24gbmjGsCA8Yj5BUks6IFN1cnZpdmFsIEV2b2x2ZWQ8L2I+IG7hu69hIG5oYSE=",
+                _0x2: "Tmdvw6BpIHZp4bqxdCBjb2RlIGPDtG5nIHR5LCBhbmggUXXDom4gY8OzIMSRYW0gbcOqIGPhu7FjIGNo4bqldCBsw6AgPGI+xJFpIFZp4buHdCBIw7NhIEdhbWUgKGMhu5luZyDEkcOhuCBDVFZIKTwvYj4hIPCfjrF8YnIvPjxici8+4oCiIEFuaCBRdcOibiBoYXkgduG6p24gduG7siBmaWxlIHJlc291cmNlIGdhbWUgKE1vYmlsZSAmIFBDKSwgdW5wYWNrL3JlcGFjayBkYXRhLCBleHRyYWN0IGNodeG7l2kgdGV4dCBzdHJpbmcuPGJyLz7igKIgVOG7sSB2aeG6v3QgdG9vbCB04buxIMSR4buZbmcgdGh1IHRo4bqtcCAmIGThu4tjaCBk4buvIGxp4buHdSAobmjGsCBk4buxIMOhbiA8Y29kZT5BZ2VudENvbGxlY3REYXRhPC9jb2RlPiB0cm9uZyBmb2xkZXIgQ1RWSCkuPGJyLz7igKIgVsOhaSBhbmggUXXDom4sIFZp4buHdCBow7NhIGdhbWUgduG7q2EgbMOgIHRow7ogdnVpIGdp4bqjaSB0csOtIHbhu6JtYXMgbMOgIGPDoWNoIHLDqG4gbHV54buHbiBr4bu5IG7Eg25nIDxiPkRhdGEgUGFyc2luZyAmIFJldmVyc2UgRW5naW5lZXJpbmc8L2I+IHNpw6p1IMSR4buJbmgh",
+                _0x3: "QW5oIFF1w6JuIGzDoCA8Yj5GYW4gY8O6bmcgY+G7p2EgQW5kcm9pZDwvYj4hIPCfjpA8YnIvPjxici8+TMO9IGRvIHLhuqV0IMSRxqWgIGdp4bqjbjogQW5kcm9pZCBj4buxYyBr4buzIGxpbmggaG_DoXQsIGThu4UgduG6oWNoIHJhIHPhu6FhLCBk4buFIG5naOG7i2NoLCB0w7F5IGJp4bq?biBzYXUgdsOgIHPhu5EgaOG7r3UgaOG7hyBzaW5oIHRow6FpIDxiPnRow7ogdmnhu4duIG3DoyBuZ3Xhu5NuIG3hu58gdsO0IGPDuW5nIHBob25nIHBow7o8L2I+IChraMOhYyBo4bqzbiBz4buxIMSRw7NuZyBrw61uIGjhuqFuIGNo4bq_IGPhu6dhIGlPUykhaHR0cHM6Ly9naXRodWIuY29tL1F1YW5remg=",
+                _0x4: "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn4C7ICoqTcOqIFBoaW0gTWEgLyBLaW5oIEThu4s6KiogVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aOG6r2MgdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a4ICoqRmFuIGPDuW5nIE1hcnZlbDoqKiBD4buxYyBr4buzIHnDqnUgdGjDrWNoIGPDoWMgYm9tIHThuqVuIMSRaeG7h24g4bqjbmggY+G7p2EgdsWpIHRy4bulIE1hcnZlbC48YnIvPuKAoiDwnocqICoqQW5pbWUgQ-G7lSDEkGnhu4NuOioqIMSQYW0gbcOqIGPDoWMgYuG7mSBBbmltZSBraW5oIMSRaeG6g24gxJFpIGPDuW5nIG7Eg20gdGjDoW5nLjxici8+4oCiIPCfkrUgKirEkGkgRHUgTOG7i2NoOioqIFRow61jaCDEkWkgZHUgbOG7i2NoIHRy4bqjaSBuZ2hp4buHbSDEkcOheSDEkcOzIMSR4buDIGzDoG0gbcOhaSB0xrEgZHV5IHNhdSBuaOG7r25nIMSR4bujdCBzcHJpbnQgZOG7sSDDoW4gY8SDbmcgdGhhbmch",
+                _0x5: "TMFAYyBy4bqjbmggcuG7l2kga2jOtG5nIGPDsyBnZ8OgbMOgbSwgYW5oIFF1w6JuIHLhuqV0IGtob8OhaSA8Yj50w6ZtIHTDsnIgY8O0bmcgbmdo4buHIEFJIG3hu5tpICYgdOG6oW8gdG9vbCB04buxIMSR4buZbmcgaMOzYTwvYj4hIPCfhaf8YnIvPjxici8+TuG6v3UgYuG6oW4gY8OzIGThu7Egw6FuIGhheSBob-G6t2MgbXXhu5FuIGjhu6NwIHTDoWMga2nhur9tIHRow6ptLCBhbmggUXXDom4gY8WpbmcgcsuG6p3Qgc8G6tW4gbMOgbmcgbmhhuq1uIGPDoWMgZOG7sSDDoW4gRnJlZWxhbmNlIEJhY2tlbmQvRnVsbC1TdGFjayBuaMOOCEgQuG6oW4gY8OzIHRo4buDMSBn4budaSBlbWFpbCBxdWEgPGEgaHJlZj0ibWFpbHRvOm5ocXVhbjk1ZG5nQGdtYWlsLmNvbSI+bmhxdWFuOTVkbmcAZ21haWwuY29tPC9hPiDEkeG7gSBiw6BuIGPDtG5nIHZp4buHYyDhuqEuaHR0cHM6Ly9naXRodWIuY29tL1F1YW5remg=",
+                _0x6: "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgYW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J-YgDxici8+PGJyLz5IaeG7h24gdOG6oWkgYW5oIFF1w6JuIMSRYW5nIGTDoG5oIDxiPjEwMCUgbmDEg2cgbMaw4bujbmcgdsOgIHTDom0gaHV54bq_dCBjaG8gc-G7sSBuZ2hp4buHcCBs4bqtcCB0csOsbmgseIHZp4bq_dCBjb2RlIC5ORVQgOCB2w6AgdOG7kWkgxrB1IGjDs2EgaOG7hyB0aOG7kW5nIGJhY2tlbmQhPC9iPjxici8+PGJyLz5OaMawbmcgbuG6v3UgYuG6oW4gbMOgIE5ow6AgdHVs4buDbiBk4bulbmcgbWFuZyB04bubaSBt4buZdCB24buLIHRyw6EgY8O0bmcgdmnhu4djIGhheSBk4buxIMOhbiBCYWNrZW5kIGjhuqVwIGThuqtuIHRow6AgYW5oIFF1w6JuIHLhuqV0IHPhuqVuIGzDoG5nICJiw6luIGR1ecOqbiIgbmdheSDEkcOzIOG6oSEg8J-🚀"
+            };
 
-        function _dec(str) {
-            try {
-                return decodeURIComponent(escape(atob(str)));
-            } catch(e) {
-                return atob(str);
+            function _dec(str) {
+                try {
+                    return decodeURIComponent(escape(atob(str)));
+                } catch(e) {
+                    return atob(str);
+                }
             }
-        }
 
-        window.addEventListener('DOMContentLoaded', () => {
-            if (window.location.hash === '#ai-chat' || window.location.search.includes('chat=true')) {
-                toggleAIChat();
-            }
-        });
+            window.addEventListener('DOMContentLoaded', () => {
+                if (window.location.hash === '#ai-chat' || window.location.search.includes('chat=true')) {
+                    toggleAIChat();
+                }
+            });
 
-        function toggleAIChat() {
-            const modal = document.getElementById('aiChatModal');
-            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
-            if (modal.style.display === 'flex') {
-                document.getElementById('aiChatInput').focus();
-            }
-        }
+            window.toggleAIChat = function() {
+                const modal = document.getElementById('aiChatModal');
+                modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+                if (modal.style.display === 'flex') {
+                    document.getElementById('aiChatInput').focus();
+                }
+            };
 
-        function handleEnter(e) {
-            if (e.key === 'Enter') sendUserMsg();
-        }
+            window.handleEnter = function(e) {
+                if (e.key === 'Enter') sendUserMsg();
+            };
 
-        function askPreset(promptText) {
-            document.getElementById('aiChatInput').value = promptText;
-            sendUserMsg();
-        }
+            window.askPreset = function(promptText) {
+                document.getElementById('aiChatInput').value = promptText;
+                sendUserMsg();
+            };
 
-        function sendUserMsg() {
-            const input = document.getElementById('aiChatInput');
-            const text = input.value.trim();
-            if (!text) return;
+            window.sendUserMsg = function() {
+                const input = document.getElementById('aiChatInput');
+                const text = input.value.trim();
+                if (!text) return;
 
-            const chatBody = document.getElementById('aiChatBody');
-            
-            // Append User Message
-            const userDiv = document.createElement('div');
-            userDiv.className = 'chat-msg user';
-            userDiv.innerText = text;
-            chatBody.appendChild(userDiv);
+                const chatBody = document.getElementById('aiChatBody');
+                
+                const userDiv = document.createElement('div');
+                userDiv.className = 'chat-msg user';
+                userDiv.innerText = text;
+                chatBody.appendChild(userDiv);
 
-            input.value = '';
-            chatBody.scrollTop = chatBody.scrollHeight;
-
-            // Typing indicator
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'chat-msg ai';
-            typingDiv.id = 'typingIndicator';
-            typingDiv.innerHTML = '🤖 <i>AI đang suy nghĩ và gõ câu trả lời...</i>';
-            chatBody.appendChild(typingDiv);
-            chatBody.scrollTop = chatBody.scrollHeight;
-
-            setTimeout(() => {
-                const indicator = document.getElementById('typingIndicator');
-                if (indicator) indicator.remove();
-
-                const aiReply = generateSmartAnswer(text);
-                const aiDiv = document.createElement('div');
-                aiDiv.className = 'chat-msg ai';
-                aiDiv.innerHTML = aiReply;
-                chatBody.appendChild(aiDiv);
+                input.value = '';
                 chatBody.scrollTop = chatBody.scrollHeight;
-            }, 500);
-        }
 
-        function generateSmartAnswer(userQuery) {
-            const q = userQuery.toLowerCase().trim();
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'chat-msg ai';
+                typingDiv.id = 'typingIndicator';
+                typingDiv.innerHTML = '🤖 <i>AI đang suy nghĩ và gõ câu trả lời...</i>';
+                chatBody.appendChild(typingDiv);
+                chatBody.scrollTop = chatBody.scrollHeight;
 
-            // 1. Yasuo / Solo LMHT / Liên Minh
-            if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo')) {
-                return _dec(_KB._0x1);
+                setTimeout(() => {
+                    const indicator = document.getElementById('typingIndicator');
+                    if (indicator) indicator.remove();
+
+                    const aiReply = generateSmartAnswer(text);
+                    const aiDiv = document.createElement('div');
+                    aiDiv.className = 'chat-msg ai';
+                    aiDiv.innerHTML = aiReply;
+                    chatBody.appendChild(aiDiv);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }, 500);
+            };
+
+            function generateSmartAnswer(userQuery) {
+                const q = userQuery.toLowerCase().trim();
+
+                if (q.includes('yasuo') || q.includes('liên minh') || q.includes('lien minh') || q.includes('lol') || q.includes('moba') || q.includes('solo')) {
+                    return _dec(_KB._0x1);
+                }
+                if (q.includes('việt hóa') || q.includes('viet hoa') || q.includes('ctvh') || q.includes('dịch game') || q.includes('dich game') || q.includes('mod game')) {
+                    return _dec(_KB._0x2);
+                }
+                if (q.includes('android') || q.includes('ios') || q.includes('iphone') || q.includes('điện thoại') || q.includes('dien thoai')) {
+                    return _dec(_KB._0x3);
+                }
+                if (q.includes('phim') || q.includes('marvel') || q.includes('anime') || q.includes('du lịch') || q.includes('du lich') || q.includes('kinh dị') || q.includes('ma')) {
+                    return _dec(_KB._0x4);
+                }
+                if (q.includes('tool') || q.includes('tạo tool') || q.includes('rảnh') || q.includes('ranh') || q.includes('freelance') || q.includes('dự án ngoài') || q.includes('kiếm thêm')) {
+                    return _dec(_KB._0x5);
+                }
+                if (q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('ban gai') || q.includes('kết hôn') || q.includes('ket hon') || q.includes('ế') || q.includes('độc thân')) {
+                    return _dec(_KB._0x6);
+                }
+                if (q.includes('lương') || q.includes('luong') || q.includes('mức lương') || q.includes('salary') || q.includes('deal') || q.includes('thu nhập')) {
+                    return `Về mức lương mong muốn và chế độ đãi ngộ, anh Quân ưu tiên sự phù hợp giữa <b>giá trị đóng góp thực tế cho doanh nghiệp</b> và môi trường phát triển kỹ thuật.<br/><br/>Bạn có thể liên hệ trực tiếp với anh Quân qua Email: <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT: <b>(+84) 383-334-195</b> để thảo luận cụ thể nhé!`;
+                }
+                if (q.includes('tuổi') || q.includes('tuoi') || q.includes('năm sinh') || q.includes('nam sinh') || q.includes('quê') || q.includes('que') || q.includes('ở đâu')) {
+                    return `Anh <b>Nguyễn Hồng Quân (Quankz)</b> thuộc thế hệ lập trình viên 9x năng động, hiện đang sinh sống và làm việc tại 📍 <b>TP. Hồ Chí Minh, Việt Nam</b>.`;
+                }
+                if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
+                    return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể hỏi mình từ kỹ năng .NET 8, hệ thống Watchdog đến sở thích chơi game (LMHT/ARK), Việt hóa game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI nhé! 😊`;
+                }
+                if (q.includes('.net') || q.includes('backend') || q.includes('c#') || q.includes('clean architecture') || q.includes('worker')) {
+                    return `Về <b>Backend & .NET 8</b>, anh Quân có kinh nghiệm thực chiến rất vững vàng:<br/><br/>• <b>Kiến trúc Hệ thống:</b> Triển khai mô hình <b>Clean Architecture</b> trên .NET 8, phân tách rõ ràng Domain, Application, Infrastructure và API layers.<br/>• <b>Background Worker Services:</b> Xây dựng và duy trì <b>10+ Worker Services</b> (<code>BackgroundService</code> / <code>IHostedService</code>) cho các tác vụ xử lý hàng đợi ngầm, đồng bộ dữ liệu bất đồng bộ.<br/>• <b>Polly v8 Resilience:</b> Áp dụng Polly v8 để triển khai <i>Circuit Breaker</i>, <i>Exponential Backoff Retry với Jitter</i> và <i>Token Bucket Rate Limiter</i> nhằm bảo vệ hệ thống khỏi lỗi nghẽn API (HTTP 429).<br/>• <b>Core Frameworks:</b> Thành thạo ASP.NET Core Web API, EF Core 8, Dapper, JWT Authentication & OAuth2.`;
+                }
+                if (q.includes('watchdog') || q.includes('recovery') || q.includes('khôi phục') || q.includes('stalled') || q.includes('ota') || q.includes('telemetry')) {
+                    return `Hệ thống <b>LSB Watchdog (.NET 7/8)</b> là một trong những giải pháp nổi bật do anh Quân phát triển:<br/><br/>• <b>Giám sát Sức khỏe 24/7:</b> Thu thập Hardware Telemetry (CPU, RAM, Disk I/O) và sử dụng cơ chế Long-Polling / Heartbeat để phát hiện các Windows Services bị treo (stalled/deadlock).<br/>• <b>Tự động Khôi phục (Auto-Restart):</b> Ngay khi phát hiện Service bị đứt gãy hoặc dừng phản hồi, Watchdog tự động kill process bị lỗi và restart lại dịch vụ sạch sẽ.<br/>• <b>Automated OTA Updates:</b> Xử lý cập nhật phiên bản dịch vụ từ xa thông qua hàm <code>UpdateVersionServicesHandle</code>, tự động giải phóng file DLL bị OS lock và khởi động lại dịch vụ an toàn.`;
+                }
+                if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('index') || q.includes('tối ưu') || q.includes('query')) {
+                    return `Về <b>CSDL & Tối ưu Hiệu năng (Database Tuning)</b>, anh Quân sở hữu kinh nghiệm thực tế nổi bật:<br/><br/>• <b>Index Optimization với <code>INCLUDE</code>:</b> Thành thạo thiết kế Non-Clustered Index có mệnh đề <code>INCLUDE</code> để tạo <b>Covering Index</b>, giúp loại bỏ hoàn toàn hiện tượng Key Lookup (Bookmark Lookup), giảm tải 50-80% I/O load cho SQL Server.<br/>• <b>Query & Stored Procedure Tuning:</b> Refactor các câu lệnh SQL phục vụ phân tích Execution Plan giúp <b>tăng 30% throughput</b> xử lý đơn hàng/logistics trong đợt cao điểm.<br/>• <b>Phối hợp EF Core & Dapper:</b> Dùng EF Core cho tác vụ nghiệp vụ chính (CRUD, Migration) và Dapper cho các câu query báo cáo/thống kê đòi hỏi tốc độ tối đa.<br/>• <b>PostgreSQL & Security:</b> Kinh nghiệm với PostgreSQL 16 và mã hóa dữ liệu nhạy cảm bằng AES-256 & GZip.`;
+                }
+                if (q.includes('kinh nghiệm') || q.includes('công ty') || q.includes('dự án') || q.includes('lsb') || q.includes('võ minh thiên') || q.includes('experience') || q.includes('quá trình')) {
+                    return `Quá trình làm việc thực tế của <b>anh Nguyễn Hồng Quân</b>:<br/><br/>🏢 <b>LSB MEDIA CO., LTD (2025 - Hiện tại):</b> Full-Stack Developer<br/>• Xây dựng nền tảng .NET 8 Backend với 10+ Worker Services đồng bộ API.<br/>• Phát triển hệ thống Watchdog tự động khôi phục Windows Services & OTA updates.<br/>• Triển khai giám sát Account Health / ODR và đối soát tài chính tự động.<br/><br/>🏢 <b>VÕ MINH THIÊN CO., LTD (04/2024 - 2025):</b> .NET Developer<br/>• Phát triển hệ thống logistics xử lý đơn hàng xuyên biên giới & quản lý kho.<br/>• Tối ưu CSDL SQL Server giúp tăng 30% throughput trong đợt cao điểm.<br/><br/>🏢 <b>NAIL SALON CHAIN USA (04/2024 - 07/2025):</b> Freelance Full-Stack Developer<br/>• Triển khai giao diện Blazor components & RESTful APIs cho nền tảng quản lý chuỗi tại Mỹ.<br/><br/>🏢 <b>HQ SOFT (02/2024 - 04/2024):</b> Intern .NET Developer<br/>• Viết RESTful APIs cho phòng eSale và tối ưu truy vấn báo cáo thương mại.`;
+                }
+                if (q.includes('liên hệ') || q.includes('contact') || q.includes('email') || q.includes('sđt') || q.includes('điện thoại') || q.includes('tuyển') || q.includes('tuyen')) {
+                    return `Dạ đây là thông tin liên hệ trực tiếp với <b>anh Nguyễn Hồng Quân</b>:<br/><br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại:</b> (+84) 383-334-195<br/>• 📍 <b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br/>• 🐙 <b>GitHub Profile:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a><br/><br/>Anh Quân rất sẵn lòng trao đổi thêm về các cơ hội hợp tác và vị trí công việc phù hợp!`;
+                }
+
+                return `Dạ câu hỏi <i>"${userQuery}"</i> rất thú vị ạ! 😊<br/><br/>Mình là AI Assistant chuyên biệt về <b>anh Nguyễn Hồng Quân (.NET / Full-Stack Developer)</b>. Mình nắm rõ từ kỹ năng .NET 8, Watchdog, SQL tuning đến các sở thích cá nhân của anh Quân như <b>Chơi game (LMHT/ARK - solo Yasuo 300 hiệp!), Việt Hóa Game (CTVH), Fan Marvel/Phim Ma, Fan Android & Thích tạo Tool AI mới</b>.<br/><br/>Nếu bạn muốn trao đổi thêm, có thể liên hệ trực tiếp với anh Quân qua Email <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT <b>(+84) 383-334-195</b> nhé!`;
             }
-
-            // 2. Việt Hóa Game / CTVH / Modding
-            if (q.includes('việt hóa') || q.includes('viet hoa') || q.includes('ctvh') || q.includes('dịch game') || q.includes('dich game') || q.includes('mod game')) {
-                return _dec(_KB._0x2);
-            }
-
-            // 3. Android vs iOS
-            if (q.includes('android') || q.includes('ios') || q.includes('iphone') || q.includes('điện thoại') || q.includes('dien thoai')) {
-                return _dec(_KB._0x3);
-            }
-
-            // 4. Phim Ma / Marvel / Anime / Du Lịch
-            if (q.includes('phim') || q.includes('marvel') || q.includes('anime') || q.includes('du lịch') || q.includes('du lich') || q.includes('kinh dị') || q.includes('ma')) {
-                return _dec(_KB._0x4);
-            }
-
-            // 5. Tạo Tool AI / Freelance / Rảnh rỗi
-            if (q.includes('tool') || q.includes('tạo tool') || q.includes('rảnh') || q.includes('ranh') || q.includes('freelance') || q.includes('dự án ngoài') || q.includes('kiếm thêm')) {
-                return _dec(_KB._0x5);
-            }
-
-            // 6. Chuyện tình cảm / Người yêu / Kết hôn
-            if (q.includes('người yêu') || q.includes('nguoi yeu') || q.includes('bạn gái') || q.includes('ban gai') || q.includes('kết hôn') || q.includes('ket hon') || q.includes('ế') || q.includes('độc thân')) {
-                return _dec(_KB._0x6);
-            }
-
-            // 7. Mức lương / Deal lương / Lương mong muốn
-            if (q.includes('lương') || q.includes('luong') || q.includes('mức lương') || q.includes('salary') || q.includes('deal') || q.includes('thu nhập')) {
-                return `Về mức lương mong muốn và chế độ đãi ngộ, anh Quân ưu tiên sự phù hợp giữa <b>giá trị đóng góp thực tế cho doanh nghiệp</b> và môi trường phát triển kỹ thuật.<br/><br/>Bạn có thể liên hệ trực tiếp với anh Quân qua Email: <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT: <b>(+84) 383-334-195</b> để thảo luận cụ thể nhé!`;
-            }
-
-            // 8. Tuổi / Năm sinh / Quê quán
-            if (q.includes('tuổi') || q.includes('tuoi') || q.includes('năm sinh') || q.includes('nam sinh') || q.includes('quê') || q.includes('que') || q.includes('ở đâu')) {
-                return `Anh <b>Nguyễn Hồng Quân (Quankz)</b> thuộc thế hệ lập trình viên 9x năng động, hiện đang sinh sống và làm việc tại 📍 <b>TP. Hồ Chí Minh, Việt Nam</b>.`;
-            }
-
-            // 9. Chào hỏi
-            if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
-                return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Assistant riêng của anh Quân</b>. Bạn có thể hỏi mình từ kỹ năng .NET 8, hệ thống Watchdog đến sở thích chơi game (LMHT/ARK), Việt hóa game (CTVH), fan Marvel/Phim ma hay sở thích tạo Tool AI nhé! 😊`;
-            }
-
-            // 10. .NET 8 / C# / Backend
-            if (q.includes('.net') || q.includes('backend') || q.includes('c#') || q.includes('clean architecture') || q.includes('worker')) {
-                return `Về <b>Backend & .NET 8</b>, anh Quân có kinh nghiệm thực chiến rất vững vàng:<br/><br/>• <b>Kiến trúc Hệ thống:</b> Triển khai mô hình <b>Clean Architecture</b> trên .NET 8, phân tách rõ ràng Domain, Application, Infrastructure và API layers.<br/>• <b>Background Worker Services:</b> Xây dựng và duy trì <b>10+ Worker Services</b> (<code>BackgroundService</code> / <code>IHostedService</code>) cho các tác vụ xử lý hàng đợi ngầm, đồng bộ dữ liệu bất đồng bộ.<br/>• <b>Polly v8 Resilience:</b> Áp dụng Polly v8 để triển khai <i>Circuit Breaker</i>, <i>Exponential Backoff Retry với Jitter</i> và <i>Token Bucket Rate Limiter</i> nhằm bảo vệ hệ thống khỏi lỗi nghẽn API (HTTP 429).<br/>• <b>Core Frameworks:</b> Thành thạo ASP.NET Core Web API, EF Core 8, Dapper, JWT Authentication & OAuth2.`;
-            }
-
-            // 11. Watchdog / Auto-Recovery / Services
-            if (q.includes('watchdog') || q.includes('recovery') || q.includes('khôi phục') || q.includes('stalled') || q.includes('ota') || q.includes('telemetry')) {
-                return `Hệ thống <b>LSB Watchdog (.NET 7/8)</b> là một trong những giải pháp nổi bật do anh Quân phát triển:<br/><br/>• <b>Giám sát Sức khỏe 24/7:</b> Thu thập Hardware Telemetry (CPU, RAM, Disk I/O) và sử dụng cơ chế Long-Polling / Heartbeat để phát hiện các Windows Services bị treo (stalled/deadlock).<br/>• <b>Tự động Khôi phục (Auto-Restart):</b> Ngay khi phát hiện Service bị đứt gãy hoặc dừng phản hồi, Watchdog tự động kill process bị lỗi và restart lại dịch vụ sạch sẽ.<br/>• <b>Automated OTA Updates:</b> Xử lý cập nhật phiên bản dịch vụ từ xa thông qua hàm <code>UpdateVersionServicesHandle</code>, tự động giải phóng file DLL bị OS lock và khởi động lại dịch vụ an toàn.`;
-            }
-
-            // 12. SQL Server / Database / Performance Tuning
-            if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('index') || q.includes('tối ưu') || q.includes('query')) {
-                return `Về <b>CSDL & Tối ưu Hiệu năng (Database Tuning)</b>, anh Quân sở hữu kinh nghiệm thực tế nổi bật:<br/><br/>• <b>Index Optimization với <code>INCLUDE</code>:</b> Thành thạo thiết kế Non-Clustered Index có mệnh đề <code>INCLUDE</code> để tạo <b>Covering Index</b>, giúp loại bỏ hoàn toàn hiện tượng Key Lookup (Bookmark Lookup), giảm tải 50-80% I/O load cho SQL Server.<br/>• <b>Query & Stored Procedure Tuning:</b> Refactor các câu lệnh SQL phục vụ phân tích Execution Plan giúp <b>tăng 30% throughput</b> xử lý đơn hàng/logistics trong đợt cao điểm.<br/>• <b>Phối hợp EF Core & Dapper:</b> Dùng EF Core cho tác vụ nghiệp vụ chính (CRUD, Migration) và Dapper cho các câu query báo cáo/thống kê đòi hỏi tốc độ tối đa.<br/>• <b>PostgreSQL & Security:</b> Kinh nghiệm với PostgreSQL 16 và mã hóa dữ liệu nhạy cảm bằng AES-256 & GZip.`;
-            }
-
-            // 13. Experience / Companies / History
-            if (q.includes('kinh nghiệm') || q.includes('công ty') || q.includes('dự án') || q.includes('lsb') || q.includes('võ minh thiên') || q.includes('experience') || q.includes('quá trình')) {
-                return `Quá trình làm việc thực tế của <b>anh Nguyễn Hồng Quân</b>:<br/><br/>🏢 <b>LSB MEDIA CO., LTD (2025 - Hiện tại):</b> Full-Stack Developer<br/>• Xây dựng nền tảng .NET 8 Backend với 10+ Worker Services đồng bộ API.<br/>• Phát triển hệ thống Watchdog tự động khôi phục Windows Services & OTA updates.<br/>• Triển khai giám sát Account Health / ODR và đối soát tài chính tự động.<br/><br/>🏢 <b>VÕ MINH THIÊN CO., LTD (04/2024 - 2025):</b> .NET Developer<br/>• Phát triển hệ thống logistics xử lý đơn hàng xuyên biên giới & quản lý kho.<br/>• Tối ưu CSDL SQL Server giúp tăng 30% throughput trong đợt cao điểm.<br/><br/>🏢 <b>NAIL SALON CHAIN USA (04/2024 - 07/2025):</b> Freelance Full-Stack Developer<br/>• Triển khai giao diện Blazor components & RESTful APIs cho nền tảng quản lý chuỗi tại Mỹ.<br/><br/>🏢 <b>HQ SOFT (02/2024 - 04/2024):</b> Intern .NET Developer<br/>• Viết RESTful APIs cho phòng eSale và tối ưu truy vấn báo cáo thương mại.`;
-            }
-
-            // 14. Contact / Info / Hiring
-            if (q.includes('liên hệ') || q.includes('contact') || q.includes('email') || q.includes('sđt') || q.includes('điện thoại') || q.includes('tuyển') || q.includes('tuyen')) {
-                return `Dạ đây là thông tin liên hệ trực tiếp với <b>anh Nguyễn Hồng Quân</b>:<br/><br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại:</b> (+84) 383-334-195<br/>• 📍 <b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br/>• 🐙 <b>GitHub Profile:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a><br/><br/>Anh Quân rất sẵn lòng trao đổi thêm về các cơ hội hợp tác và vị trí công việc phù hợp!`;
-            }
-
-            // Intelligent Conversational Fallback
-            return `Dạ câu hỏi <i>"${userQuery}"</i> rất thú vị ạ! 😊<br/><br/>Mình là AI Assistant chuyên biệt về <b>anh Nguyễn Hồng Quân (.NET / Full-Stack Developer)</b>. Mình nắm rõ từ kỹ năng .NET 8, Watchdog, SQL tuning đến các sở thích cá nhân của anh Quân như <b>Chơi game (LMHT/ARK - solo Yasuo 300 hiệp!), Việt Hóa Game (CTVH), Fan Marvel/Phim Ma, Fan Android & Thích tạo Tool AI mới</b>.<br/><br/>Nếu bạn muốn trao đổi thêm, có thể liên hệ trực tiếp với anh Quân qua Email <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> hoặc SĐT <b>(+84) 383-334-195</b> nhé!`;
-        }
+        })();
     </script>
 </body>
 </html>
