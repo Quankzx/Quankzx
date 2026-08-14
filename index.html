@@ -140,7 +140,7 @@
             color: white;
             border: none;
             border-radius: 50px;
-            padding: 12px 20px;
+            padding: 12px 22px;
             font-weight: 600;
             font-size: 10pt;
             box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
@@ -159,9 +159,9 @@
             position: fixed;
             bottom: 84px;
             right: 24px;
-            width: 380px;
+            width: 400px;
             max-width: calc(100vw - 32px);
-            height: 520px;
+            height: 540px;
             max-height: calc(100vh - 120px);
             background: #ffffff;
             border-radius: 16px;
@@ -191,14 +191,14 @@
             gap: 10px;
         }
         .ai-avatar {
-            width: 34px;
-            height: 34px;
+            width: 36px;
+            height: 36px;
             background: #7c3aed;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 18px;
         }
         .ai-header-text h4 {
             margin: 0;
@@ -238,11 +238,11 @@
             gap: 12px;
         }
         .chat-msg {
-            max-width: 85%;
-            padding: 10px 14px;
+            max-width: 88%;
+            padding: 11px 15px;
             border-radius: 12px;
             font-size: 9pt;
-            line-height: 1.45;
+            line-height: 1.5;
         }
         .chat-msg.ai {
             background: #ffffff;
@@ -261,14 +261,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 6px;
+            margin-top: 10px;
         }
         .chip-btn {
             background: #f1f5f9;
             border: 1px solid #cbd5e1;
             color: #334155;
             border-radius: 20px;
-            padding: 4px 10px;
+            padding: 5px 12px;
             font-size: 8pt;
             cursor: pointer;
             transition: all 0.2s;
@@ -289,7 +289,7 @@
             flex: 1;
             border: 1px solid #cbd5e1;
             border-radius: 20px;
-            padding: 8px 14px;
+            padding: 9px 16px;
             font-size: 9pt;
             outline: none;
             transition: border-color 0.2s;
@@ -302,8 +302,8 @@
             color: white;
             border: none;
             border-radius: 50%;
-            width: 34px;
-            height: 34px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -439,7 +439,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | Instant Answers</p>
+                    <p><span class="online-dot"></span> Online | Natural NLP Engine</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -447,18 +447,19 @@
         
         <div class="ai-chat-body" id="aiChatBody">
             <div class="chat-msg ai">
-                Hi! 👋 I'm Quan's AI Recruiter Assistant. Ask me anything about Quan's .NET 8 experience, SQL optimization, Watchdog auto-recovery, or tech stack!
+                Dạ chào bạn! 👋 Mình là AI Assistant của anh Nguyễn Hồng Quân (Quankz). Mình rất sẵn lòng chia sẻ chi tiết về kinh nghiệm làm .NET 8, hệ thống Watchdog tự khôi phục, tối ưu SQL Server hay quá trình làm việc của anh Quân!
                 <div class="ai-suggestions">
-                    <button class="chip-btn" onclick="askPreset('Core .NET 8 & Backend Skills?')">💡 .NET 8 Skills</button>
-                    <button class="chip-btn" onclick="askPreset('Watchdog & Auto-Recovery system?')">⚙️ Watchdog System</button>
-                    <button class="chip-btn" onclick="askPreset('SQL Server optimization experience?')">🛢️ SQL Optimization</button>
-                    <button class="chip-btn" onclick="askPreset('How to contact Quan?')">✉️ Contact Info</button>
+                    <button class="chip-btn" onclick="askPreset('Kinh nghiệm .NET 8 & Backend?')">💡 .NET 8 & Backend</button>
+                    <button class="chip-btn" onclick="askPreset('Hệ thống Watchdog hoạt động thế nào?')">⚙️ Watchdog System</button>
+                    <button class="chip-btn" onclick="askPreset('Kinh nghiệm tối ưu CSDL SQL Server?')">🛢️ Tối ưu SQL Server</button>
+                    <button class="chip-btn" onclick="askPreset('Quá trình làm việc tại các công ty?')">🏢 Các công ty đã làm</button>
+                    <button class="chip-btn" onclick="askPreset('Thông tin liên hệ trực tiếp với Quân?')">✉️ Liên hệ trực tiếp</button>
                 </div>
             </div>
         </div>
 
         <div class="ai-chat-footer">
-            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Ask about Quan's background..." onkeypress="handleEnter(event)" />
+            <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Hỏi AI bất kỳ điều gì về anh Quân..." onkeypress="handleEnter(event)" />
             <button class="ai-send-btn" onclick="sendUserMsg()">➔</button>
         </div>
     </div>
@@ -507,7 +508,7 @@
             const typingDiv = document.createElement('div');
             typingDiv.className = 'chat-msg ai';
             typingDiv.id = 'typingIndicator';
-            typingDiv.innerText = '🤖 AI is thinking...';
+            typingDiv.innerText = '🤖 AI đang phân tích câu hỏi...';
             chatBody.appendChild(typingDiv);
             chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -521,32 +522,49 @@
                 aiDiv.innerHTML = aiReply;
                 chatBody.appendChild(aiDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;
-            }, 600);
+            }, 500);
         }
 
-        function generateAIAnswer(query) {
-            const q = query.toLowerCase();
+        function generateAIAnswer(userQuery) {
+            const q = userQuery.toLowerCase().trim();
 
-            if (q.includes('.net') || q.includes('backend') || q.includes('c#')) {
-                return `<b>🟣 .NET 8 & Backend Experience:</b><br/>• Architected .NET 8 Clean Architecture platforms with 10+ Background Worker Services.<br/>• Proficient in ASP.NET Core Web API, EF Core 8, Dapper & RESTful APIs.<br/>• Applied Polly v8 resilience pipelines (Circuit Breaker, Exponential Backoff Retry with Jitter).`;
-            }
-            if (q.includes('watchdog') || q.includes('recovery') || q.includes('service')) {
-                return `<b>🛡️ Watchdog & Service Auto-Recovery:</b><br/>• Developed .NET 7/8 Watchdog platform with hardware telemetry (CPU/RAM/Disk).<br/>• Automated detection and restart for stalled Windows Services 24/7.<br/>• Zero-touch OTA deployment updates via <code>UpdateVersionServicesHandle</code>.`;
-            }
-            if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('query')) {
-                return `<b>🛢️ SQL & Database Optimization:</b><br/>• High expertise in MS SQL Server & PostgreSQL 16.<br/>• Index Optimization using <code>INCLUDE</code> clause (Covering Index) to eliminate Key Lookups.<br/>• Increased order processing throughput by 30% through query & stored procedure tuning.`;
-            }
-            if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('hire')) {
-                return `<b>✉️ Contact Information:</b><br/>• <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• <b>Phone:</b> (+84) 383-334-195<br/>• <b>Location:</b> Ho Chi Minh City, Vietnam<br/>• <b>GitHub:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a>`;
-            }
-            if (q.includes('ai') || q.includes('mcp') || q.includes('claude')) {
-                return `<b>🤖 AI & MCP Integration:</b><br/>• Experienced in LLM-Assisted Engineering (Claude, ChatGPT, Copilot).<br/>• Model Context Protocol (MCP) integration for automated dev tools.<br/>• AI-driven code review, security auditing & unit test generation.`;
-            }
-            if (q.includes('react') || q.includes('frontend') || q.includes('blazor')) {
-                return `<b>🎨 Frontend & UI Skills:</b><br/>• Skilled in React 18, TypeScript, Vite, TailwindCSS & JsonForms.<br/>• Blazor component development for business management portals.`;
+            // 1. Chào hỏi
+            if (q.match(/^(chào|hi|hello|xin chào|hei|hey|chao)/i)) {
+                return `Dạ chào bạn! 👋 Rất vui được đón tiếp bạn ghé thăm Profile của <b>anh Nguyễn Hồng Quân</b>.<br/><br/>Mình là <b>AI Recruiter Assistant riêng của anh Quân</b>. Mình có thể chia sẻ chi tiết về kinh nghiệm làm <b>.NET 8, SQL Server tuning, hệ thống Watchdog tự khôi phục dịch vụ</b>, cũng như quá trình làm việc thực tế của anh Quân.<br/><br/>Bạn muốn tìm hiểu thêm về khía cạnh kỹ thuật nào ạ?`;
             }
 
-            return `<b>🤖 Quan's AI Assistant:</b><br/>Quan is a <b>Full-Stack / .NET Developer</b> specializing in .NET 8 Web APIs, Background Worker Services, Watchdog Auto-Recovery, and SQL Server optimization.<br/><br/>Feel free to ask about his .NET 8 experience, SQL tuning, or contact info!`;
+            // 2. .NET 8 / C# / Backend
+            if (q.includes('.net') || q.includes('backend') || q.includes('c#') || q.includes('clean architecture') || q.includes('worker')) {
+                return `Về <b>Backend & .NET 8</b>, anh Quân có kinh nghiệm thực chiến rất vững vàng:<br/><br/>• <b>Kiến trúc Hệ thống:</b> Triển khai mô hình <b>Clean Architecture</b> trên .NET 8, phân tách rõ ràng Domain, Application, Infrastructure và API layers.<br/>• <b>Background Worker Services:</b> Xây dựng và duy trì <b>10+ Worker Services</b> (<code>BackgroundService</code> / <code>IHostedService</code>) cho các tác vụ xử lý hàng đợi ngầm, đồng bộ dữ liệu bất đồng bộ.<br/>• <b>Polly v8 Resilience:</b> Áp dụng Polly v8 để triển khai <i>Circuit Breaker</i>, <i>Exponential Backoff Retry với Jitter</i> và <i>Token Bucket Rate Limiter</i> nhằm bảo vệ hệ thống khỏi lỗi nghẽn API (HTTP 429).<br/>• <b>Core Frameworks:</b> Thành thạo ASP.NET Core Web API, EF Core 8, Dapper, JWT Authentication & OAuth2.`;
+            }
+
+            // 3. Watchdog / Auto-Recovery / Services
+            if (q.includes('watchdog') || q.includes('recovery') || q.includes('khôi phục') || q.includes('stalled') || q.includes('ota') || q.includes('telemetry')) {
+                return `Hệ thống <b>LSB Watchdog (.NET 7/8)</b> là một trong những giải pháp nổi bật do anh Quân phát triển:<br/><br/>• <b>Giám sát Sức khỏe 24/7:</b> Thu thập Hardware Telemetry (CPU, RAM, Disk I/O) và sử dụng cơ chế Long-Polling / Heartbeat để phát hiện các Windows Services bị treo (stalled/deadlock).<br/>• <b>Tự động Khôi phục (Auto-Restart):</b> Ngay khi phát hiện Service bị đứt gãy hoặc dừng phản hồi, Watchdog tự động kill process bị lỗi và restart lại dịch vụ sạch sẽ.<br/>• <b>Automated OTA Updates:</b> Xử lý cập nhật phiên bản dịch vụ từ xa thông qua hàm <code>UpdateVersionServicesHandle</code>, tự động giải phóng file DLL bị OS lock và khởi động lại dịch vụ an toàn.`;
+            }
+
+            // 4. SQL Server / Database / Performance Tuning
+            if (q.includes('sql') || q.includes('database') || q.includes('postgres') || q.includes('index') || q.includes('tối ưu') || q.includes('query')) {
+                return `Về <b>CSDL & Tối ưu Hiệu năng (Database Tuning)</b>, anh Quân sở hữu kinh nghiệm thực tế nổi bật:<br/><br/>• <b>Index Optimization với <code>INCLUDE</code>:</b> Thành thạo thiết kế Non-Clustered Index có mệnh đề <code>INCLUDE</code> để tạo <b>Covering Index</b>, giúp loại bỏ hoàn toàn hiện tượng Key Lookup (Bookmark Lookup), giảm tải 50-80% I/O load cho SQL Server.<br/>• <b>Query & Stored Procedure Tuning:</b> Refactor các câu lệnh SQL phức tạp, phân tích Execution Plan giúp <b>tăng 30% throughput</b> xử lý đơn hàng/logistics trong đợt cao điểm.<br/>• <b>Phối hợp EF Core & Dapper:</b> Dùng EF Core cho tác vụ nghiệp vụ chính (CRUD, Migration) và Dapper cho các câu query báo cáo/thống kê đòi hỏi tốc độ tối đa.<br/>• <b>PostgreSQL & Security:</b> Kinh nghiệm với PostgreSQL 16 và mã hóa dữ liệu nhạy cảm bằng AES-256 & GZip.`;
+            }
+
+            // 5. Experience / Companies / History
+            if (q.includes('kinh nghiệm') || q.includes('công ty') || q.includes('dự án') || q.includes('lsb') || q.includes('võ minh thiên') || q.includes('experience') || q.includes('quá trình')) {
+                return `Quá trình làm việc thực tế của <b>anh Nguyễn Hồng Quân</b>:<br/><br/>🏢 <b>LSB MEDIA CO., LTD (2025 - Hiện tại):</b> Full-Stack Developer<br/>• Xây dựng nền tảng .NET 8 Backend với 10+ Worker Services đồng bộ API.<br/>• Phát triển hệ thống Watchdog tự động khôi phục Windows Services & OTA updates.<br/>• Triển khai giám sát Account Health / ODR và đối soát tài chính tự động.<br/><br/>🏢 <b>VÕ MINH THIÊN CO., LTD (04/2024 - 2025):</b> .NET Developer<br/>• Phát triển hệ thống logistics xử lý đơn hàng xuyên biên giới & quản lý kho.<br/>• Tối ưu CSDL SQL Server giúp tăng 30% throughput trong đợt cao điểm.<br/><br/>🏢 <b>NAIL SALON CHAIN USA (04/2024 - 07/2025):</b> Freelance Full-Stack Developer<br/>• Triển khai giao diện Blazor components & RESTful APIs cho nền tảng quản lý chuỗi tại Mỹ.<br/><br/>🏢 <b>HQ SOFT (02/2024 - 04/2024):</b> Intern .NET Developer<br/>• Viết RESTful APIs cho phòng eSale và tối ưu truy vấn báo cáo thương mại.`;
+            }
+
+            // 6. AI & MCP Protocol
+            if (q.includes('ai') || q.includes('mcp') || q.includes('claude') || q.includes('copilot') || q.includes('prompt')) {
+                return `Về <b>Kỹ năng AI & Tự động hóa Workflow</b>:<br/><br/>• <b>LLM-Assisted Engineering:</b> Thành thạo ứng dụng AI (Claude 3.5, ChatGPT, GitHub Copilot) vào quy trình lập trình hằng ngày để tăng tốc độ phát triển.<br/>• <b>Model Context Protocol (MCP):</b> Tích hợp và khai thác giao thức MCP để kết nối các công cụ dev với AI.<br/>• <b>AI Code Review & Verification:</b> Có năng lực thẩm định, kiểm tra độ an toàn (Security), phát hiện edge-cases và tối ưu hiệu năng đối với code do AI sinh ra.`;
+            }
+
+            // 7. Contact / Info / Hiring
+            if (q.includes('liên hệ') || q.includes('contact') || q.includes('email') || q.includes('sđt') || q.includes('điện thoại') || q.includes('tuyển') || q.includes('tuyen')) {
+                return `Dạ đây là thông tin liên hệ trực tiếp với <b>anh Nguyễn Hồng Quân</b>:<br/><br/>• ✉️ <b>Email:</b> <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a><br/>• 📞 <b>Số điện thoại:</b> (+84) 383-334-195<br/>• 📍 <b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam<br/>• 🐙 <b>GitHub Profile:</b> <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a><br/><br/>Anh Quân rất sẵn lòng trao đổi thêm về các cơ hội hợp tác và vị trí công việc phù hợp!`;
+            }
+
+            // Default Fallback
+            return `Cảm ơn bạn đã đặt câu hỏi! 😊<br/><br/><b>Anh Nguyễn Hồng Quân</b> là một <b>.NET / Full-Stack Developer</b> chuyên sâu về <b>.NET 8 Web APIs, Background Worker Services, Watchdog Auto-Recovery, SQL Server Optimization</b> và <b>React/Blazor</b>.<br/><br/>Bạn có thể bấm vào các nút gợi ý bên dưới hoặc hỏi mình chi tiết về:<br/>1. <i>Kinh nghiệm .NET 8 & Backend</i><br/>2. <i>Hệ thống Watchdog tự khôi phục</i><br/>3. <i>Tối ưu hóa CSDL SQL Server</i><br/>4. <i>Thông tin liên hệ trực tiếp</i>`;
         }
     </script>
 </body>
