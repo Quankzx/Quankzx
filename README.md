@@ -63,16 +63,15 @@
 
 ---
 
-### 📊 GitHub Activity Stats
+### 📈 Contribution Activity Graph
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Quankzx&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="Quankzx's GitHub Stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Quankzx&layout=compact&theme=dark&hide_border=true" alt="Top Languages" height="165" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Quankzx&theme=github-dark&hide_border=true" alt="Quankzx's GitHub Activity Graph" width="100%" />
 </div>
 
 ---
 
-### 🐍 Contribution Graph (Snake Animation)
+### 🐍 Contribution Activity (Snake Game)
 
 <div align="center">
   <picture>
