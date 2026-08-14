@@ -10,9 +10,9 @@
   </p>
 
   <p>
-    📄 <b>View Resume / CV:</b> 
-    <a href="./NguyenHongQuan_CV_Harvard_Format.md"><b>Markdown Format</b></a> | 
-    <a href="./NguyenHongQuan_CV_Harvard_Format.html"><b>HTML Format</b></a>
+    📄 <b>View My Resume / CV:</b> 
+    <a href="./NguyenHongQuan_CV_Harvard_Format.md"><b>Markdown Version</b></a> | 
+    <a href="https://htmlpreview.github.io/?https://github.com/Quankzx/Quankzx/blob/main/NguyenHongQuan_CV_Harvard_Format.html" target="_blank"><b>Web HTML Render</b></a>
   </p>
 
 </div>
@@ -28,11 +28,9 @@
 
 ---
 
-### 🛠️ Tech Stack & Skills
+### 🛠️ Tech Stack & Core Competencies
 
-<details open>
-<summary><b>Backend Engineering</b></summary>
-<br />
+#### 🟢 Backend Engineering
 <p align="left">
   <img src="https://img.shields.io/badge/.NET%208-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET 8" />
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
@@ -42,11 +40,8 @@
   <img src="https://img.shields.io/badge/Polly%20v8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="Polly" />
   <img src="https://img.shields.io/badge/Serilog-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="Serilog" />
 </p>
-</details>
 
-<details open>
-<summary><b>Frontend & Web Engineering</b></summary>
-<br />
+#### 🔵 Frontend & Web Engineering
 <p align="left">
   <img src="https://img.shields.io/badge/React%2018-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
@@ -55,11 +50,8 @@
   <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
   <img src="https://img.shields.io/badge/Blazor-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="Blazor" />
 </p>
-</details>
 
-<details open>
-<summary><b>Databases, AI & Tools</b></summary>
-<br />
+#### 🟣 Databases, AI & Infrastructure
 <p align="left">
   <img src="https://img.shields.io/badge/MS%20SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="MS SQL Server" />
   <img src="https://img.shields.io/badge/PostgreSQL%2016-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL 16" />
@@ -68,34 +60,19 @@
   <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" />
   <img src="https://img.shields.io/badge/MCP%20Protocol-000000?style=for-the-badge&logo=anthropic&logoColor=white" alt="MCP Protocol" />
 </p>
-</details>
 
 ---
 
-### 🏆 GitHub Trophies
+### 📊 GitHub Activity Stats
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Quankzx&theme=tokyonight&no-frame=true&margin-w=15" alt="GitHub Trophies" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Quankzx&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="Quankzx's GitHub Stats" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Quankzx&layout=compact&theme=dark&hide_border=true" alt="Top Languages" height="165" />
 </div>
 
 ---
 
-### 📊 GitHub Activity & Metrics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Quankzx&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Quankzx's GitHub Stats" height="175" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Quankzx&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="175" />
-</div>
-
-<br />
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Quankzx&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</div>
-
----
-
-### 🐍 Contribution Activity
+### 🐍 Contribution Graph (Snake Animation)
 
 <div align="center">
   <picture>
