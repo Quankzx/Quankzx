@@ -868,10 +868,11 @@
                 input.value = '';
                 chatBody.scrollTop = chatBody.scrollHeight;
 
+                const lang = _detectLang(text);
                 const typingDiv = document.createElement('div');
                 typingDiv.className = 'chat-msg ai';
                 typingDiv.id = 'typingIndicator';
-                typingDiv.innerHTML = '🤖 <i>Gemini AI đang suy luận và gõ câu trả lời...</i>';
+                typingDiv.innerHTML = lang === 'en' ? '🤖 <i>Quan\'s Assistant is thinking...</i>' : '🤖 <i>Trợ lý của Quân đang suy nghĩ...</i>';
                 chatBody.appendChild(typingDiv);
                 chatBody.scrollTop = chatBody.scrollHeight;
 
