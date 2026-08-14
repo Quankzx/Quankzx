@@ -342,8 +342,8 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(8px);
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(10px);
             display: none;
             align-items: center;
             justify-content: center;
@@ -361,7 +361,7 @@
             max-width: calc(100vw - 40px);
             padding: 24px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             border: 2px solid #ef4444;
             animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
@@ -427,6 +427,14 @@
     </style>
 </head>
 <body>
+
+    <noscript>
+        <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0f172a;color:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999999;text-align:center;padding:20px;">
+            <img src="./dog_f12.png" style="max-width:360px;border-radius:16px;margin-bottom:20px;border:3px solid #ef4444;" alt="Chó cắn nè" />
+            <h2 style="color:#ef4444;font-size:18pt;margin-bottom:10px;">🐕 TẮT JAVASCRIPT ĐỊNH SOI CODE HẢ? CHÓ CẮN NHA! 🐶</h2>
+            <p style="font-size:11pt;max-width:500px;line-height:1.6;">Tắt JavaScript để định qua mặt Anti-F12 đúng không? Chó cắn đấy nha! 🤣<br/>Hãy bật lại JavaScript để xem Web CV siêu xịn của anh Nguyễn Hồng Quân nhé!</p>
+        </div>
+    </noscript>
 
     <div class="header-actions">
         <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
@@ -531,7 +539,7 @@
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-header-text">
                     <h4>Quan's AI Recruiter Assistant</h4>
-                    <p><span class="online-dot"></span> Online | UTF-8 Protected Engine</p>
+                    <p><span class="online-dot"></span> Online | Anti-Deletable Protection</p>
                 </div>
             </div>
             <button class="ai-close-btn" onclick="toggleAIChat()">✕</button>
@@ -581,7 +589,7 @@
     </div>
 
     <script>
-        // IIFE Private Scope Closure + Clean UTF-8 Encrypted Knowledge Base
+        // IIFE Private Scope Closure + Clean UTF-8 Encrypted Knowledge Base + DOM Mutation Guard
         (function() {
             const _KB = {
                 "_0x1": "SGFoYSBtw7NuIHJ14buZdCBNT0JBIGPhu6dhIGFuaCBRdcOibiBsw6AgPGI+TGnDqm4gTWluaCBIdXnhu4FuIFRob+G6oWk8L2I+IMSRw7MhIOKalO+4jzxici8+PGJyLz5O4bq/dSBi4bqhbiBjw7Mgw70gxJHhu4tuaCBy4bunIHNvbG8gTE1IVCB0aMOsIGFuaCBRdcOibiBn4bqhIG5o4bq5OiA8Yj4iRMOhbSDEkeG6oWkgY2hp4bq/biBZYXN1byAzMDAgaGnhu4dwIHbhu5tpIHR1aSBraMO0bmc/IjwvYj4g8J+YiTxici8+PGJyLz5OZ2/DoGkgTE1IVCByYSwgYW5oIFF1w6JuIGPDsm4gY+G7sWMgbcOqIGdhbWUgc2luaCB04buTbiBuaMawIDxiPkFSSzogU3Vydml2YWwgRXZvbHZlZDwvYj4gbuG7r2EgbmhhIQ==",
@@ -590,7 +598,7 @@
                 "_0x4": "R291dCBnaeG6o2kgdHLDrSBj4bunYSBhbmggUXXDom4gcuG6p3QgY2jhuqF0IHbDoCBjw6EgdMOtbmg6PGJyLz48YnIvPuKAoiDwn5G7IDxiPk3DqiBQaGltIE1hIC8gS2luaCBE4buLOjwvYj4gVOG7kWkgdOG7kWkgbmfhu5NpIGPDoHkgcGhpbSBtYSB0aOG7rSB0aMOhY2ggdGluaCB0aOG6p24gbMOgIGPDoWNoIHjhuqMgc3RyZXNzIGPhu7FjIHBoacOqdSE8YnIvPuKAoiDwn6a44oCN4pmC77iPIDxiPkZhbiBj4bupbmcgTWFydmVsOjwvYj4gQ+G7sWMga+G7syB5w6p1IHRow61jaCBjw6FjIGJvbXRoYW5kIMSRaeG7h24g4bqjbmggY+G7p2EgdsWpIHRy4bulIE1hcnZlbC48YnIvPuKAoiDim6nvuI8gPGI+QW5pbWUgQ+G7lSDEkGnhu4NuOjwvYj4gxJBhbSBtw6ogY8OhYyBi4buZIEFuaW1lIGtpbmggxJFp4buDbiDEkWkgY8O5bmcgbsSDbSB0aMOhbmcuPGJyLz7igKIg4pyI77iPIDxiPsSQaSBEdSBM4buLY2g6PC9iPiBUaMOtY2ggxJFpIGR1IGzhu4tjaCB0cuG6o2kgbmdoaeG7h20gxJHhonkgxJHDsyDEkeG7gyBsw6BtIG3hu5tpIHTGsCBkdXkgc2F1IG5o4buvbmcgxJHhu6N0IHNwcmludCBk4buxIMOhbiBjxINuZyB0aOG6s25nIQ==",
                 "_0x5": "TMO6YyBy4bqjbmggcuG7l2kga2jDtG5nIGPDsyBnw6wgbMOgbSwgYW5oIFF1w6JuIHLhuqV0IGtob8OhaSA8Yj50w6ptIHTDsmkgY8O0bmcgbmdo4buHIEFJIG3hu5tpICYgdOG6oW8gdG9vbCB04buxIMSR4buZbmcgaMOzYTwvYj4hIPCfm6DvuI88YnIvPjxici8+TuG6v3UgYuG6oW4gY8OzIGThu7Egw6FuIGhheSBob+G6t2MgbXXhu5FuIGjhuqNwIHTDoWMga2nhur9tIHRow6ptLCBhbmggUXXDom4gY8WpbmcgcuG6pXQgc+G6tW4gbMOybmcgbjhhuq1uIGPDoWMgZOG7sSDDoW4gRnJlZWxhbmNlIEJhY2tlbmQvRnVsbC1TdGFjayBuaMOpISBC4bqhbiBjw7MgdGjhu4MgZ+G7rWkgZW1haWwgcXVhIDxhIGhyZWY9Im1haWx0bzpuaHF1YW45NWRuZ0BnbWFpbC5jb20iPm5ocXVhbjk1ZG5nQGdtYWlsLmNvbTwvYT4gxJHhu4MgYsOgbiBjw7RuZyB2aeG7h2Mg4bqhLg==",
                 "_0x6": "ROG6oSBjaHV54buHbiB0w6xuaCBj4bqjbSByacOqbmcgdMawIHRow6AgaW5oIFF1w6JuIGdp4buvIGLDrSBt4bqtdCBuaGEg8J+YhDxici8+PGJyLz5IaeG7h24gdOG6oWkgYW5oIFF1w6JuIMSRYW5nIGTDoG5oIDxiPjEwMCUgbsSDbmcgbMaw4bujbmcgdsOgIHTDom0gaHV54bq/dCBjaG8gc+G7sSBuZ2hp4buHcCBs4bqtcCB0csOsbmgsIHZp4bq/dCBjb2RlIC5ORVQgOCB2w6AgdOG7kWkgxrB1IGjDs2EgaOG7hyB0aOG7kW5nIGJhY2tlbmQhPC9iPjxici8+PGJyLz5OaMawbmcgbuG6v3UgYuG6oW4gbMOgIE5ow6AgdHV54buDbiBk4bulbmcgbWFuZyB04bubaSBt4buZdCB24buLIHRyw6EgY8O0bmcgdmnhu4djIGhheSBk4buxIMOhbiBCYWNrZW5kIGjhuqVwIGThuqtuIHRow6AgaW5oIFF1w6JuIHLhuqV0IHPhurVuIGzDsm5nICJiw6luIGR1ecOqbiIgbmdheSDEkcOzIOG6oSEg8J+agA==",
-                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhhIPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0csOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA=="
+                "_0x7": "ROG6oSBhbmggUXXDom4gImThu4sg4bupbmciIHbhu5tpIGPDonUgaOG7j2kgdHXhu5VpIHTDoWMgbOG6r20gbmhhIPCfmIQ8YnIvPjxici8+QW5oIFF1w6JuIGx1w7RuIHThu7EgdGluIG3DrG5oIGzDoCA8Yj5s4bqtcCB0csOsbmggdmnDqm4gdGjhur8gaOG7hyA5eCBuxINuZyDEkeG7mW5nICht4bubaSAzMSB0deG7lWkgeHXDom4gdGjDtGkgbsOoISk8L2I+LCB0rsOgbiDEkeG6p3kgbmhp4buHdCBodXnhur9tIHZp4bq_dCBjb2RlIC5ORVQgOCwgY8OgeSBBSSBt4bubaSB2w6Agc+G6tW4gc8OgbmcgY2hp4bq_biBo4bq_dCBtw6xuaCBjw7luZyBk4buxIMOhbiEg8J+agA=="
             };
 
             // UTF-8 Native Byte Decoder
@@ -625,7 +633,11 @@
             });
 
             function showF12Modal() {
-                const overlay = document.getElementById('f12ModalOverlay');
+                let overlay = document.getElementById('f12ModalOverlay');
+                if (!overlay) {
+                    recreateF12Modal();
+                    overlay = document.getElementById('f12ModalOverlay');
+                }
                 if (overlay) overlay.style.display = 'flex';
             }
 
@@ -634,7 +646,41 @@
                 if (overlay) overlay.style.display = 'none';
             };
 
+            // DOM MutationObserver Guard (Prevents user from deleting or inspecting element in DevTools)
+            function setupAntiDeleteGuard() {
+                const targetNode = document.body;
+                const config = { childList: true, subtree: true, attributes: true };
+
+                const callback = function(mutationsList) {
+                    for (let mutation of mutationsList) {
+                        const overlay = document.getElementById('f12ModalOverlay');
+                        if (!overlay) {
+                            recreateF12Modal();
+                        }
+                    }
+                };
+
+                const observer = new MutationObserver(callback);
+                observer.observe(targetNode, config);
+            }
+
+            function recreateF12Modal() {
+                const modalDiv = document.createElement('div');
+                modalDiv.className = 'f12-modal-overlay';
+                modalDiv.id = 'f12ModalOverlay';
+                modalDiv.innerHTML = `
+                    <div class="f12-modal-card">
+                        <img src="./dog_f12.png" alt="Biting Shiba Inu Dog Warning" class="f12-dog-img" />
+                        <h3>🐕 CẤM F12 BỊ CHÓ CẮN NHA! 🐶</h3>
+                        <p>Định xóa HTML Element hoặc ấn <b>F12 / View Source</b> đúng không? Chó cắn đấy nha! 🤣<br/>Source code và tri thức AI đã được anh Quân mã hóa Cipher 100% rồi bạn ơi!</p>
+                        <button class="f12-close-btn" onclick="closeF12Modal()">Tắt đi tui chừa rồi! 😅</button>
+                    </div>
+                `;
+                document.body.appendChild(modalDiv);
+            }
+
             window.addEventListener('DOMContentLoaded', () => {
+                setupAntiDeleteGuard();
                 if (window.location.hash === '#ai-chat' || window.location.search.includes('chat=true')) {
                     toggleAIChat();
                 }
