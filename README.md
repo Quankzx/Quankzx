@@ -27,10 +27,22 @@
 
 ### 👨‍💻 About Me
 
-- 💻 **Backend & Systems:** Specializing in building robust **.NET 8 Web APIs**, **Background Worker Services**, **asynchronous data pipelines**, and **service auto-recovery systems**.
-- 🛠️ **Database & Performance:** Experienced in **SQL Server** & **PostgreSQL** query optimization, index tuning (`INCLUDE`), and high-throughput data operations.
-- 🤖 **AI & Workflow Automation:** Leveraging **LLM-assisted development (Claude / Copilot / ChatGPT)**, **Model Context Protocol (MCP)** integration, and **AI code review & verification**.
-- 🌐 **Frontend Development:** Building responsive web interfaces using **React 18 / TypeScript** and **Blazor**.
+- 🛒 **Amazon & E-commerce Automation:** Specializing in building high-throughput **.NET 8 Web APIs**, **Background Worker Services**, and automated **Amazon SP-API** data-sync workflows.
+- 🛡️ **Systems Reliability & Auto-Recovery:** Architecting **24/7 Watchdog services**, Windows Services auto-recovery, long-polling telemetry, and resilience pipelines with **Polly v8** (Rate-Limiting & Jitter Retry).
+- 🗄️ **Database & Performance Optimization:** Deep experience in **SQL Server** & **PostgreSQL 16** execution plan analysis, non-clustered covering index tuning (`INCLUDE`), and eliminating Key Lookups.
+- 🌐 **Full-Stack & Frontend:** Developing modern user interfaces with **React 18 / TypeScript / Vite** and **Blazor WebAssembly / Server**.
+- 🤖 **AI & Workflow Acceleration:** Leveraging **LLM-assisted development (Claude, ChatGPT, Gemini)**, **Model Context Protocol (MCP)** integration, and AI-driven security/code verification.
+
+---
+
+### 💼 Experience & Core Domains
+
+| Company / Product | Role | Core Domain & Focus | Timeline |
+| :--- | :--- | :--- | :--- |
+| **LSB MEDIA CO., LTD** | Full-Stack / .NET Developer | **Amazon Seller / E-commerce Automation Platform** | *2025 – Present* |
+| **VÕ MINH THIÊN CO., LTD** | .NET Developer | **E-commerce / Cross-Border Order Fulfillment & Logistics** | *2024 – 2025* |
+| **NAIL SALON CHAIN (USA)** | Freelance Full-Stack Developer | **Salon Management SaaS Platform (U.S. Market)** | *2024 – 2025* |
+| **HQ SOFT** | Intern .NET Developer | **Enterprise Software Development (.NET / eSale DMS)** | *2024* |
 
 ---
 

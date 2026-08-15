@@ -111,8 +111,22 @@
             justify-content: space-between;
             font-style: italic;
             font-size: 9.5pt;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
             color: #475569;
+        }
+        .job-domain {
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: #2563eb;
+            margin: 0 0 2px 0;
+            letter-spacing: 0.2px;
+        }
+        .job-desc {
+            font-size: 8.5pt;
+            color: #475569;
+            margin: 0 0 6px 0;
+            font-style: italic;
+            line-height: 1.4;
         }
         ul {
             margin: 4px 0 10px 18px;
@@ -492,13 +506,18 @@
             <span>Ho Chi Minh City, Vietnam</span>
         </div>
         <div class="job-sub">
-            <span>Full-Stack Developer</span>
+            <span>Full-Stack / .NET Developer</span>
             <span>2025 – Present</span>
         </div>
+        <div class="job-domain">Domain: Amazon Seller / E-commerce Automation Platform</div>
+        <div class="job-desc">E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.</div>
         <ul>
-            <li><strong>Enterprise Backend Platform (.NET 8):</strong> Built and maintained a .NET 8 Clean Architecture platform with Background Worker Services for asynchronous API synchronization and high-throughput data processing.</li>
-            <li><strong>Watchdog & Automated Service Updates:</strong> Developed the LSB Watchdog platform using .NET 7/8, including long-polling workers, hardware telemetry, Windows Service monitoring/restart, and automated OTA service updates (<code>UpdateVersionServicesHandle</code>).</li>
-            <li><strong>Account Health & Finance Automation:</strong> Implemented Account Health / ODR monitoring and automated Finance API refund reconciliation to identify system issues and support revenue recovery workflows.</li>
+            <li><strong>Amazon Seller Data Synchronization:</strong> Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services to synchronize Amazon seller data and automate recurring business workflows.</li>
+            <li><strong>Amazon SP-API & Ads Integration:</strong> Developed integrations with Amazon SP-API for orders, inventory, account health (ODR), finance, shipping, reports, and Amazon Ads API.</li>
+            <li><strong>Resilience & Rate-Limit Handling:</strong> Implemented asynchronous processing, Polly v8 retry policies with jitter, rate-limit handling (Token Bucket), and LWA token rotation to ensure high reliability for long-running synchronization jobs.</li>
+            <li><strong>Watchdog & Auto-Recovery Platform:</strong> Built .NET 7/8 Watchdog / self-healing services to monitor background processes, track hardware telemetry (CPU/RAM/Disk), and automatically restart failed or unresponsive services with OTA updates.</li>
+            <li><strong>High-Throughput Database Optimization:</strong> Optimized SQL Server / PostgreSQL queries, stored procedures, and indexes to resolve performance bottlenecks during high-volume operations.</li>
+            <li><strong>Operational & Financial Automation:</strong> Developed core operational features for order fulfillment, shipping, account health monitoring, and automated financial reconciliation.</li>
         </ul>
 
         <div class="job-header">
@@ -509,10 +528,13 @@
             <span>.NET Developer</span>
             <span>Apr 2024 – Early 2025</span>
         </div>
+        <div class="job-domain">Domain: E-commerce / Cross-Border Order Fulfillment & Logistics</div>
+        <div class="job-desc">E-commerce order management and fulfillment platform supporting online sellers, cross-border shipping, and warehouse inventory operations.</div>
         <ul>
-            <li><strong>Logistics & Order Fulfillment Automation:</strong> Developed and maintained a high-throughput logistics management platform handling end-to-end order processing, cross-border shipping workflows, and warehouse inventory tracking.</li>
-            <li><strong>Database Optimization:</strong> Optimized SQL Server database schemas, stored procedures, and indexes, eliminating performance bottlenecks during peak shipping cycles.</li>
-            <li><strong>System Modernization:</strong> Refactored legacy logistics modules into modern ASP.NET Core APIs, reducing system downtime, improving API response latency, and enhancing operational workflow stability.</li>
+            <li><strong>Order Fulfillment & Logistics APIs:</strong> Developed RESTful APIs and backend services for order management, cross-border fulfillment, and warehouse inventory workflows.</li>
+            <li><strong>Asynchronous Processing:</strong> Implemented asynchronous processing for high-volume order operations and external service/carrier integrations.</li>
+            <li><strong>Database & Query Optimization:</strong> Optimized SQL Server database queries, covering indexes (<code>INCLUDE</code>), and stored procedures to improve overall order-processing throughput by 30%.</li>
+            <li><strong>Requirements & Production Support:</strong> Collaborated with the team to analyze requirements, implement business features, troubleshoot production issues, and modernize existing services.</li>
         </ul>
 
         <div class="job-header">
@@ -520,12 +542,16 @@
             <span>Freelance / Part-time</span>
         </div>
         <div class="job-sub">
-            <span>Full-Stack Developer</span>
+            <span>Freelance Full-Stack Developer</span>
             <span>Apr 2024 – July 2025</span>
         </div>
+        <div class="job-domain">Domain: Salon Management SaaS Platform (U.S. Market)</div>
+        <div class="job-desc">SaaS-style multi-location management platform for U.S. nail salon businesses, covering appointment scheduling, staff management, customer management, promotions, and daily operations.</div>
         <ul>
-            <li><strong>Business Management Platform:</strong> Built and maintained a comprehensive web management platform for U.S.-based business chains to streamline customer appointment booking, staff scheduling, customer profiles, and promotional campaigns.</li>
-            <li><strong>Client Engagement & UI Development:</strong> Implemented responsive user interfaces using <strong>Blazor components</strong> and RESTful APIs, enabling store owners to increase appointment retention rates and streamline daily front-desk operations.</li>
+            <li><strong>Salon Operations & Scheduling:</strong> Developed features for online appointment booking, dynamic staff scheduling, customer loyalty management, promotions, and daily salon workflows.</li>
+            <li><strong>APIs & Web Interfaces:</strong> Built and maintained REST APIs and responsive web interfaces using <strong>Blazor components</strong> for day-to-day business operations.</li>
+            <li><strong>Business Logic & Security:</strong> Implemented business logic, database operations, authentication/authorization (RBAC), and secure integrations required by the platform.</li>
+            <li><strong>Production & Maintenance:</strong> Supported deployment, production troubleshooting, and ongoing feature releases ensuring 99.9% operational reliability.</li>
         </ul>
 
         <div class="job-header">
@@ -536,8 +562,11 @@
             <span>Intern .NET Developer (Back Office)</span>
             <span>Feb 2024 – Apr 2024</span>
         </div>
+        <div class="job-domain">Domain: Enterprise Software Development (.NET / eSale DMS)</div>
+        <div class="job-desc">Enterprise distribution management software (eSale DMS) and business management solutions.</div>
         <ul>
-            <li><strong>Back-Office & Sales API Support:</strong> Handled business feature requirements for back-office enterprise software, writing RESTful APIs for the eSale department and optimizing database queries to support daily commercial sales reporting.</li>
+            <li><strong>Back-Office APIs:</strong> Developed RESTful APIs and implemented business features using ASP.NET Core and Entity Framework Core for the eSale system.</li>
+            <li><strong>Bug Fixing & Maintenance:</strong> Worked with senior developers to analyze requirements, investigate bugs, and maintain backend modules and sales reporting queries.</li>
         </ul>
 
         <h2>EDUCATION</h2>

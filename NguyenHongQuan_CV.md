@@ -29,35 +29,54 @@ Full-Stack / .NET Developer specializing in e-commerce automation and backend sy
 ## 💼 PROFESSIONAL EXPERIENCE
 
 ### **LSB MEDIA CO., LTD** — *Ho Chi Minh City, Vietnam*
-> **Full-Stack Developer** &nbsp;|&nbsp; *2025 – Present*
+> **Full-Stack / .NET Developer** &nbsp;|&nbsp; *2025 – Present*  
+> 🏷️ *Domain: Amazon Seller / E-commerce Automation Platform*
 
-* 🚀 **Enterprise Backend Platform (.NET 8):** Architected and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services for asynchronous API synchronization and high-throughput data processing.
-* 🛡️ **Watchdog & Automated Service Updates:** Developed the LSB Watchdog platform using .NET 7/8, featuring long-polling workers, hardware telemetry (CPU/RAM/Disk), Windows Service auto-recovery, and automated OTA service updates (`UpdateVersionServicesHandle`).
-* 📊 **Account Monitoring & Finance Automation:** Implemented real-time Account Health / ODR monitoring and automated Finance API refund reconciliation to identify system issues and support revenue recovery workflows.
+*E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.*
+
+* 🚀 **Amazon Seller Data Synchronization:** Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services to synchronize Amazon seller data and automate recurring business workflows.
+* 📦 **Amazon SP-API & Ads Integration:** Developed integrations with Amazon SP-API for orders, inventory, account health (ODR), finance, shipping, reports, and Amazon Ads API.
+* ⚡ **Resilience & Rate-Limit Handling:** Implemented asynchronous processing, Polly v8 retry policies with jitter, rate-limit handling (Token Bucket), and LWA token rotation to ensure high reliability for long-running synchronization jobs.
+* 🛡️ **Watchdog & Auto-Recovery Platform:** Built .NET 7/8 Watchdog / self-healing services to monitor background processes, track hardware telemetry (CPU/RAM/Disk), and automatically restart failed or unresponsive services with OTA updates.
+* 🗄️ **High-Throughput Database Optimization:** Optimized SQL Server / PostgreSQL queries, stored procedures, and indexes to resolve performance bottlenecks during high-volume operations.
+* 📊 **Operational & Financial Automation:** Developed core operational features for order fulfillment, shipping, account health monitoring, and automated financial reconciliation.
 
 ---
 
 ### **VÕ MINH THIÊN CO., LTD** — *Ho Chi Minh City, Vietnam*
-> **.NET Developer** &nbsp;|&nbsp; *Apr 2024 – Early 2025*
+> **.NET Developer** &nbsp;|&nbsp; *Apr 2024 – Early 2025*  
+> 🏷️ *Domain: E-commerce / Cross-Border Order Fulfillment & Logistics*
 
-* 📦 **Logistics & Order Fulfillment Automation:** Developed and maintained a high-throughput logistics management platform handling end-to-end order processing, cross-border shipping workflows, and warehouse inventory tracking.
-* ⚡ **Database & Throughput Optimization:** Optimized SQL Server database schemas, stored procedures, and indexes, increasing overall order processing throughput by 30% and eliminating bottlenecks during peak operation cycles.
-* 🔄 **System Modernization:** Refactored legacy logistics modules into modern ASP.NET Core APIs, reducing system downtime, improving API response latency, and enhancing operational stability.
+*E-commerce order management and fulfillment platform supporting online sellers, cross-border shipping, and warehouse inventory operations.*
+
+* 📦 **Order Fulfillment & Logistics APIs:** Developed RESTful APIs and backend services for order management, cross-border fulfillment, and warehouse inventory workflows.
+* ⚙️ **Asynchronous Processing:** Implemented asynchronous processing for high-volume order operations and external service/carrier integrations.
+* ⚡ **Database & Query Optimization:** Optimized SQL Server database queries, covering indexes (`INCLUDE`), and stored procedures to improve overall order-processing throughput by 30%.
+* 🔄 **Requirements & Production Support:** Collaborated with the team to analyze requirements, implement business features, troubleshoot production issues, and modernize existing services.
 
 ---
 
 ### **NAIL SALON CHAIN (USA)** — *Freelance / Part-time*
-> **Full-Stack Developer** &nbsp;|&nbsp; *Apr 2024 – July 2025*
+> **Freelance Full-Stack Developer** &nbsp;|&nbsp; *Apr 2024 – July 2025*  
+> 🏷️ *Domain: Salon Management SaaS Platform (U.S. Market)*
 
-* 💻 **Business Management Platform:** Built and maintained a comprehensive web management platform for U.S.-based business chains to streamline customer booking, staff scheduling, customer profiles, and promotional campaigns.
-* 🎨 **Client Engagement & UI Development:** Implemented responsive user interfaces using **Blazor components** and RESTful APIs, enabling store owners to increase customer retention and streamline daily front-desk operations.
+*SaaS-style multi-location management platform for U.S. nail salon businesses, covering appointment scheduling, staff management, customer management, promotions, and daily operations.*
+
+* 💻 **Salon Operations & Scheduling:** Developed features for online appointment booking, dynamic staff scheduling, customer loyalty management, promotions, and daily salon workflows.
+* 🎨 **APIs & Web Interfaces:** Built and maintained REST APIs and responsive web interfaces using **Blazor components** for day-to-day business operations.
+* 🔐 **Business Logic & Security:** Implemented business logic, database operations, authentication/authorization (RBAC), and secure integrations required by the platform.
+* 🛠️ **Production & Maintenance:** Supported deployment, production troubleshooting, and ongoing feature releases ensuring 99.9% operational reliability.
 
 ---
 
 ### **HQ SOFT** — *Ho Chi Minh City, Vietnam*
-> **Intern .NET Developer (Back Office)** &nbsp;|&nbsp; *Feb 2024 – Apr 2024*
+> **Intern .NET Developer (Back Office)** &nbsp;|&nbsp; *Feb 2024 – Apr 2024*  
+> 🏷️ *Domain: Enterprise Software Development (.NET / eSale DMS)*
 
-* 🛠️ **Back-Office & Sales API Support:** Handled business feature requirements for back-office enterprise software, writing RESTful APIs for the eSale department and optimizing database queries to support daily commercial sales reporting.
+*Enterprise distribution management software (eSale DMS) and business management solutions.*
+
+* 🛠️ **Back-Office APIs:** Developed RESTful APIs and implemented business features using ASP.NET Core and Entity Framework Core for the eSale system.
+* 🔍 **Bug Fixing & Maintenance:** Worked with senior developers to analyze requirements, investigate bugs, and maintain backend modules and sales reporting queries.
 
 ---
 
