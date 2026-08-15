@@ -3,7 +3,7 @@
 # NGUYEN HONG QUAN
 ### .NET / Full-Stack Developer | Backend Systems & Software Engineering
 
-📍 Ho Chi Minh City, Vietnam &nbsp;|&nbsp; 📞 (+84) 383-334-195 &nbsp;|&nbsp; ✉️ [nhquan95dng@gmail.com](mailto:nhquan95dng@gmail.com) &nbsp;|&nbsp; 🐙 [GitHub Profile](https://github.com/Quankzx)
+📍 Ho Chi Minh City, Vietnam &nbsp;|&nbsp; 📞 (+84) 383-334-195 &nbsp;|&nbsp; ✉️ [nhquan95dng@gmail.com](mailto:nhquan95dng@gmail.com) &nbsp;|&nbsp; 🐙 [GitHub Profile](https://github.com/Quankzx) &nbsp;|&nbsp; 💼 [LinkedIn Profile](https://www.linkedin.com/in/h%E1%BB%93ng-qu%C3%A2n-nguy%E1%BB%85n-69609b248/)
 
 ---
 
