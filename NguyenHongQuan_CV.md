@@ -35,13 +35,10 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 *Automation platform for Amazon sellers providing order processing, inventory sync, account health monitoring, financial settlement tracking, and reporting.*
 
-* 🚀 **Data Synchronization & Background Services:** Built and maintained a Clean Architecture backend with Background Worker Services and **RESTful APIs** for automated seller data synchronization pipelines.
-* 📦 **Amazon SP-API & Ads Integration:** Integrated with Amazon SP-API (Orders, Inventory, Account Health, Finance, Shipping, Reports) and Amazon Ads API to automate seller data workflows.
-* ☁️ **Cloud Storage with AWS S3:** Integrated **AWS S3** to securely store and manage generated financial reports, export files, and media assets.
-* ⚡ **API Resilience & Rate Limiting:** Implemented asynchronous processing, Polly retry policies, and rate-limit handling to ensure stability for long-running synchronization jobs.
-* 🛡️ **Watchdog & Auto-Recovery Service:** Developed a Watchdog service to monitor system health and automatically restart unresponsive background processes.
-* 🗄️ **Database Optimization:** Optimized SQL Server / PostgreSQL queries and indexes to handle batch data processing efficiently.
-* 🔄 **Agile / Scrum Teamwork:** Collaborated in an Agile/Scrum team, participating in sprint planning, daily stand-ups, backlog refinement, and peer code reviews via Jira.
+* 🚀 **Backend & Worker Services:** Built and maintained a Clean Architecture backend (.NET 8) with Background Worker Services and RESTful APIs to automate Amazon seller data synchronization.
+* 📦 **Amazon SP-API & Cloud Storage:** Integrated Amazon SP-API (Orders, Inventory, Account Health, Finances, Reports) and AWS S3 for secure financial report and media asset storage.
+* ⚡ **API Resilience & Watchdog Service:** Implemented Polly retry policies, rate-limit handling, and a 24/7 Watchdog service to monitor system health and auto-recover background processes.
+* 🗄️ **Database Tuning & Agile Teamwork:** Optimized SQL Server / PostgreSQL queries for batch processing and collaborated in an Agile/Scrum team via Jira.
 
 ---
 
