@@ -11,13 +11,13 @@
 
 ## 📌 PROFESSIONAL SUMMARY
 
-Full-Stack / .NET Developer specializing in backend systems, e-commerce automation, and API integrations. Experienced in building **Web APIs**, **Background Worker Services**, **data synchronization pipelines (gRPC / REST)**, and **watchdog services**. Practical experience working in **Agile/Scrum** environments, integrating third-party platforms (Amazon SP-API), utilizing **AWS S3** for cloud storage, and optimizing **SQL Server / PostgreSQL** databases.
+Full-Stack / .NET Developer specializing in backend systems, e-commerce automation, and API integrations. Experienced in building **Web APIs**, **Background Worker Services**, **data synchronization pipelines**, and **watchdog services**. Practical experience working in **Agile/Scrum** environments, integrating third-party platforms (Amazon SP-API), utilizing **AWS S3** for cloud storage, and optimizing **SQL Server / PostgreSQL** databases.
 
 ---
 
 ## 🛠️ TECHNICAL & DOMAIN SKILLS
 
-* **Backend Development:** `C#`, `.NET / .NET Core`, `ASP.NET Core Web API`, `RESTful APIs`, `gRPC`, `Clean Architecture`, `Background Worker Services`, `Entity Framework Core`, `Dapper`, `OAuth2`, `JWT`.
+* **Backend Development:** `C#`, `.NET / .NET Core`, `ASP.NET Core Web API`, `RESTful APIs`, `Clean Architecture`, `Background Worker Services`, `Entity Framework Core`, `Dapper`, `OAuth2`, `JWT`.
 * **Cloud & Storage:** `AWS S3`, `Docker`, `Git/GitHub Actions`, `Nginx`, `IIS`, `Postman`, `Linux / Windows Server`.
 * **Service Monitoring & Reliability:** `Windows Services`, `Long Polling`, `Automated OTA Updates`, `Telemetry Monitoring`, `Serilog`, `Polly` *(Circuit Breaker, Retry, Timeout)*.
 * **Frontend & UI:** `React`, `TypeScript`, `Vite`, `TailwindCSS`, `JsonForms`, `Blazor`.
@@ -35,7 +35,7 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 *E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.*
 
-* 🚀 **Data Synchronization & Background Services:** Built and maintained a Clean Architecture backend with Background Worker Services, using **gRPC** for internal service communication and **RESTful APIs** for data synchronization pipelines.
+* 🚀 **Data Synchronization & Background Services:** Built and maintained a Clean Architecture backend with Background Worker Services and **RESTful APIs** for automated seller data synchronization pipelines.
 * 📦 **Amazon SP-API & Ads Integration:** Integrated with Amazon SP-API (Orders, Inventory, Account Health, Finance, Shipping, Reports) and Amazon Ads API to automate seller data workflows.
 * ☁️ **Cloud Storage with AWS S3:** Integrated **AWS S3** to securely store and manage generated financial reports, export files, and media assets.
 * ⚡ **API Resilience & Rate Limiting:** Implemented asynchronous processing, Polly retry policies, and rate-limit handling to ensure stability for long-running synchronization jobs.
