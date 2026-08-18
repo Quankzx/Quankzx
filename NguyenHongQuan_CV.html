@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,11 @@
             size: A4;
             margin: 12mm 15mm 12mm 15mm;
         }
+
         * {
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: #1a1f2c;
@@ -25,6 +28,7 @@
             padding: 30px 20px;
             background: #f8fafc;
         }
+
         .cv-card {
             background: #ffffff;
             border-radius: 8px;
@@ -32,12 +36,14 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
         }
+
         .header-actions {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 20px;
             gap: 10px;
         }
+
         .btn-print {
             background: #2563eb;
             color: #ffffff;
@@ -53,9 +59,11 @@
             gap: 6px;
             transition: background 0.2s;
         }
+
         .btn-print:hover {
             background: #1d4ed8;
         }
+
         h1 {
             font-size: 22pt;
             font-weight: 700;
@@ -65,6 +73,7 @@
             letter-spacing: 1px;
             color: #0f172a;
         }
+
         .subtitle {
             text-align: center;
             font-weight: 600;
@@ -72,6 +81,7 @@
             margin-bottom: 8px;
             color: #2563eb;
         }
+
         .contact-info {
             text-align: center;
             font-size: 9.5pt;
@@ -80,14 +90,17 @@
             padding-bottom: 12px;
             color: #475569;
         }
+
         .contact-info a {
             color: #2563eb;
             text-decoration: none;
             font-weight: 500;
         }
+
         .contact-info a:hover {
             text-decoration: underline;
         }
+
         h2 {
             font-size: 11pt;
             font-weight: 700;
@@ -98,6 +111,7 @@
             letter-spacing: 0.5px;
             color: #0f172a;
         }
+
         .job-header {
             display: flex;
             justify-content: space-between;
@@ -106,6 +120,7 @@
             margin-top: 10px;
             color: #0f172a;
         }
+
         .job-sub {
             display: flex;
             justify-content: space-between;
@@ -114,6 +129,7 @@
             margin-bottom: 2px;
             color: #475569;
         }
+
         .job-domain {
             font-size: 8.5pt;
             font-weight: 600;
@@ -121,6 +137,7 @@
             margin: 0 0 2px 0;
             letter-spacing: 0.2px;
         }
+
         .job-desc {
             font-size: 8.5pt;
             color: #475569;
@@ -128,19 +145,23 @@
             font-style: italic;
             line-height: 1.4;
         }
+
         ul {
             margin: 4px 0 10px 18px;
             padding: 0;
         }
+
         li {
             margin-bottom: 5px;
             text-align: justify;
             color: #334155;
         }
+
         .skills-list p {
             margin: 4px 0;
             color: #334155;
         }
+
         strong {
             color: #0f172a;
         }
@@ -165,10 +186,12 @@
             z-index: 9999;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .ai-chat-btn:hover {
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 30px rgba(124, 58, 237, 0.45);
         }
+
         .ai-chat-modal {
             position: fixed;
             bottom: 84px;
@@ -187,10 +210,19 @@
             z-index: 9999;
             animation: modalSlideUp 0.3s ease-out forwards;
         }
+
         @keyframes modalSlideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .ai-chat-header {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
@@ -199,11 +231,13 @@
             align-items: center;
             justify-content: space-between;
         }
+
         .ai-chat-header-info {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .ai-avatar {
             width: 36px;
             height: 36px;
@@ -214,11 +248,13 @@
             justify-content: center;
             font-size: 18px;
         }
+
         .ai-header-text h4 {
             margin: 0;
             font-size: 10.5pt;
             font-weight: 600;
         }
+
         .ai-header-text p {
             margin: 0;
             font-size: 7.5pt;
@@ -227,12 +263,14 @@
             align-items: center;
             gap: 4px;
         }
+
         .online-dot {
             width: 6px;
             height: 6px;
             background: #22c55e;
             border-radius: 50%;
         }
+
         .ai-close-btn {
             background: transparent;
             border: none;
@@ -241,7 +279,11 @@
             cursor: pointer;
             padding: 4px;
         }
-        .ai-close-btn:hover { color: #ffffff; }
+
+        .ai-close-btn:hover {
+            color: #ffffff;
+        }
+
         .ai-chat-body {
             flex: 1;
             padding: 16px;
@@ -251,6 +293,7 @@
             flex-direction: column;
             gap: 12px;
         }
+
         .chat-msg {
             max-width: 88%;
             padding: 11px 15px;
@@ -258,6 +301,7 @@
             font-size: 9pt;
             line-height: 1.5;
         }
+
         .chat-msg.ai {
             background: #ffffff;
             color: #1e293b;
@@ -265,12 +309,14 @@
             align-self: flex-start;
             border-bottom-left-radius: 2px;
         }
+
         .chat-msg.user {
             background: #4f46e5;
             color: #ffffff;
             align-self: flex-end;
             border-bottom-right-radius: 2px;
         }
+
         .ai-tab-header {
             display: flex;
             gap: 6px;
@@ -279,6 +325,7 @@
             border-bottom: 1px solid #cbd5e1;
             padding-bottom: 6px;
         }
+
         .ai-tab-btn {
             background: #e2e8f0;
             border: none;
@@ -290,16 +337,19 @@
             border-radius: 6px;
             transition: all 0.2s;
         }
+
         .ai-tab-btn.active {
             background: #4f46e5;
             color: #ffffff;
         }
+
         .ai-suggestions {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
             margin-top: 4px;
         }
+
         .chip-btn {
             background: #f1f5f9;
             border: 1px solid #cbd5e1;
@@ -310,11 +360,13 @@
             cursor: pointer;
             transition: all 0.2s;
         }
+
         .chip-btn:hover {
             background: #4f46e5;
             color: #ffffff;
             border-color: #4f46e5;
         }
+
         .download-action-btn {
             background: #2563eb;
             color: white;
@@ -330,9 +382,11 @@
             gap: 6px;
             transition: background 0.2s;
         }
+
         .download-action-btn:hover {
             background: #1d4ed8;
         }
+
         .ai-chat-footer {
             padding: 12px;
             background: #ffffff;
@@ -340,6 +394,7 @@
             display: flex;
             gap: 8px;
         }
+
         .ai-chat-input {
             flex: 1;
             border: 1px solid #cbd5e1;
@@ -349,9 +404,11 @@
             outline: none;
             transition: border-color 0.2s;
         }
+
         .ai-chat-input:focus {
             border-color: #4f46e5;
         }
+
         .ai-send-btn {
             background: #4f46e5;
             color: white;
@@ -365,7 +422,10 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-        .ai-send-btn:hover { background: #4338ca; }
+
+        .ai-send-btn:hover {
+            background: #4338ca;
+        }
 
         /* F12 Protection Modal - Professional & Cute Design */
         .f12-modal-overlay {
@@ -382,10 +442,17 @@
             z-index: 999999;
             animation: fadeIn 0.3s ease-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         .f12-modal-card {
             background: #ffffff;
             border-radius: 20px;
@@ -397,10 +464,19 @@
             border: 2px solid #6366f1;
             animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
+
         @keyframes popIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
+
         .f12-dog-img {
             width: 180px;
             height: 180px;
@@ -411,18 +487,21 @@
             display: block;
             border: 4px solid #e0e7ff;
         }
+
         .f12-modal-card h3 {
             margin: 0 0 10px 0;
             color: #4f46e5;
             font-size: 13.5pt;
             font-weight: 700;
         }
+
         .f12-modal-card p {
             margin: 0 0 20px 0;
             color: #334155;
             font-size: 9.5pt;
             line-height: 1.6;
         }
+
         .f12-close-btn {
             background: #4f46e5;
             color: #ffffff;
@@ -435,6 +514,7 @@
             transition: all 0.2s;
             box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
         }
+
         .f12-close-btn:hover {
             background: #4338ca;
             transform: translateY(-1px);
@@ -447,11 +527,13 @@
                 padding: 0;
                 max-width: 100%;
             }
+
             .cv-card {
                 box-shadow: none;
                 border: none;
                 padding: 0;
             }
+
             .header-actions,
             .ai-chat-btn,
             .ai-chat-modal,
@@ -468,23 +550,31 @@
                 visibility: hidden !important;
                 opacity: 0 !important;
             }
-            h1 { color: #000000; }
-            .subtitle { color: #222222; }
-            h2 { border-bottom-color: #333333; color: #000000; }
-            .contact-info { border-bottom-color: #333333; }
+
+            h1 {
+                color: #000000;
+            }
+
+            .subtitle {
+                color: #222222;
+            }
+
+            h2 {
+                border-bottom-color: #333333;
+                color: #000000;
+            }
+
+            .contact-info {
+                border-bottom-color: #333333;
+            }
         }
     </style>
-    
-    
-    
-    
-    
-    
     <script defer src="./assets/vendor.min.js?v=7.0.0"></script>
 </head>
+
 <body>
 
-    
+
 
     <div class="header-actions">
         <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
@@ -494,23 +584,27 @@
         <h1>NGUYEN HONG QUAN</h1>
         <div class="subtitle">.NET / Full-Stack Developer | Backend Systems & Software Engineering</div>
         <div class="contact-info">
-            Ho Chi Minh City, Vietnam &nbsp;|&nbsp; (+84) 383-334-195 &nbsp;|&nbsp; <a href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> &nbsp;|&nbsp; <a href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/h%E1%BB%93ng-qu%C3%A2n-nguy%E1%BB%85n-69609b248/" target="_blank">linkedin.com/in/hong-quan</a>
+            Ho Chi Minh City, Vietnam &nbsp;|&nbsp; (+84) 383-334-195 &nbsp;|&nbsp; <a
+                href="mailto:nhquan95dng@gmail.com">nhquan95dng@gmail.com</a> &nbsp;|&nbsp; <a
+                href="https://github.com/Quankzx" target="_blank">github.com/Quankzx</a> &nbsp;|&nbsp; <a
+                href="https://www.linkedin.com/in/h%E1%BB%93ng-qu%C3%A2n-nguy%E1%BB%85n-69609b248/"
+                target="_blank">linkedin.com/in/hong-quan</a>
         </div>
 
         <h2>PROFESSIONAL SUMMARY</h2>
         <p style="margin: 4px 0; text-align: justify;">
-            Full-Stack / .NET Developer specializing in e-commerce automation and backend systems. Experienced in building <strong>.NET 8 RESTful Web APIs</strong>, <strong>Background Worker Services</strong>, <strong>gRPC</strong> data synchronization, <strong>AWS</strong> cloud deployment, and <strong>24/7 watchdog services</strong>. Practical experience working in <strong>Agile/Scrum</strong> environments, integrating third-party APIs (Amazon SP-API), optimizing <strong>SQL Server / PostgreSQL</strong> queries, and supporting production systems.
+            Full-Stack / .NET Developer specializing in backend systems, e-commerce automation, and API integrations. Experienced in building <strong>.NET 8 Web APIs</strong>, <strong>Background Worker Services</strong>, <strong>data synchronization pipelines (gRPC / REST)</strong>, and <strong>24/7 watchdog services</strong>. Practical experience working in <strong>Agile/Scrum</strong> environments, integrating with third-party platforms (Amazon SP-API), utilizing <strong>AWS S3</strong> for cloud storage, optimizing <strong>SQL Server / PostgreSQL</strong> databases, and supporting production systems.
         </p>
 
         <h2>TECHNICAL & DOMAIN SKILLS</h2>
         <div class="skills-list">
-            <p><strong>Backend Development:</strong> .NET 8 / .NET 7, ASP.NET Core Web API, RESTful APIs, gRPC (Protocol Buffers), Clean Architecture, Background Worker Services, Entity Framework Core 8, Dapper, OAuth2, JWT.</p>
-            <p><strong>Cloud & Infrastructure:</strong> Amazon Web Services (AWS EC2, S3), Docker, Git/GitHub Actions, Nginx, IIS, Postman, Linux/Windows Server.</p>
-            <p><strong>Service Monitoring & Auto-Recovery:</strong> Windows Services Control, Long Polling, Automated OTA Remote Updates, Hardware Telemetry (CPU/RAM/Disk), Serilog, Polly v8 (Circuit Breaker, Retry, Timeout).</p>
-            <p><strong>Frontend & UI Engineering:</strong> React 18, TypeScript, Vite, TailwindCSS, JsonForms, Blazor, Dynamic Schema Form Rendering.</p>
-            <p><strong>Databases & Performance:</strong> PostgreSQL 16, MS SQL Server, Index Optimization (Covering Index INCLUDE), Query Execution Plan Analysis, Stored Procedures, AES-256 / GZip Credential Encryption.</p>
-            <p><strong>Methodologies & Teamwork:</strong> Agile / Scrum, Jira, Sprint Planning, Daily Stand-ups, Backlog Refinement, Code Reviews.</p>
-            <p><strong>AI & Tools:</strong> LLM-Assisted Development (Claude, ChatGPT, Gemini), Model Context Protocol (MCP) Integration, AI Code Review & Refactoring.</p>
+            <p><strong>Backend Development:</strong> .NET 8 / .NET 7, ASP.NET Core Web API, RESTful APIs, gRPC, Clean Architecture, Background Worker Services, Entity Framework Core, Dapper, OAuth2, JWT.</p>
+            <p><strong>Cloud & Storage:</strong> AWS S3, Docker, Git/GitHub, Nginx, IIS, Postman, Linux/Windows Server.</p>
+            <p><strong>Service Monitoring & Reliability:</strong> Windows Services Control, Long Polling, Automated OTA Updates, Telemetry Monitoring, Serilog, Polly v8 (Circuit Breaker, Retry, Timeout).</p>
+            <p><strong>Frontend & UI:</strong> React 18, TypeScript, Vite, TailwindCSS, JsonForms, Blazor, Dynamic Schema Form Rendering.</p>
+            <p><strong>Databases & Performance:</strong> PostgreSQL 16, MS SQL Server, Index Optimization (Covering Index INCLUDE), Stored Procedures, AES-256 / GZip Data Encryption.</p>
+            <p><strong>Methodology & Collaboration:</strong> Agile / Scrum, Jira, Sprint Planning, Daily Stand-ups, Backlog Refinement, Code Reviews.</p>
+            <p><strong>AI & Tools:</strong> LLM-Assisted Development (Claude, ChatGPT, Gemini), Model Context Protocol (MCP) Integration, AI Code Review.</p>
         </div>
 
         <h2>PROFESSIONAL EXPERIENCE</h2>
@@ -526,13 +620,13 @@
         <div class="job-domain">Domain: Amazon Seller / E-commerce Automation Platform</div>
         <div class="job-desc">E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.</div>
         <ul>
-            <li><strong>Data Synchronization via gRPC & REST:</strong> Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services, utilizing <strong>gRPC</strong> for internal worker synchronization and <strong>RESTful Web APIs</strong> for data pipelines.</li>
-            <li><strong>Amazon SP-API & Ads Integration:</strong> Developed integrations with Amazon SP-API for orders, inventory, account health (ODR), finance, shipping, reports, and Amazon Ads API.</li>
-            <li><strong>AWS Deployment & File Storage:</strong> Deployed and maintained backend services on <strong>AWS EC2</strong>, integrating <strong>AWS S3</strong> for report and media asset storage.</li>
-            <li><strong>Resilience & Rate-Limit Handling:</strong> Implemented asynchronous processing, Polly v8 retry policies with jitter, rate-limit handling (Token Bucket), and LWA token rotation for synchronization tasks.</li>
-            <li><strong>Watchdog & Auto-Recovery:</strong> Built .NET 7/8 Watchdog / self-healing service to monitor background processes, track hardware telemetry (CPU/RAM/Disk), and automatically restart failed services.</li>
-            <li><strong>Database Optimization:</strong> Optimized SQL Server / PostgreSQL queries, stored procedures, and indexes to resolve performance bottlenecks during batch processing.</li>
-            <li><strong>Agile / Scrum Teamwork:</strong> Worked in an <strong>Agile/Scrum</strong> workflow with 2-week sprints, participating in sprint planning, daily stand-ups, backlog refinement, and code reviews in Jira.</li>
+            <li><strong>Data Synchronization & Background Services:</strong> Built and maintained a .NET 8 Clean Architecture backend with 10+ Background Worker Services, using <strong>gRPC</strong> for internal service communication and <strong>RESTful APIs</strong> for data synchronization pipelines.</li>
+            <li><strong>Amazon SP-API & Ads Integration:</strong> Integrated with Amazon SP-API (Orders, Inventory, Account Health, Finance, Shipping, Reports) and Amazon Ads API to automate seller data workflows.</li>
+            <li><strong>Cloud Storage with AWS S3:</strong> Integrated <strong>AWS S3</strong> to securely store and manage generated financial reports, export files, and media assets.</li>
+            <li><strong>API Resilience & Rate Limiting:</strong> Implemented asynchronous processing, Polly v8 retry policies, and rate-limit handling to ensure high stability for long-running synchronization jobs.</li>
+            <li><strong>Watchdog & Auto-Recovery Service:</strong> Developed a .NET 7/8 Watchdog service to monitor system health and automatically restart unresponsive background processes.</li>
+            <li><strong>Database Optimization:</strong> Optimized SQL Server / PostgreSQL queries and indexes to handle high-volume batch data processing efficiently.</li>
+            <li><strong>Agile / Scrum Teamwork:</strong> Collaborated in 2-week sprints, participating in sprint planning, daily stand-ups, backlog refinement, and peer code reviews via Jira.</li>
         </ul>
 
         <div class="job-header">
@@ -546,10 +640,10 @@
         <div class="job-domain">Domain: E-commerce / Cross-Border Order Fulfillment & Logistics</div>
         <div class="job-desc">E-commerce order management and fulfillment platform supporting online sellers, cross-border shipping, and warehouse inventory operations.</div>
         <ul>
-            <li><strong>Order Fulfillment & Logistics REST APIs:</strong> Developed RESTful APIs and backend services using ASP.NET Core for order management, cross-border fulfillment, and warehouse inventory workflows.</li>
-            <li><strong>Asynchronous Processing:</strong> Implemented asynchronous processing for high-volume order operations and external service/carrier integrations.</li>
-            <li><strong>Database & Query Optimization:</strong> Optimized SQL Server database queries, covering indexes (<code>INCLUDE</code>), and stored procedures to improve overall order-processing throughput by 30%.</li>
-            <li><strong>Agile Collaboration:</strong> Participated in Agile stand-ups, sprint tasks, troubleshooting production issues, and modernizing existing services.</li>
+            <li><strong>Order Management & Logistics APIs:</strong> Developed RESTful Web APIs using ASP.NET Core for order processing, cross-border shipping workflows, and warehouse inventory tracking.</li>
+            <li><strong>Asynchronous Processing:</strong> Implemented asynchronous workflows to process high-volume order operations and external shipping carrier integrations.</li>
+            <li><strong>Database Performance Tuning:</strong> Optimized SQL Server database queries, covering indexes (<code>INCLUDE</code>), and stored procedures to improve order-processing speed.</li>
+            <li><strong>Team Collaboration & Support:</strong> Worked in an Agile environment to analyze business requirements, troubleshoot production issues, and modernize backend modules.</li>
         </ul>
 
         <div class="job-header">
@@ -563,10 +657,10 @@
         <div class="job-domain">Domain: Salon Management SaaS Platform (U.S. Market)</div>
         <div class="job-desc">SaaS-style multi-location management platform for U.S. nail salon businesses, covering appointment scheduling, staff management, customer management, promotions, and daily operations.</div>
         <ul>
-            <li><strong>Salon Operations & Scheduling:</strong> Developed features for online appointment booking, dynamic staff scheduling, customer loyalty management, promotions, and daily salon workflows.</li>
-            <li><strong>RESTful APIs & Blazor UI:</strong> Built and maintained RESTful APIs and responsive web interfaces using <strong>Blazor components</strong> for day-to-day business operations.</li>
-            <li><strong>AWS Hosting & Security:</strong> Supported deployment on <strong>AWS (EC2, S3)</strong>, handled multi-tenant database logic, and configured Role-Based Access Control (RBAC).</li>
-            <li><strong>Production & Maintenance:</strong> Supported deployment, troubleshooting, and ongoing feature updates ensuring 99.9% platform availability.</li>
+            <li><strong>Salon Operations & Scheduling:</strong> Built core features for online appointment booking, dynamic staff scheduling, customer loyalty programs, and daily operations.</li>
+            <li><strong>Web APIs & Blazor UI:</strong> Developed backend REST APIs and responsive web interfaces using <strong>Blazor components</strong> for store managers and staff.</li>
+            <li><strong>Access Control & Multi-Tenancy:</strong> Implemented multi-tenant database logic and Role-Based Access Control (RBAC) to secure store-level operations.</li>
+            <li><strong>Maintenance & Feature Releases:</strong> Supported ongoing platform maintenance, bug fixing, and continuous feature updates ensuring 99.9% platform availability.</li>
         </ul>
 
         <div class="job-header">
@@ -580,8 +674,8 @@
         <div class="job-domain">Domain: Enterprise Software Development (.NET / eSale DMS)</div>
         <div class="job-desc">Enterprise distribution management software (eSale DMS) and business management solutions.</div>
         <ul>
-            <li><strong>Back-Office REST APIs:</strong> Developed RESTful APIs and implemented business features using ASP.NET Core and Entity Framework Core for the eSale DMS system.</li>
-            <li><strong>Bug Fixing & Maintenance:</strong> Worked with senior developers to analyze requirements, investigate bugs, and maintain backend modules and sales reporting queries.</li>
+            <li><strong>Back-Office API Development:</strong> Developed RESTful APIs and business logic using ASP.NET Core and Entity Framework Core for the eSale DMS system.</li>
+            <li><strong>Maintenance & Bug Investigation:</strong> Collaborated with senior developers to analyze requirements, resolve backend bugs, and maintain sales reporting queries.</li>
         </ul>
 
         <h2>EDUCATION</h2>
@@ -595,4 +689,5 @@
         </div>
     </div>
 </body>
+
 </html>
