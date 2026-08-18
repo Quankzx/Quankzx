@@ -11,19 +11,19 @@
 
 ## 📌 PROFESSIONAL SUMMARY
 
-Full-Stack / .NET Developer specializing in e-commerce automation, distributed backend systems, and cloud integration. Experienced in building high-throughput **.NET 8 Web APIs**, **gRPC microservices**, **Background Worker Services**, **AWS cloud solutions**, and **24/7 self-healing watchdog architectures**. Proven track record of operating in **Agile/Scrum** environments, delivering resilient API integrations (Amazon SP-API), optimizing **SQL Server / PostgreSQL** databases, and maintaining 99.9% uptime for production systems.
+Full-Stack / .NET Developer specializing in e-commerce automation and backend systems. Experienced in building **.NET 8 RESTful Web APIs**, **Background Worker Services**, **gRPC** data synchronization, **AWS** cloud deployment, and **24/7 watchdog services**. Practical experience working in **Agile/Scrum** environments, integrating third-party APIs (Amazon SP-API), optimizing **SQL Server / PostgreSQL** queries, and supporting production systems.
 
 ---
 
 ## 🛠️ TECHNICAL & DOMAIN SKILLS
 
-* **Backend & Distributed Systems:** `.NET 8` / `.NET 7`, `ASP.NET Core Web API`, `gRPC (Protocol Buffers)`, `Clean Architecture`, `Background Worker Services`, `EF Core 8`, `Dapper`, `RESTful APIs`, `OAuth2`, `JWT`.
-* **Cloud & Infrastructure (AWS):** `AWS (EC2, S3, CloudWatch, SQS, IAM)`, `Docker`, `Git/GitHub Actions`, `Nginx`, `IIS`, `Postman`, `Linux / Windows Server`.
-* **Service Monitoring & Auto-Recovery:** `Windows Services Control`, `Long Polling`, `Automated OTA Remote Updates`, `Hardware Telemetry`, `Serilog`, `Polly v8` *(Circuit Breaker, Retry, Timeout)*.
+* **Backend Development:** `.NET 8` / `.NET 7`, `ASP.NET Core Web API`, `RESTful APIs`, `gRPC (Protocol Buffers)`, `Clean Architecture`, `Background Worker Services`, `EF Core 8`, `Dapper`, `OAuth2`, `JWT`.
+* **Cloud & Infrastructure:** `AWS (EC2, S3)`, `Docker`, `Git/GitHub Actions`, `Nginx`, `IIS`, `Postman`, `Linux / Windows Server`.
+* **Service Monitoring & Auto-Recovery:** `Windows Services Control`, `Long Polling`, `Automated OTA Remote Updates`, `Hardware Telemetry (CPU/RAM/Disk)`, `Serilog`, `Polly v8` *(Circuit Breaker, Retry, Timeout)*.
 * **Frontend & UI Engineering:** `React 18`, `TypeScript`, `Vite`, `TailwindCSS`, `JsonForms`, `Blazor`, `Dynamic Schema Form Rendering`.
-* **Databases & Performance Tuning:** `PostgreSQL 16`, `MS SQL Server`, `Index Optimization (Covering Index INCLUDE)`, `Query Execution Plan Analysis`, `AES-256 / GZip Encryption`.
-* **Software Methodologies & Collaboration:** `Agile / Scrum (Sprint Planning, Daily Stand-ups, Backlog Refinement, Retrospectives)`, `Jira`, `Confluence`, `TDD / Unit Testing`.
-* **AI & Workflow Automation:** `LLM-Assisted Development (Claude, ChatGPT, Gemini)`, `Model Context Protocol (MCP) Integration`, `AI Code Review & Security Auditing`, `AI-Driven Refactoring`.
+* **Databases & Performance:** `PostgreSQL 16`, `MS SQL Server`, `Index Optimization (Covering Index INCLUDE)`, `Query Execution Plan Analysis`, `AES-256 / GZip Encryption`.
+* **Methodologies & Teamwork:** `Agile / Scrum`, `Jira`, `Sprint Planning`, `Daily Stand-ups`, `Backlog Refinement`, `Code Reviews`.
+* **AI & Tools:** `LLM-Assisted Development (Claude, ChatGPT, Gemini)`, `Model Context Protocol (MCP) Integration`, `AI Code Review & Refactoring`.
 
 ---
 
@@ -31,17 +31,17 @@ Full-Stack / .NET Developer specializing in e-commerce automation, distributed b
 
 ### **LSB MEDIA CO., LTD** — *Ho Chi Minh City, Vietnam*
 > **Full-Stack / .NET Developer** &nbsp;|&nbsp; *2025 – Present*  
-> 🏷️ *Domain: Amazon Seller / E-commerce Automation Platform (AWS & Distributed .NET)*
+> 🏷️ *Domain: Amazon Seller / E-commerce Automation Platform*
 
-*Enterprise e-commerce automation platform for Amazon sellers, providing centralized tools for high-volume order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.*
+*E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.*
 
-* 🚀 **Distributed Data Synchronization & gRPC:** Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services, leveraging **gRPC** and **RESTful Web APIs** for ultra-fast inter-service communication and Amazon seller data synchronization.
-* ☁️ **AWS Cloud Infrastructure:** Deployed and managed backend services on **AWS (EC2, S3 for report/media storage, CloudWatch for operational telemetry, SQS for asynchronous message queuing)**.
-* 📦 **Amazon SP-API & Ads Integration:** Developed robust integrations with Amazon SP-API for orders, inventory, account health (ODR), finance, shipping, reports, and Amazon Ads API.
-* ⚡ **Resilience & Rate-Limit Handling:** Implemented asynchronous processing, Polly v8 retry policies with jitter, rate-limit handling (Token Bucket), and LWA token rotation to ensure high reliability for long-running synchronization jobs.
-* 🛡️ **Watchdog & Auto-Recovery Platform:** Built .NET 7/8 Watchdog / self-healing services to monitor background processes, track hardware telemetry (CPU/RAM/Disk), and automatically restart failed or unresponsive services with OTA updates.
-* 🗄️ **High-Throughput Database Optimization:** Optimized SQL Server / PostgreSQL queries, stored procedures, and indexes to resolve performance bottlenecks during high-volume operations.
-* 🔄 **Agile / Scrum Delivery:** Collaborated in an **Agile/Scrum** engineering team with 2-week sprint cycles, active participation in sprint planning, daily stand-ups, backlog refinement, and peer code reviews via Jira/Confluence.
+* 🚀 **Data Synchronization via gRPC & REST:** Built and maintained a .NET 8 Clean Architecture platform with 10+ Background Worker Services, utilizing **gRPC** for internal worker synchronization and **RESTful Web APIs** for data pipelines.
+* 📦 **Amazon SP-API & Ads Integration:** Developed integrations with Amazon SP-API for orders, inventory, account health (ODR), finance, shipping, reports, and Amazon Ads API.
+* ☁️ **AWS Deployment & File Storage:** Deployed and maintained backend services on **AWS EC2**, integrating **AWS S3** for report and media asset storage.
+* ⚡ **Resilience & Rate-Limit Handling:** Implemented asynchronous processing, Polly v8 retry policies with jitter, rate-limit handling (Token Bucket), and LWA token rotation for synchronization tasks.
+* 🛡️ **Watchdog & Auto-Recovery Platform:** Built .NET 7/8 Watchdog / self-healing service to monitor background processes, track hardware telemetry (CPU/RAM/Disk), and automatically restart failed services.
+* 🗄️ **Database Optimization:** Optimized SQL Server / PostgreSQL queries, stored procedures, and indexes to resolve performance bottlenecks during batch processing.
+* 🔄 **Agile / Scrum Teamwork:** Worked in an **Agile/Scrum** workflow with 2-week sprints, participating in sprint planning, daily stand-ups, backlog refinement, and code reviews in Jira.
 
 ---
 
@@ -51,10 +51,10 @@ Full-Stack / .NET Developer specializing in e-commerce automation, distributed b
 
 *E-commerce order management and fulfillment platform supporting online sellers, cross-border shipping, and warehouse inventory operations.*
 
-* 📦 **Order Fulfillment & Logistics REST APIs:** Developed high-performance **RESTful Web APIs** and backend services for order management, cross-border fulfillment, and warehouse inventory workflows.
-* ☁️ **Cloud Asset Storage & Async Processing:** Implemented asynchronous processing for high-volume order operations and integrated **AWS S3** for automated shipping label generation and logistics documentation storage.
+* 📦 **Order Fulfillment & Logistics REST APIs:** Developed RESTful APIs and backend services using ASP.NET Core for order management, cross-border fulfillment, and warehouse inventory workflows.
+* ⚙️ **Asynchronous Processing:** Implemented asynchronous processing for high-volume order operations and external service/carrier integrations.
 * ⚡ **Database & Query Optimization:** Optimized SQL Server database queries, covering indexes (`INCLUDE`), and stored procedures to improve overall order-processing throughput by 30%.
-* 🔄 **Agile Collaboration & Support:** Participated in daily Agile stand-ups, sprint estimation, troubleshooting production issues, and modernizing legacy services to modern ASP.NET Core APIs.
+* 🔄 **Agile Collaboration:** Participated in Agile stand-ups, sprint tasks, troubleshooting production issues, and modernizing existing services.
 
 ---
 
@@ -65,9 +65,9 @@ Full-Stack / .NET Developer specializing in e-commerce automation, distributed b
 *SaaS-style multi-location management platform for U.S. nail salon businesses, covering appointment scheduling, staff management, customer management, promotions, and daily operations.*
 
 * 💻 **Salon Operations & Scheduling:** Developed features for online appointment booking, dynamic staff scheduling, customer loyalty management, promotions, and daily salon workflows.
-* 🎨 **RESTful APIs & Blazor UI:** Built and maintained **RESTful Web APIs** and responsive web interfaces using **Blazor components** for day-to-day business operations.
-* 🔐 **Cloud Deployment & Security:** Deployed platform services on **AWS (EC2, S3)**, implemented multi-tenant database logic, and configured Role-Based Access Control (RBAC).
-* 🛠️ **Agile Feature Releases:** Delivered features following Agile milestones, continuous production monitoring, and ensuring 99.9% platform availability.
+* 🎨 **RESTful APIs & Blazor UI:** Built and maintained RESTful APIs and responsive web interfaces using **Blazor components** for day-to-day business operations.
+* 🔐 **AWS Hosting & Security:** Supported deployment on **AWS (EC2, S3)**, handled multi-tenant database logic, and configured Role-Based Access Control (RBAC).
+* 🛠️ **Production & Maintenance:** Supported deployment, troubleshooting, and ongoing feature updates ensuring 99.9% platform availability.
 
 ---
 
@@ -77,8 +77,8 @@ Full-Stack / .NET Developer specializing in e-commerce automation, distributed b
 
 *Enterprise distribution management software (eSale DMS) and business management solutions.*
 
-* 🛠️ **Back-Office REST APIs:** Developed RESTful Web APIs and implemented business features using ASP.NET Core and Entity Framework Core for the eSale DMS system.
-* 🔍 **Bug Fixing & Maintenance:** Worked with senior developers in Agile team settings to analyze requirements, investigate bugs, and maintain backend modules and sales reporting queries.
+* 🛠️ **Back-Office REST APIs:** Developed RESTful APIs and implemented business features using ASP.NET Core and Entity Framework Core for the eSale DMS system.
+* 🔍 **Bug Fixing & Maintenance:** Worked with senior developers to analyze requirements, investigate bugs, and maintain backend modules and sales reporting queries.
 
 ---
 
