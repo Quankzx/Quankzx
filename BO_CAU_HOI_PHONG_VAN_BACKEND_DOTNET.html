@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cẩm Nang 40 Câu Hỏi Phỏng Vấn .NET / Backend Thực Chiến - Nguyễn Hồng Quân</title>
+    <title>Bộ Câu Hỏi Phỏng Vấn .NET / Backend Developer Chuẩn Nhà Tuyển Dụng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,7 +20,6 @@
             --border: #e2e8f0;
             --accent: #06b6d4;
             --success: #10b981;
-            --warning: #f59e0b;
             --code-bg: #0f172a;
             --code-text: #f8fafc;
         }
@@ -39,13 +38,11 @@
             scroll-behavior: smooth;
         }
 
-        /* Container Layout */
         .app-container {
             display: flex;
             min-height: 100vh;
         }
 
-        /* Sidebar Navigation */
         .sidebar {
             width: 320px;
             background: #ffffff;
@@ -60,14 +57,6 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
-        }
-
-        .sidebar-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border);
         }
 
         .sidebar-brand h2 {
@@ -146,7 +135,6 @@
             font-weight: 700;
         }
 
-        /* Main Content */
         .main-content {
             margin-left: 320px;
             flex: 1;
@@ -154,26 +142,15 @@
             max-width: 1100px;
         }
 
-        /* Hero Banner */
         .hero-banner {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #312e81 100%);
             color: #ffffff;
             padding: 36px 32px;
             border-radius: 20px;
             margin-bottom: 36px;
-            box-shadow: 0 12px 30px rgba(30, 27, 75, 0.2);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-banner::after {
-            content: '🚀';
-            position: absolute;
-            right: 24px;
-            bottom: 10px;
-            font-size: 6rem;
-            opacity: 0.15;
-            pointer-events: none;
         }
 
         .hero-badge {
@@ -200,11 +177,10 @@
         .hero-subtitle {
             font-size: 0.95rem;
             color: #cbd5e1;
-            max-width: 700px;
+            max-width: 750px;
             line-height: 1.5;
         }
 
-        /* Chapter Section */
         .chapter-section {
             margin-bottom: 44px;
             scroll-margin-top: 24px;
@@ -224,22 +200,12 @@
         }
 
         .chapter-title {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
             color: #0f172a;
             letter-spacing: -0.3px;
         }
 
-        .chapter-tag {
-            font-size: 0.75rem;
-            background: #e2e8f0;
-            color: #475569;
-            padding: 3px 10px;
-            border-radius: 6px;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Question & Answer Card */
         .qa-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -253,7 +219,6 @@
         .qa-card:hover {
             border-color: #cbd5e1;
             box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-            transform: translateY(-1px);
         }
 
         .qa-header {
@@ -302,8 +267,20 @@
             background: #fcfdfe;
         }
 
+        .qa-intent {
+            margin-top: 12px;
+            font-size: 0.82rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 8px 14px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         .qa-answer {
-            margin-top: 14px;
+            margin-top: 12px;
             font-size: 0.92rem;
             color: #334155;
             line-height: 1.65;
@@ -325,11 +302,10 @@
             margin-bottom: 6px;
         }
 
-        /* Code Snippet inside Answer */
         pre {
             background: var(--code-bg);
             color: var(--code-text);
-            padding: 14px 16px;
+            padding: 12px 16px;
             border-radius: 8px;
             overflow-x: auto;
             font-family: 'JetBrains Mono', monospace;
@@ -340,7 +316,7 @@
 
         code {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.84em;
+            font-size: 0.85em;
             background: #e2e8f0;
             color: #0f172a;
             padding: 2px 6px;
@@ -355,7 +331,6 @@
             font-weight: 400;
         }
 
-        /* Print / Mobile Adjustments */
         @media (max-width: 900px) {
             .sidebar {
                 display: none;
@@ -371,7 +346,6 @@
             }
         }
 
-        /* Sticky Action Buttons */
         .action-bar {
             position: fixed;
             bottom: 24px;
@@ -410,26 +384,27 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-brand">
-                <h2>CẨM NANG <span>PHỎNG VẤN</span></h2>
+                <h2>PHỎNG VẤN <span>.NET BACKEND</span></h2>
             </div>
 
             <div class="search-box">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm từ khóa (SP-API, Polly, S3...)..." />
+                <input type="text" id="searchInput" class="search-input" placeholder="Tìm câu hỏi (DI, Async, Rate limit, Index, S3...)..." />
             </div>
 
             <ul class="toc-list">
-                <li class="toc-item"><a href="#chuong1"><span>1. Clean Architecture & C#</span> <span class="toc-badge">7 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong2"><span>2. Amazon SP-API & Workers</span> <span class="toc-badge">8 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong3"><span>3. Watchdog & Polly Resilience</span> <span class="toc-badge">7 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong4"><span>4. SQL Server & Performance</span> <span class="toc-badge">7 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong5"><span>5. AWS S3 & Security / DPAPI</span> <span class="toc-badge">5 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong6"><span>6. Võ Minh Thiên & Nail Salon</span> <span class="toc-badge">4 câu</span></a></li>
-                <li class="toc-item"><a href="#chuong7"><span>7. Agile / Scrum & Tình Huống</span> <span class="toc-badge">2 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong1"><span>1. C# & .NET Core Core Concepts</span> <span class="toc-badge">6 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong2"><span>2. Web API & Clean Architecture</span> <span class="toc-badge">6 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong3"><span>3. Background Worker & Data Sync</span> <span class="toc-badge">6 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong4"><span>4. API Resilience, Rate Limit & Polly</span> <span class="toc-badge">5 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong5"><span>5. Database Optimization & SQL</span> <span class="toc-badge">7 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong6"><span>6. System Monitoring & Watchdog</span> <span class="toc-badge">4 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong7"><span>7. Cloud (AWS S3) & Security</span> <span class="toc-badge">4 câu</span></a></li>
+                <li class="toc-item"><a href="#chuong8"><span>8. Agile / Scrum & Tình huống</span> <span class="toc-badge">3 câu</span></a></li>
             </ul>
 
             <div style="margin-top: auto; padding: 12px; background: #f8fafc; border-radius: 10px; border: 1px dashed var(--border); font-size: 0.78rem; color: var(--text-muted);">
-                💡 <strong>100% Thực tế:</strong> Toàn bộ câu trả lời được trích xuất trực tiếp từ source code <code>C:\CongViec\LSB</code> & <code>LSB Watchdog</code>.
+                🎯 <strong>Góc nhìn Nhà tuyển dụng:</strong> Bộ câu hỏi tổng quát từ CV của bạn, giúp bạn trả lời tự nhiên, sâu sắc và thuyết phục mọi Tech Lead.
             </div>
         </aside>
 
@@ -438,42 +413,34 @@
 
             <!-- Hero Banner -->
             <div class="hero-banner">
-                <span class="hero-badge">Tài liệu ôn thi phỏng vấn độc quyền</span>
-                <h1 class="hero-title">40 Câu Hỏi & Trả Lời Phỏng Vấn .NET / Backend Thực Chiến</h1>
+                <span class="hero-badge">Chuẩn Phỏng Vấn Tuyển Dụng Backend</span>
+                <h1 class="hero-title">Bộ Câu Hỏi Phỏng Vấn .NET / Backend Developer</h1>
                 <p class="hero-subtitle">
-                    Dành riêng cho <strong>Nguyễn Hồng Quân</strong>. Đầy đủ các chủ đề sát sườn: Clean Architecture, Amazon SP-API, Background Workers, Polly 8, Windows Watchdog, SQL Tuning, và AWS S3.
+                    Bộ câu hỏi được xây dựng dựa trên góc nhìn thực tế của <strong>Tech Lead & Hiring Manager</strong> khi đọc CV của bạn. Hướng dẫn cách trả lời tự tin, giải thích rõ nguyên lý và lồng ghép kinh nghiệm thực chiến.
                 </p>
             </div>
 
             <!-- CHƯƠNG 1 -->
             <section class="chapter-section" id="chuong1">
                 <div class="chapter-header">
-                    <span class="chapter-icon">🏛️</span>
-                    <h2 class="chapter-title">Chương 1: Kiến trúc LSB & Clean Architecture Thực tế</h2>
-                    <span class="chapter-tag">LSB.SellerCentral</span>
+                    <span class="chapter-icon">💻</span>
+                    <h2 class="chapter-title">Chương 1: C# & .NET Core Core Concepts (Nền tảng)</h2>
                 </div>
 
                 <!-- Q1 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 1:</span> Em hãy trình bày cấu trúc Solution của dự án LSB Seller Central?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 1:</span> Trong .NET, cơ chế Dependency Injection (DI) hỗ trợ các loại Service Lifetime nào? Khi nào sử dụng từng loại?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Hiểu biết về quản lý vòng đời bộ nhớ và các lỗi cấp phát tài nguyên trong .NET.</div>
                         <div class="qa-answer">
-                            Solution của em được tổ chức dạng <strong>Monorepo</strong> gồm các project rõ ràng theo <strong>Clean Architecture</strong>:
+                            Trong .NET có 3 loại Lifetime chính:
                             <ul>
-                                <li><code>LSB.SellerCentral.Core</code>: Class Library dùng chung chứa DTOs, cấu hình, Base SP-API Client (<code>OrdersApiClient</code>, <code>FinancesApiClient</code>, <code>LedgerSummaryApiClient</code>) và các policy Polly retry.</li>
-                                <li><code>LSB.SellerCentral.BackEnd</code>: Tách làm 4 tầng Clean Architecture:
-                                    <ul>
-                                        <li><strong>Domain:</strong> Chứa Entities (<code>SettlementSummary</code>, <code>FinancialTransaction</code>, <code>LedgerSummary</code>, <code>FulfilledShipment</code>...).</li>
-                                        <li><strong>Application:</strong> Chứa CQRS Handlers với MediatR, FluentValidation, AWS S3 Client.</li>
-                                        <li><strong>Infrastructure:</strong> Chứa EF Core <code>ApplicationDbContext</code> (SQL Server), Identity, JWT.</li>
-                                        <li><strong>API:</strong> Cung cấp RESTful endpoints cho dashboard.</li>
-                                    </ul>
-                                </li>
-                                <li><code>LSB.SellerCentral.Services</code>: Windows Worker Service chứa các Background Workers chạy ngầm đồng bộ dữ liệu Amazon.</li>
-                                <li><code>LSB.SellerCentral.App</code>: Chứa frontend React 18 + Vite + TailwindCSS (SellerManager) và WPF ConfigurationTool.</li>
+                                <li><strong>Transient (<code>AddTransient</code>):</strong> Tạo một instance mới mỗi lần được yêu cầu (resolve). Phù hợp cho các service nhẹ, không lưu trạng thái (Stateless) như Helpers, Mappers, Validators.</li>
+                                <li><strong>Scoped (<code>AddScoped</code>):</strong> Tạo một instance duy nhất trong phạm vi của một Request (trong Web API là một HTTP Request). Phù hợp cho các service gắn liền với ngữ cảnh request như <code>DbContext</code>, Repositories, Current User Context.</li>
+                                <li><strong>Singleton (<code>AddSingleton</code>):</strong> Tạo duy nhất một instance cho toàn bộ vòng đời của ứng dụng. Phù hợp cho các service dùng chung như Caching in-memory, Configuration, hoặc các tiến trình chạy nền (<code>BackgroundService</code>).</li>
                             </ul>
                         </div>
                     </div>
@@ -482,17 +449,15 @@
                 <!-- Q2 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 2:</span> Tại sao em dùng MediatR trong tầng Application của LSB? Luồng xử lý một Request diễn ra như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 2:</span> Lỗi "Captive Dependency" trong Dependency Injection là gì và làm sao để khắc phục?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Kinh nghiệm xử lý lỗi bất đồng bộ vòng đời giữa Scoped và Singleton.</div>
                         <div class="qa-answer">
-                            Em dùng <strong>MediatR</strong> để áp dụng mô hình <strong>CQRS</strong> (Command Query Responsibility Segregation) nhằm tách biệt luồng Ghi và Đọc, đồng thời Decouple (giảm phụ thuộc) giữa Controller và Business Logic:
-                            <ul>
-                                <li><strong>Luồng xử lý:</strong> Controller chỉ nhận request và gọi <code>_mediator.Send(command)</code>. MediatR tự động điều phối đến đúng <code>IRequestHandler</code> tương ứng trong tầng Application.</li>
-                                <li>Tầng Application xử lý nghiệp vụ, gọi <code>ApplicationDbContext</code> ở Infrastructure để lưu dữ liệu, sau đó trả về DTO cho Controller.</li>
-                                <li>Mỗi Use-Case nằm gọn trong 1 file Handler riêng, rất dễ bảo trì và viết Unit Test với Moq/xUnit.</li>
-                            </ul>
+                            <strong>Captive Dependency</strong> xảy ra khi một service có vòng đời dài (ví dụ: Singleton) phụ thuộc và inject trực tiếp một service có vòng đời ngắn hơn (ví dụ: Scoped <code>DbContext</code>) qua constructor. Khi đó, service Scoped sẽ bị giữ lại (bắt giữ) và sống mãi mãi theo Singleton.
+                            <br><br><strong>Hậu quả:</strong> <code>DbContext</code> không bao giờ được giải phóng, gây rò rỉ bộ nhớ (Memory Leak) và lỗi đa luồng (Concurrency Exceptions) khi nhiều luồng cùng gọi vào một DbContext instance.
+                            <br><strong>Cách khắc phục:</strong> Trong Singleton (như BackgroundService), ta inject <code>IServiceScopeFactory</code>. Mỗi khi cần dùng Scoped service, ta tạo scope thủ công bằng <code>using (var scope = _scopeFactory.CreateScope())</code> và resolve service từ scope đó.
                         </div>
                     </div>
                 </div>
@@ -500,14 +465,16 @@
                 <!-- Q3 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 3:</span> Dependency Injection (DI) trong LSB được cấu hình thế nào? Tránh lỗi Captive Dependency ra sao?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 3:</span> Lập trình bất đồng bộ (async/await) trong C# hoạt động như thế nào? Tại sao nên tránh dùng .Result hoặc .Wait()?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Khả năng tối ưu I/O Bound, Thread Pool và phòng tránh Deadlock.</div>
                         <div class="qa-answer">
                             <ul>
-                                <li>Trong Web API: Đăng ký Service nghiệp vụ là <strong>Scoped</strong> (<code>ISettlementSyncService</code>, <code>ApplicationDbContext</code>), các Helper không trạng thái là <strong>Transient</strong>, và các thành phần dùng chung như <code>HttpClient</code>, <code>IConfiguration</code>, <code>LwaTokenProvider</code> là <strong>Singleton</strong>.</li>
-                                <li><strong>Tránh Captive Dependency:</strong> Trong <code>LSB.SellerCentral.Services</code> (BackgroundService là Singleton), em tuyệt đối không inject trực tiếp <code>DbContext</code> vào constructor. Thay vào đó, em inject <code>IServiceScopeFactory</code>, mỗi lần Worker chạy chu kỳ sync sẽ gọi <code>using (var scope = _scopeFactory.CreateScope())</code> để tạo scope mới và resolve <code>DbContext</code>. Khi xong việc, scope tự dispose giải phóng kết nối.</li>
+                                <li><code>async/await</code> không tạo ra Thread mới cho các tác vụ I/O (gọi API, truy vấn DB, đọc file). Khi gặp từ khóa <code>await</code>, luồng hiện tại được trả về <strong>Thread Pool</strong> để phục vụ request khác. Khi tác vụ I/O hoàn thành, một luồng từ Pool sẽ được cấp phát để tiếp tục thực thi đoạn code sau await.</li>
+                                <li><strong>Tại sao tránh <code>.Result</code> / <code>.Wait()</code>:</strong> Đây là kỹ thuật Sync-over-Async làm block luồng hiện tại để chờ Task hoàn thành. Điều này dễ dẫn đến <strong>Deadlock</strong> và làm cạn kiệt tài nguyên Thread Pool (Thread Pool Starvation), khiến ứng dụng không thể xử lý thêm request mới.</li>
+                                <li><strong>Nguyên tắc vàng:</strong> Luôn áp dụng <em>"Async all the way"</em> từ Controller xuống tầng Database/Network.</li>
                             </ul>
                         </div>
                     </div>
@@ -516,12 +483,19 @@
                 <!-- Q4 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 4:</span> Em validate dữ liệu đầu vào trong LSB bằng cách nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 4:</span> Middleware trong ASP.NET Core là gì? Em thường dùng Middleware để xử lý những việc gì?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Kiến thức về HTTP Request Pipeline trong ASP.NET Core.</div>
                         <div class="qa-answer">
-                            Em sử dụng thư viện <code>FluentValidation</code> trong project <code>LSB.SellerCentral.Application</code>. Mỗi Command/Query có một class Validator kế thừa <code>AbstractValidator&lt;T&gt;</code>, ví dụ kiểm tra khoảng ngày hợp lệ, định dạng Marketplace ID, SKU không được rỗng... Logic validation được tách biệt hoàn toàn khỏi DTO và Entity.
+                            Middleware là các khối code được ghép nối với nhau thành một đường ống (Pipeline) để xử lý các HTTP Request và Response theo mô hình Chain of Responsibility.
+                            <br><br><strong>Các ứng dụng thực tế em thường triển khai:</strong>
+                            <ul>
+                                <li><strong>Global Exception Handling:</strong> Bắt tất cả các lỗi unhandled exception trong hệ thống, ghi log chi tiết và trả về response chuẩn RFC 7807 (Problem Details) với mã HTTP 500.</li>
+                                <li><strong>Authentication & Authorization:</strong> Kiểm tra JWT Bearer token và xác thực quyền người dùng.</li>
+                                <li><strong>Request/Response Logging & Timing:</strong> Đo thời gian thực thi (Elapsed time) của API để phát hiện các endpoint bị chậm.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -529,12 +503,16 @@
                 <!-- Q5 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 5:</span> Em cấu hình xác thực người dùng và bảo mật API trong LSB BackEnd như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 5:</span> Quá trình Garbage Collection (GC) trong .NET hoạt động như thế nào và làm sao để giải phóng unmanaged resources?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Khả năng quản lý bộ nhớ và tối ưu ứng dụng lâu dài.</div>
                         <div class="qa-answer">
-                            Em sử dụng <code>Microsoft.AspNetCore.Identity.EntityFrameworkCore</code> kết hợp với <strong>JWT (JSON Web Token)</strong>. Khi người dùng đăng nhập thành công, hệ thống mã hóa UserId, Email, Roles vào Claims của Token, ký bằng khóa đối xứng HMAC-SHA256. Các Controller bảo mật được gắn thuộc tính <code>[Authorize]</code>.
+                            <ul>
+                                <li>GC trong .NET tự động thu hồi bộ nhớ trên Heap theo cơ chế 3 thế hệ (Generational GC): <strong>Gen 0</strong> (đối tượng mới tạo, ngắn hạn), <strong>Gen 1</strong> (vùng đệm), và <strong>Gen 2</strong> (đối tượng sống lâu dài như Static/Singleton). Các đối tượng lớn hơn 85,000 bytes được đưa vào <strong>LOH (Large Object Heap)</strong>.</li>
+                                <li><strong>Giải phóng tài nguyên Unmanaged (File stream, DB connection, Socket):</strong> Cần triển khai pattern <code>IDisposable</code> / <code>IAsyncDisposable</code>. Trong code sử dụng, luôn bọc trong khối <code>using (var resource = ...)</code> hoặc <code>using var ...</code> để đảm bảo phương thức <code>Dispose()</code> luôn được gọi tự động ngay cả khi có Exception xảy ra.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -542,25 +520,17 @@
                 <!-- Q6 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 6:</span> Dự án LSB xử lý Exception tập trung như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 6:</span> Phân biệt giữa IEnumerable, IQueryable và IList trong C#?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Tránh lỗi lọc dữ liệu trên RAM (In-Memory filtering) gây sập server.</div>
                         <div class="qa-answer">
-                            Em xây dựng <code>GlobalExceptionMiddleware</code> đặt ở đầu pipeline của ASP.NET Core API. Mọi unhandled exception phát sinh từ tầng dưới đều được bắt tại đây, ghi log chi tiết vào Serilog kèm <code>TraceIdentifier</code>, và trả về response chuẩn ProblemDetails (RFC 7807) với mã lỗi HTTP phù hợp (400, 404, 500) mà không để lộ chi tiết nhạy cảm của server ra ngoài.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q7 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 7:</span> Lập trình bất đồng bộ (async/await) được áp dụng trong LSB ra sao?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Toàn bộ các tác vụ I/O bound từ việc gọi Amazon SP-API qua <code>HttpClient</code> / <code>RestSharp</code>, query database qua EF Core (<code>ToListAsync</code>, <code>SaveChangesAsync</code>), upload file lên S3 (<code>PutObjectAsync</code>) đều là <code>async/await</code> 100%. Em luôn truyền <code>CancellationToken</code> từ Controller hoặc Worker vào các method bất đồng bộ để kịp thời giải phóng tài nguyên khi request bị cancel.
+                            <ul>
+                                <li><strong><code>IQueryable&lt;T&gt;</code>:</strong> Hoạt động dựa trên Expression Tree. Khi ta viết <code>.Where()</code> hay <code>.Select()</code>, điều kiện được dịch thành câu lệnh SQL và thực thi trực tiếp trên Database server.</li>
+                                <li><strong><code>IEnumerable&lt;T&gt;</code>:</strong> Dùng để duyệt dữ liệu tuần tự. Nếu gọi <code>.Where()</code> trên IEnumerable, toàn bộ dữ liệu từ DB đã được tải về RAM của server rồi mới lọc (In-Memory filtering) -> gây chậm và tốn bộ nhớ nếu bảng lớn.</li>
+                                <li><strong><code>IList&lt;T&gt;</code> / <code>List&lt;T&gt;</code>:</strong> Tập hợp dữ liệu đã nằm hoàn toàn trong bộ nhớ RAM, hỗ trợ thêm/sửa/xóa và truy xuất theo chỉ mục <code>[index]</code>.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -569,26 +539,46 @@
             <!-- CHƯƠNG 2 -->
             <section class="chapter-section" id="chuong2">
                 <div class="chapter-header">
-                    <span class="chapter-icon">📦</span>
-                    <h2 class="chapter-title">Chương 2: Amazon SP-API & Các Worker Services Chạy Ngầm</h2>
-                    <span class="chapter-tag">Background Workers</span>
+                    <span class="chapter-icon">🏛️</span>
+                    <h2 class="chapter-title">Chương 2: Web API & Clean Architecture (Thiết kế hệ thống)</h2>
+                </div>
+
+                <!-- Q7 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 7:</span> Em hiểu thế nào về kiến trúc Clean Architecture và tại sao nên áp dụng nó cho dự án Backend?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Tư duy phân tầng kiến trúc và quản lý sự phụ thuộc.</div>
+                        <div class="qa-answer">
+                            Clean Architecture chia hệ thống thành các tầng độc lập theo nguyên tắc <strong>Dependency Rule (Phụ thuộc hướng vào trong)</strong>:
+                            <ul>
+                                <li><strong>Domain (Lõi):</strong> Chứa Entities, Enums, Value Objects. Hoàn toàn không phụ thuộc vào bất kỳ framework hoặc thư viện ngoài nào.</li>
+                                <li><strong>Application:</strong> Chứa Business Logic, Use Cases, CQRS Handlers, DTOs, Validation. Chỉ phụ thuộc vào Domain.</li>
+                                <li><strong>Infrastructure:</strong> Triển khai kết nối CSDL (EF Core DbContext), Gọi API bên ngoài, Lưu trữ file (AWS S3), JWT Authentication.</li>
+                                <li><strong>Presentation / API:</strong> Controllers, Middlewares, Background Workers.</li>
+                            </ul>
+                            <strong>Lợi ích:</strong> Dễ viết Unit Test (mock dependencies dễ dàng), dễ thay thế công nghệ (ví dụ đổi SQL Server sang PostgreSQL mà không cần sửa Business Logic ở tầng Application).
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Q8 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 8:</span> Kể tên các Background Worker chính trong LSB.SellerCentral.Services và nhiệm vụ của từng worker?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 8:</span> Mô hình CQRS (Command Query Responsibility Segregation) là gì? Khi nào nên áp dụng?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Khả năng tách biệt luồng Đọc và Ghi để tối ưu hệ thống.</div>
                         <div class="qa-answer">
-                            Trong project <code>LSB.SellerCentral.Services</code>, em phát triển các worker kế thừa <code>BackgroundService</code>:
+                            <strong>CQRS</strong> là mô hình tách biệt rõ ràng giữa hai luồng xử lý:
                             <ul>
-                                <li><code>SettlementSyncWorker</code>: Thu thập các Financial Event Groups trạng thái <code>CLOSED</code> từ Amazon Finances API v2024-06-19 và liên kết <code>SettlementSummaryId</code> với các giao dịch thời gian thực (<code>FinancialTransaction</code>).</li>
-                                <li><code>ReportSyncWorker</code>: Yêu cầu và tải các báo cáo FBA Returns, Fulfilled Shipments, Inventory Ledger (<code>GET_LEDGER_SUMMARY_VIEW_DATA</code>).</li>
-                                <li><code>SearchOrdersDataWorker</code>: Đồng bộ đơn hàng mới và cập nhật trạng thái đơn hàng (Pending, Unshipped, Shipped, Cancelled).</li>
-                                <li><code>InventoryDataWorker</code> & <code>PerformanceDataWorker</code>: Cập nhật số lượng tồn kho và chỉ số sức khỏe tài khoản (Account Health / ODR).</li>
+                                <li><strong>Commands (Ghi):</strong> Các hành động thay đổi trạng thái dữ liệu (Create, Update, Delete). Cần validate chặt chẽ, kiểm tra tính toàn vẹn nghiệp vụ.</li>
+                                <li><strong>Queries (Đọc):</strong> Các hành động chỉ lấy dữ liệu để hiển thị (Read-only). Cần tối ưu tốc độ đọc tối đa, có thể bypass tầng nghiệp vụ phức tạp, dùng <code>.AsNoTracking()</code> hoặc Dapper.</li>
                             </ul>
+                            Trong .NET, em thường kết hợp CQRS với thư viện <strong>MediatR</strong> để mỗi use-case là một class Request và Handler riêng biệt, giúp code gọn gàng, tránh việc một Service class bị phình to hàng nghìn dòng.
                         </div>
                     </div>
                 </div>
@@ -596,13 +586,17 @@
                 <!-- Q9 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 9:</span> Cơ chế xác thực LWA (Login with Amazon) cho SP-API hoạt động như thế nào trong code của em?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 9:</span> Cơ chế xác thực và phân quyền bằng JWT Token trong Web API hoạt động như thế nào?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Kỹ năng bảo mật API Backend.</div>
                         <div class="qa-answer">
-                            Amazon SP-API yêu cầu mỗi request phải có header <code>x-amz-access-token</code> (hạn 1 tiếng).
-                            <br>Em xây dựng một Token Helper: lưu Access Token trong bộ nhớ cache. Trước khi gọi SP-API, hệ thống kiểm tra token. Nếu token sắp hết hạn (trước 5 phút), hệ thống sẽ gửi request OAuth2 POST đến <code>https://api.amazon.com/auth/o2/token</code> với <code>client_id</code>, <code>client_secret</code> và <code>refresh_token</code> để lấy access token mới, cập nhật lại vào cache rồi mới thực thi tiếp.
+                            <ul>
+                                <li><strong>Authentication (Xác thực):</strong> Người dùng gửi thông tin đăng nhập. Nếu hợp lệ, backend tạo ra một chuỗi <strong>Access Token (JWT)</strong> chứa các Claims (UserId, Email, Roles) được ký bằng Secret Key đối xứng (HMAC-SHA256). Client đính kèm token này vào header <code>Authorization: Bearer &lt;token&gt;</code> cho các request tiếp theo.</li>
+                                <li><strong>Authorization (Phân quyền):</strong> Backend sử dụng attribute <code>[Authorize(Roles = "Admin,Manager")]</code> hoặc Policy-based Authorization để kiểm tra quyền hạn trước khi cho phép request đi vào Action.</li>
+                                <li><strong>Refresh Token:</strong> Access Token có hạn ngắn (ví dụ 15-30 phút). Khi hết hạn, client gửi Refresh Token (lưu an toàn trong DB) lên để xin cấp mới Access Token mà người dùng không cần đăng nhập lại.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -610,15 +604,15 @@
                 <!-- Q10 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 10:</span> Amazon SP-API giới hạn Rate Limit (Token Bucket). Em đã xử lý lỗi 429 QuotaExceeded trong Worker như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 10:</span> Tại sao nên dùng FluentValidation thay vì gắn DataAnnotations trực tiếp lên Model/DTO?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Tư duy Clean Code và nguyên lý Single Responsibility.</div>
                         <div class="qa-answer">
-                            Em xử lý theo 2 cấp độ:
                             <ul>
-                                <li><strong>Cấp độ Request (Polly):</strong> Áp dụng chính sách Retry với Exponential Backoff kèm Jitter qua <code>Polly.Extensions.Http</code> cho các lỗi tạm thời.</li>
-                                <li><strong>Cấp độ Worker Batch (Nghiệp vụ):</strong> Với các báo cáo nặng trong <code>ReportSyncWorker</code> (như Inventory Ledger), nếu gặp <code>429 QuotaExceeded</code>, Worker chủ động tạm dừng và delay 4 tiếng trước khi thử lại chunk tiếp theo. Đồng thời khi <code>LastSyncedAt</code> đã chạm ngày hiện tại, worker cũng delay 4 tiếng để tránh spam gọi báo cáo nhiều lần trong ngày.</li>
+                                <li><strong>DataAnnotations:</strong> Gắn các attribute <code>[Required]</code>, <code>[MaxLength]</code> trực tiếp lên DTO. Nhược điểm: làm bẩn class DTO, khó viết các logic validate phức tạp (ví dụ validate phụ thuộc nhiều trường, kiểm tra điều kiện nghiệp vụ hoặc truy vấn DB bất đồng bộ).</li>
+                                <li><strong>FluentValidation:</strong> Tách toàn bộ logic kiểm tra sang một class riêng kế thừa <code>AbstractValidator&lt;T&gt;</code>. Hỗ trợ validate có điều kiện (<code>When()</code>, <code>Unless()</code>), quy tắc bất đồng bộ (<code>MustAsync()</code>), và dễ dàng viết Unit Test độc lập cho các rule kiểm tra.</li>
                             </ul>
                         </div>
                     </div>
@@ -627,12 +621,25 @@
                 <!-- Q11 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 11:</span> Trong SettlementSyncWorker, em chia batch đồng bộ dữ liệu tài chính như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 11:</span> Em thiết kế chuẩn RESTful Web API như thế nào? (HTTP Methods, Status Codes, URL Naming)</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Tiêu chuẩn thiết kế API chuyên nghiệp.</div>
                         <div class="qa-answer">
-                            Dữ liệu Settlement được chia theo từng chunk <strong>180 ngày</strong> để truy vấn các nhóm sự kiện tài chính <code>CLOSED</code>. Khi lấy về, worker tự động liên kết <code>SettlementSummaryId</code> với các bản ghi <code>FinancialTransaction</code> có sẵn theo khoảng ngày mà không xóa hay ghi đè lịch sử giao dịch gốc, đảm bảo tính toàn vẹn cho dữ liệu đối soát.
+                            <ul>
+                                <li><strong>URL Naming:</strong> Sử dụng danh từ số nhiều đại diện cho tài nguyên (Resource), ví dụ: <code>/api/orders</code>, <code>/api/orders/{id}/items</code>.</li>
+                                <li><strong>HTTP Methods:</strong>
+                                    <ul>
+                                        <li><code>GET</code>: Lấy dữ liệu (Idempotent, Safe).</li>
+                                        <li><code>POST</code>: Tạo mới tài nguyên.</li>
+                                        <li><code>PUT</code>: Cập nhật toàn bộ tài nguyên (Idempotent).</li>
+                                        <li><code>PATCH</code>: Cập nhật một phần thuộc tính tài nguyên.</li>
+                                        <li><code>DELETE</code>: Xóa tài nguyên (Idempotent).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>HTTP Status Codes chuẩn:</strong> <code>200 OK</code>, <code>201 Created</code> (kèm header Location), <code>204 No Content</code>, <code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>403 Forbidden</code>, <code>404 Not Found</code>, <code>429 Too Many Requests</code>, <code>500 Internal Server Error</code>.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -640,51 +647,21 @@
                 <!-- Q12 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 12:</span> Khi tải các file báo cáo lớn từ Amazon về, em lưu trữ payload audit ở đâu và như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 12:</span> Hệ thống Multi-Tenancy (phục vụ nhiều công ty/khách hàng trên cùng 1 hệ thống) được thiết kế và cách ly dữ liệu ra sao?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Kiến trúc SaaS và bảo mật dữ liệu giữa các doanh nghiệp.</div>
                         <div class="qa-answer">
-                            Hệ thống tự động lưu các file JSON payload thô vào thư mục <code>C:\ProgramData\LSB\LSBSellerCentral\Payloads\</code> theo cấu trúc phân cấp để phục vụ cho việc kiểm tra (audit log) và đối soát khi có sai lệch số liệu, sau đó giải nén, parse từng dòng dạng stream và lưu vào CSDL.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q13 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 13:</span> Làm sao đảm bảo không bị trùng đơn hàng khi SearchOrdersDataWorker chạy định kỳ?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Trên bảng <code>Orders</code> trong CSDL SQL Server, em đặt chỉ mục duy nhất (Unique Index) trên cột <code>AmazonOrderId</code>. Trong worker, khi quét danh sách đơn hàng về, hệ thống kiểm tra nếu <code>AmazonOrderId</code> đã tồn tại thì chỉ cập nhật trạng thái (<code>OrderStatus</code>, <code>LastUpdateDate</code>), nếu chưa có thì mới <code>Insert</code> mới, bọc trong Transaction của DB.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q14 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 14:</span> Khi Windows tắt hoặc service bị Stop, làm sao Worker dừng an toàn (Graceful Shutdown)?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Trong vòng lặp <code>ExecuteAsync(CancellationToken stoppingToken)</code> của Worker, em luôn kiểm tra <code>stoppingToken.IsCancellationRequested</code> và truyền <code>stoppingToken</code> vào các hàm I/O async. Sau khi xử lý xong một batch/chunk nhỏ (50-100 bản ghi), worker commit DB và lưu mốc <code>LastSyncedAt</code>. Nếu service bị ngắt giữa chừng, worker dừng ngay lập tức mà không để lại dữ liệu rác, và lần chạy tiếp theo sẽ bắt đầu từ mốc <code>LastSyncedAt</code> gần nhất.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q15 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 15:</span> Tại sao em đóng gói LSB.SellerCentral.Services thành Windows Service thay vì Console App?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Em sử dụng package <code>Microsoft.Extensions.Hosting.WindowsServices</code> và WiX Toolset để cài đặt thành <strong>Windows Service</strong> trên server. Điều này giúp service tự động khởi động cùng Windows khi máy chủ restart, chạy ngầm dưới quyền tài khoản hệ thống mà không cần người dùng đăng nhập mở terminal, và có thể được quản lý bởi ServiceController / Watchdog.
+                            Cách tiếp cận phổ biến và hiệu quả nhất là <strong>Shared Database, Shared Schema (Row-level Isolation)</strong>:
+                            <ul>
+                                <li>Mọi bảng dữ liệu nghiệp vụ đều có thêm cột <code>TenantId</code>.</li>
+                                <li>Khi có request đến, Middleware trích xuất <code>TenantId</code> từ JWT Token hoặc Subdomain và lưu vào <code>ICurrentTenantService</code>.</li>
+                                <li>Trong EF Core <code>DbContext</code>, ta sử dụng tính năng <strong>Global Query Filter</strong>:
+                                    <pre><code>modelBuilder.Entity&lt;Order&gt;().HasQueryFilter(e => e.TenantId == _currentTenant.TenantId);</code></pre>
+                                </li>
+                                <li>EF Core sẽ tự động thêm điều kiện <code>WHERE TenantId = @tenantId</code> vào mọi câu truy vấn, loại bỏ hoàn toàn nguy cơ rò rỉ dữ liệu giữa các khách hàng.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -693,21 +670,89 @@
             <!-- CHƯƠNG 3 -->
             <section class="chapter-section" id="chuong3">
                 <div class="chapter-header">
-                    <span class="chapter-icon">🛡️</span>
-                    <h2 class="chapter-title">Chương 3: Hệ thống LSB Watchdog, Telemetry & Polly Resilience</h2>
-                    <span class="chapter-tag">LSB Watchdog</span>
+                    <span class="chapter-icon">⚙️</span>
+                    <h2 class="chapter-title">Chương 3: Background Worker Services & Data Synchronization</h2>
+                </div>
+
+                <!-- Q13 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 13:</span> Em thường sử dụng Background Worker Service trong các dự án cho những mục đích gì?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Trải nghiệm thực tế với các tác vụ chạy ngầm.</div>
+                        <div class="qa-answer">
+                            Em sử dụng <code>BackgroundService</code> kế thừa từ <code>IHostedService</code> cho các tác vụ nền:
+                            <ul>
+                                <li><strong>Đồng bộ dữ liệu định kỳ:</strong> Tự động gọi API bên thứ ba (như sàn TMĐT Amazon, đối tác vận chuyển) để kéo đơn hàng mới, cập nhật tồn kho, đối soát giao dịch tài chính.</li>
+                                <li><strong>Xử lý tác vụ nặng bất đồng bộ:</strong> Xử lý các file báo cáo lớn, tạo file export Excel/PDF, gửi email thông báo hàng loạt mà không bắt người dùng trên Web phải chờ đợi.</li>
+                                <li><strong>Dọn dẹp và bảo trì hệ thống:</strong> Xóa các file tạm, dọn dẹp các session hết hạn, kiểm tra tính toàn vẹn của dữ liệu định kỳ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q14 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 14:</span> Khi máy chủ restart hoặc ứng dụng bị shutdown, làm sao để Worker dừng một cách an toàn (Graceful Shutdown)?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li>Phương thức <code>ExecuteAsync(CancellationToken stoppingToken)</code> nhận vào một <code>stoppingToken</code>. Khi ứng dụng nhận tín hiệu dừng (SIGTERM/Stop Service), token này được kích hoạt trạng thái hủy (Cancelled).</li>
+                                <li><strong>Cách xử lý:</strong>
+                                    <ol>
+                                        <li>Luôn kiểm tra <code>!stoppingToken.IsCancellationRequested</code> trong các vòng lặp và truyền token vào các hàm I/O async (<code>HttpClient.GetAsync</code>, <code>DbContext.SaveChangesAsync</code>, <code>Task.Delay</code>).</li>
+                                        <li>Chia nhỏ công việc thành từng <strong>Batch/Chunk nhỏ</strong> (ví dụ 50-100 items). Sau mỗi chunk, commit Transaction và lưu mốc trạng thái <code>LastSyncedAt</code> vào DB.</li>
+                                        <li>Nếu bị ngắt giữa chừng, Worker hủy chunk hiện tại an toàn. Lần khởi động tiếp theo sẽ đọc mốc <code>LastSyncedAt</code> gần nhất để chạy tiếp mà không bị trùng lặp hay mất dữ liệu.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q15 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 15:</span> Làm sao đảm bảo tính Idempotency (không bị ghi trùng lặp dữ liệu) khi Worker đồng bộ dữ liệu nhiều lần?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-intent">🎯 <strong>Người phỏng vấn muốn kiểm tra:</strong> Tư duy bảo đảm tính toàn vẹn dữ liệu (Data Integrity).</div>
+                        <div class="qa-answer">
+                            Khi gọi API bên ngoài, Worker có thể gặp sự cố mất mạng sau khi đã nhận dữ liệu nhưng chưa kịp lưu, dẫn đến việc lần chạy sau sẽ lấy lại dữ liệu đó.
+                            <br><br><strong>Giải pháp:</strong>
+                            <ul>
+                                <li>Tạo <strong>Unique Index / Unique Constraint</strong> trên Database cho các mã định danh nghiệp vụ duy nhất (ví dụ: <code>ExternalOrderId</code>, <code>TransactionId</code>, <code>SKU</code>).</li>
+                                <li>Áp dụng chiến lược <strong>Upsert</strong>: Kiểm tra nếu bản ghi đã tồn tại theo mã định danh duy nhất thì chỉ thực hiện Update trạng thái, nếu chưa có thì mới Insert mới.</li>
+                                <li>Bọc toàn bộ thao tác ghi của một batch vào trong <code>Database Transaction</code>.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Q16 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 16:</span> Dự án LSB Watchdog được sinh ra để giải quyết vấn đề gì?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 16:</span> Làm sao xử lý việc đọc và xử lý các file dữ liệu rất lớn (hàng trăm MB) trong Worker mà không làm tràn bộ nhớ RAM (OutOfMemoryException)?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Trong môi trường production, các Worker Service đồng bộ Amazon chạy 24/7 có thể bị dừng do lỗi mạng đột ngột, server hết tài nguyên hoặc tiến trình bị crash/treo.
-                            <br><code>LSB.Watchdog</code> là một hệ thống độc lập chạy ngầm có nhiệm vụ: liên tục giám sát trạng thái sống còn của các Windows Services, đo đạc tải phần cứng (CPU/RAM/Disk), tự động khởi động lại service khi gặp sự cố (Self-Healing), và cung cấp API/WebPortal quản lý tập trung.
+                            <ul>
+                                <li><strong>Tránh:</strong> Không bao giờ đọc toàn bộ file vào chuỗi String hoặc Byte Array trên RAM (<code>ReadAllText</code>, <code>ReadAllBytes</code>).</li>
+                                <li><strong>Giải pháp chuẩn:</strong>
+                                    <ul>
+                                        <li>Sử dụng <strong>Streaming I/O</strong>: Đọc dữ liệu dạng luồng thông qua <code>StreamReader</code> kết hợp các thư viện streaming parser (như <code>CsvHelper</code> hoặc JSON Stream Parser).</li>
+                                        <li>Đọc và xử lý từng dòng một (Line-by-line processing).</li>
+                                        <li>Gom dữ liệu theo từng batch nhỏ (ví dụ 500-1000 dòng), ghi vào Database bằng EF Core rồi gọi <code>ChangeTracker.Clear()</code> để giải phóng bộ nhớ của ORM ngay lập tức.</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -715,20 +760,16 @@
                 <!-- Q17 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 17:</span> Watchdog kiểm tra và điều khiển các Windows Service bằng cách nào trong C#?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 17:</span> Khi có nhiều Background Worker cùng chạy, làm sao tránh xung đột tài nguyên hoặc làm cạn kiệt Connection Pool của Database?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Em sử dụng thư viện <code>System.ServiceProcess.ServiceController</code> (v8.0.0).
-                            <pre><code>using var sc = new ServiceController(serviceName);
-if (sc.Status == ServiceControllerStatus.Stopped)
-{
-    _logger.LogWarning("Service {ServiceName} is stopped. Attempting restart...", serviceName);
-    sc.Start();
-    sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(30));
-}</code></pre>
-                            Điều này đảm bảo các Worker bị crash sẽ được tự động phục hồi trong vòng vài giây.
+                            <ul>
+                                <li><strong>Thời gian khởi chạy so le (Staggered Schedules):</strong> Không cho các worker chạy cùng một tích tắc lúc hệ thống khởi động.</li>
+                                <li><strong>Mở kết nối ngắn nhất có thể:</strong> Chỉ tạo scope và mở kết nối DB khi thực sự bắt đầu ghi/đọc dữ liệu, giải phóng (Dispose) ngay sau khi batch hoàn thành, không giữ DbContext mở trong lúc đang gọi API bên ngoài tốn thời gian.</li>
+                                <li><strong>Điều tiết đồng thời (Concurrency Throttling):</strong> Sử dụng <code>SemaphoreSlim</code> để giới hạn số lượng tác vụ được phép truy cập tài nguyên nặng cùng một lúc.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -736,75 +777,17 @@ if (sc.Status == ServiceControllerStatus.Stopped)
                 <!-- Q18 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 18:</span> Watchdog đo đạc telemetry phần cứng (CPU, RAM, Disk) như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 18:</span> Cơ chế tự động làm mới (Token Rotation) khi làm việc với các API bên thứ ba sử dụng OAuth2 Access Token diễn ra như thế nào?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Em tích hợp thư viện <code>Hardware.Info</code> (v101.1.0) trong <code>LSB.Watchdog.Services</code>.
-                            <br>Định kỳ hệ thống đọc thông số: tổng dung lượng RAM đã dùng/còn trống, phần trăm tải CPU, và dung lượng trống trên các ổ đĩa. Thông tin này được ghi vào Serilog và phục vụ cho các cảnh báo khi tài nguyên máy chủ chạm ngưỡng nguy hiểm (>90% RAM hoặc Disk đầy).
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q19 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 19:</span> Em cấu hình thư viện Polly (v8.6.4) trong Watchdog và LSB như thế nào?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Em sử dụng các package <code>Polly</code>, <code>Polly.Core</code>, <code>Polly.Extensions</code> (v8.6.4) và <code>Microsoft.Extensions.Http.Resilience</code>.
-                            <br>Em thiết lập <strong>ResiliencePipeline</strong> gồm:
+                            Access Token của các bên thứ ba (như Amazon LWA) thường chỉ có hạn sử dụng ngắn (1 giờ):
                             <ul>
-                                <li><strong>Retry Strategy:</strong> Thử lại tối đa 3 lần với Exponential Backoff kèm Jitter khi gặp lỗi HTTP 5xx hoặc HttpRequestException.</li>
-                                <li><strong>Timeout Strategy:</strong> Giới hạn thời gian tối đa cho mỗi HTTP Call (ví dụ 30s) để giải phóng thread.</li>
-                                <li><strong>Circuit Breaker:</strong> Tạm ngắt kết nối nếu tỷ lệ lỗi vượt quá 50% trong 30 giây để tránh làm nghẽn hệ thống.</li>
+                                <li>Xây dựng một <code>TokenProvider</code> quản lý Access Token trong In-Memory Cache.</li>
+                                <li>Trước khi thực hiện bất kỳ cuộc gọi API nào, hệ thống kiểm tra token trong cache. Nếu token còn hạn (trừ đi khoảng an toàn 5 phút), trả về dùng ngay.</li>
+                                <li>Nếu token sắp hết hạn hoặc đã hết, sử dụng Refresh Token gửi request cấp phát lại token mới, cập nhật vào cache và tiếp tục cuộc gọi API. Sử dụng <code>SemaphoreSlim</code> để khóa luồng, tránh việc nhiều worker cùng lúc gọi refresh token (Cache Stampede).</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q20 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 20:</span> Cấu hình Serilog trong Watchdog có những tính năng gì nổi bật?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Trong <code>LSB.Watchdog.Services</code>, em cấu hình Serilog (v4.3.0) với:
-                            <ul>
-                                <li><strong>Enrichers:</strong> <code>Serilog.Enrichers.Process</code>, <code>Thread</code>, <code>Environment</code> để tự động đính kèm ProcessId, ThreadId và MachineName vào từng dòng log.</li>
-                                <li><strong>Sinks:</strong> Sử dụng <code>Serilog.Sinks.Async</code> để ghi log bất đồng bộ không làm chậm luồng chính, kết hợp <code>Serilog.Sinks.File</code> với cơ chế rolling log hàng ngày và <code>Serilog.Sinks.Map</code> để tách log theo từng module service riêng biệt.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q21 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 21:</span> LSB.Watchdog.Central và file cấu hình Yaml hoạt động ra sao?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Project <code>LSB.Watchdog.Central</code> là một ASP.NET Core Web API sử dụng Swagger/OpenAPI để quản lý cấu hình tập trung. Em sử dụng <code>YamlDotNet</code> (v16.3.0) để đọc và parse các file cấu hình <code>.yaml</code> định nghĩa danh sách các service cần giám sát, ngưỡng cảnh báo CPU/RAM và chu kỳ kiểm tra.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q22 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 22:</span> Công cụ ConfigurationTool trong Watchdog và LSB dùng để làm gì?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Đó là một ứng dụng Desktop WPF xây dựng bằng <code>CommunityToolkit.Mvvm</code> (v8.2.2) và giao diện <code>MaterialDesignThemes</code> (v5.2.1). Công cụ này cho phép kỹ thuật viên cấu hình nhanh chu kỳ Worker, kiểm tra bật/tắt Windows Services trực quan qua <code>ServiceController</code>, và mã hóa an toàn các API Key của Amazon trước khi ghi vào file cấu hình.
                         </div>
                     </div>
                 </div>
@@ -813,109 +796,100 @@ if (sc.Status == ServiceControllerStatus.Stopped)
             <!-- CHƯƠNG 4 -->
             <section class="chapter-section" id="chuong4">
                 <div class="chapter-header">
-                    <span class="chapter-icon">🗄️</span>
-                    <h2 class="chapter-title">Chương 4: Cơ sở dữ liệu SQL Server & PostgreSQL Thực chiến</h2>
-                    <span class="chapter-tag">DB Tuning</span>
+                    <span class="chapter-icon">🛡️</span>
+                    <h2 class="chapter-title">Chương 4: API Resilience, Rate Limiting & Polly</h2>
                 </div>
 
-                <!-- Q23 -->
+                <!-- Q19 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 23:</span> Em sử dụng Entity Framework Core với SQL Server trong LSB như thế nào?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 19:</span> Khi tích hợp với API bên thứ ba gặp mã lỗi 429 Too Many Requests (Rate Limiting), em xử lý như thế nào?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Em sử dụng <code>Microsoft.EntityFrameworkCore.SqlServer</code> (v7.0). Trong <code>LSB.SellerCentral.Infrastructure</code>, <code>ApplicationDbContext</code> quản lý các DbSet cho Entities. Em sử dụng Fluent API trong <code>OnModelCreating</code> để cấu hình ràng buộc quan hệ, kiểu dữ liệu (<code>decimal(18,2)</code> cho số tiền tài chính), và quản lý cấu trúc bảng hoàn toàn thông qua <strong>EF Core Migrations</strong>.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q24 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 24:</span> Tại sao trong các Worker đồng bộ dữ liệu em hay dùng .AsNoTracking()?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Khi Worker cần đọc hàng nghìn bản ghi để kiểm tra xem đơn hàng hay giao dịch đã tồn tại trong DB chưa (Read-Only), việc dùng <code>.AsNoTracking()</code> giúp EF Core không đưa các entity này vào Change Tracker. Điều này giúp tiết kiệm rất nhiều dung lượng RAM và tăng tốc độ truy vấn từ 20-30%.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q25 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 25:</span> Em tối ưu truy vấn SQL Server bằng Covering Index (INCLUDE) như thế nào trong dự án Võ Minh Thiên / LSB?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Trong hệ thống đơn hàng logistics tại Võ Minh Thiên và LSB, các truy vấn danh sách đơn hàng thường xuyên lọc theo <code>OrderStatus</code> và <code>OrderDate</code>, sau đó hiển thị các cột <code>AmazonOrderId</code>, <code>TotalAmount</code>, <code>CustomerName</code>.
-                            <pre><code>CREATE NONCLUSTERED INDEX IX_Orders_Filter
-ON Orders (OrderStatus, OrderDate)
-INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
-                            Nhờ có <code>INCLUDE</code>, câu query lấy toàn bộ dữ liệu ngay trên Index mà không cần thao tác <strong>Key Lookup</strong> vào bảng chính, giảm Disk I/O và tăng tốc độ truy vấn rõ rệt.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q26 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 26:</span> Khi nào em dùng ChangeTracker.Clear() trong EF Core khi xử lý Batch Data?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Khi Worker insert hoặc update hàng nghìn bản ghi theo từng đợt (ví dụ mỗi batch 500 records), sau khi gọi <code>await _dbContext.SaveChangesAsync()</code>, các bản ghi đó vẫn nằm trong bộ nhớ theo dõi của <code>ChangeTracker</code>. Nếu không xóa, qua nhiều vòng lặp <code>ChangeTracker</code> sẽ phình to gây tốn RAM. Em gọi <code>_dbContext.ChangeTracker.Clear()</code> ngay sau mỗi batch để dọn sạch bộ nhớ theo dõi.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q27 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 27:</span> Phân biệt cách sử dụng SQL Server và PostgreSQL trong kinh nghiệm của em?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
+                            Các hệ thống lớn thường áp dụng thuật toán **Token Bucket** hoặc **Leaky Bucket** để giới hạn request.
+                            <br><br><strong>Cách xử lý chuyên nghiệp:</strong>
                             <ul>
-                                <li><strong>SQL Server:</strong> Thường dùng trong các ứng dụng doanh nghiệp (.NET Core + EF Core SqlServer), hỗ trợ cực tốt công cụ SSMS, phân tích Execution Plan trực quan, và chỉ mục Covering Index <code>INCLUDE</code>.</li>
-                                <li><strong>PostgreSQL (v16):</strong> Rất mạnh mẽ trong việc xử lý kiểu dữ liệu JSON/JSONB, chi phí vận hành mã nguồn mở tối ưu, và quản lý các tác vụ batch import lớn rất nhẹ nhàng.</li>
+                                <li><strong>Cấp độ Request (Transient Fault Handling):</strong> Sử dụng thư viện **Polly** thiết lập chính sách **Retry với Exponential Backoff kèm Jitter** (thử lại sau 2s, 4s, 8s... cộng thêm độ lệch ngẫu nhiên vài trăm ms).</li>
+                                <li><strong>Cấp độ Quản lý hàng đợi (Batch Throttling):</strong> Nếu quota bị chạm trần liên tục, worker chuyển sang trạng thái tạm nghỉ (Delay) một khoảng thời gian dài hơn (ví dụ vài giờ đối với các báo cáo nặng) trước khi thử lại chunk tiếp theo để tránh bị đối tác khóa tài khoản.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Q28 -->
+                <!-- Q20 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 28:</span> Làm sao em phát hiện được câu query SQL bị chậm trong quá trình phát triển?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 20:</span> Em hiểu thế nào về Circuit Breaker Pattern và các trạng thái của nó?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            <ol>
-                                <li><strong>Bật Log SQL trong EF Core:</strong> Cấu hình <code>LogTo(Console.WriteLine, LogLevel.Information)</code> trong môi trường Development để xem câu lệnh SQL mà EF Core tự sinh ra.</li>
-                                <li><strong>SQL Server Profiler / Extended Events:</strong> Bắt các câu query có <code>Duration</code> cao hoặc <code>Reads</code> lớn.</li>
-                                <li><strong>SSMS Execution Plan (Ctrl + M):</strong> Kiểm tra xem có xuất hiện <code>Table Scan</code>, <code>Index Scan</code> hoặc <code>Key Lookup</code> không để bổ sung Index thích hợp.</li>
-                            </ol>
+                            <strong>Circuit Breaker</strong> là mẫu thiết kế giúp bảo vệ hệ thống không bị treo khi dịch vụ đích gặp sự cố nghiêm trọng, hoạt động qua 3 trạng thái:
+                            <ul>
+                                <li><strong>Closed (Đóng):</strong> Trạng thái bình thường, mọi request đều đi qua. Hệ thống theo dõi tỷ lệ lỗi.</li>
+                                <li><strong>Open (Ngắt mạch):</strong> Khi tỷ lệ lỗi vượt ngưỡng cho phép (ví dụ >50% lỗi trong 30s), mạch ngắt ngay lập tức. Tất cả các request tiếp theo bị từ chối tức thì (Fast Fail) mà không gửi ra mạng, giúp dịch vụ đích có thời gian phục hồi và không làm nghẽn thread của bên gọi.</li>
+                                <li><strong>Half-Open (Nửa mở):</strong> Sau một khoảng thời gian chờ (Cooldown), mạch cho phép một số lượng nhỏ request đi qua thử nghiệm. Nếu thành công, mạch đóng lại (<strong>Closed</strong>); nếu thất bại, tiếp tục ngắt (<strong>Open</strong>).</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Q29 -->
+                <!-- Q21 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 29:</span> Stored Procedures có được dùng trong các dự án của em không và khi nào nên dùng?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 21:</span> Tại sao trong Retry Policy của Polly luôn cần bổ sung "Jitter" (Độ lệch ngẫu nhiên)?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Có. Trong dự án tại Võ Minh Thiên và HQ Soft, các báo cáo tổng hợp doanh thu theo tháng/quý cần tính toán phức tạp trên nhiều bảng lớn được viết bằng <strong>Stored Procedures</strong> và gọi từ .NET qua EF Core <code>FromSqlRaw</code> hoặc Dapper để tận dụng việc pre-compile kế hoạch thực thi trực tiếp trên Database server.
+                            Để giải quyết bài toán <strong>Thundering Herd Problem (Hiện tượng bầy đàn)</strong>.
+                            <br>Nếu không có Jitter, khi một dịch vụ gặp sự cố, tất cả 100 client bị lỗi tại cùng 1 giây sẽ cùng đợi đúng 2s, 4s, 8s để thử lại. Điều này tạo ra các đợt "sóng thần" request đồng loạt ập vào server đích tại cùng một tích tắc, khiến server càng bị quá tải và không thể gượng dậy.
+                            <br><strong>Jitter</strong> thêm một khoảng thời gian ngẫu nhiên (ví dụ <code>2s + Random(100ms - 500ms)</code>), giúp phân tán đều các lượt thử lại trên dòng thời gian.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q22 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 22:</span> Khi gọi API bên thứ ba bị Timeout hoặc Network Drop mà không rõ bên kia đã xử lý hay chưa, em làm thế nào?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li>Đối với tác vụ <strong>GET (Đọc):</strong> Có thể an toàn thử lại vì tính chất Idempotent.</li>
+                                <li>Đối với tác vụ <strong>POST (Tạo đơn / Thanh toán / Ghi dữ liệu):</strong>
+                                    <ol>
+                                        <li>Sử dụng <strong>Idempotency Key</strong> (Header) truyền kèm request nếu bên thứ ba hỗ trợ.</li>
+                                        <li>Trước khi quyết định gọi lại, thực hiện một truy vấn (Query Status / GET) dựa trên mã tham chiếu nghiệp vụ duy nhất để xác nhận xem phía đối tác đã tạo thành công hay chưa.</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q23 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 23:</span> Em sử dụng HttpClientFactory và Typed Client trong .NET như thế nào để tránh lỗi Socket Exhaustion?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li>Nếu khởi tạo <code>new HttpClient()</code> thủ công liên tục, khi dispose socket vẫn bị kẹt ở trạng thái <code>TIME_WAIT</code> của hệ điều hành, dẫn đến lỗi <strong>Socket Exhaustion</strong> khi tải cao.</li>
+                                <li><strong>Giải pháp chuẩn:</strong> Sử dụng <code>IHttpClientFactory</code> đăng ký <strong>Typed Client</strong> trong <code>Program.cs</code>:
+                                    <pre><code>services.AddHttpClient&lt;IExternalApiClient, ExternalApiClient&gt;(client => {
+    client.BaseAddress = new Uri("https://api.example.com/");
+    client.Timeout = TimeSpan.FromSeconds(30);
+}).AddPolicyHandler(GetRetryPolicy());</code></pre>
+                                </li>
+                                <li><code>HttpClientFactory</code> tự động quản lý vòng đời của <code>HttpMessageHandler</code>, tái sử dụng các kết nối socket bên dưới một cách tối ưu.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -924,79 +898,135 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
             <!-- CHƯƠNG 5 -->
             <section class="chapter-section" id="chuong5">
                 <div class="chapter-header">
-                    <span class="chapter-icon">☁️</span>
-                    <h2 class="chapter-title">Chương 5: AWS S3 & Bảo mật Credentials (DPAPI / AES)</h2>
-                    <span class="chapter-tag">Cloud & Security</span>
+                    <span class="chapter-icon">🗄️</span>
+                    <h2 class="chapter-title">Chương 5: Database Optimization & SQL Performance</h2>
+                </div>
+
+                <!-- Q24 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 24:</span> Phân biệt Clustered Index và Non-Clustered Index trong cơ sở dữ liệu quan hệ?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li><strong>Clustered Index:</strong> Quyết định trực tiếp thứ tự sắp xếp vật lý của dữ liệu trên đĩa cứng (Leaf node chính là Data page chứa toàn bộ dữ liệu dòng). Mỗi bảng chỉ có duy nhất <strong>1 Clustered Index</strong> (thường mặc định là Primary Key).</li>
+                                <li><strong>Non-Clustered Index:</strong> Là một cấu trúc cây B-Tree độc lập tách rời bảng dữ liệu. Leaf node chỉ chứa các cột được đánh index kèm theo một con trỏ (Row Pointer / Clustered Key) trỏ về dòng dữ liệu thực tế trên bảng chính. Một bảng có thể tạo nhiều Non-Clustered Index.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q25 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 25:</span> Covering Index với mệnh đề INCLUDE trong SQL Server hoạt động như thế nào và đem lại lợi ích gì?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li><strong>Vấn đề:</strong> Khi Non-Clustered Index chỉ chứa các cột trong điều kiện <code>WHERE</code>, nhưng câu lệnh <code>SELECT</code> lại cần lấy thêm các cột khác, SQL Server buộc phải thực hiện thêm thao tác <strong>Key Lookup / RID Lookup</strong> vào bảng chính để lấy dữ liệu -> gây tốn nhiều Disk I/O.</li>
+                                <li><strong>Giải pháp với <code>INCLUDE</code>:</strong>
+                                    <pre><code>CREATE NONCLUSTERED INDEX IX_Orders_Status_Date
+ON Orders (OrderStatus, OrderDate)
+INCLUDE (TotalAmount, CustomerName, TrackingCode);</code></pre>
+                                </li>
+                                <li>Các cột trong <code>INCLUDE</code> được đính kèm ở tầng lá (Leaf Node) của Index mà không làm phình cây B-Tree. Khi truy vấn, SQL Server lấy được toàn bộ dữ liệu ngay trên Index mà <strong>không cần Key Lookup</strong>, giúp tăng tốc độ truy vấn từ 30% đến nhiều lần.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q26 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 26:</span> Vấn đề N+1 Query trong ORM là gì? Em xử lý nó ra sao trong Entity Framework Core?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li><strong>Vấn đề:</strong> Xảy ra khi ta truy vấn danh sách N bản ghi cha (1 query), sau đó lặp qua từng phần tử để truy cập navigation property con, ORM sẽ tự động bắn thêm N câu query riêng lẻ nữa vào DB -> Tổng cộng <strong>1 + N queries</strong>, gây nghẽn kết nối DB nghiêm trọng.</li>
+                                <li><strong>Cách khắc phục:</strong>
+                                    <ol>
+                                        <li><strong>Projection (Tốt nhất):</strong> Dùng <code>.Select()</code> để chỉ định đúng các trường DTO cần lấy, EF Core sẽ tự động sinh câu query SQL JOIN tối ưu nhất.</li>
+                                        <li><strong>Eager Loading:</strong> Sử dụng <code>.Include()</code> và <code>.ThenInclude()</code> để JOIN sẵn dữ liệu con ngay từ câu query đầu tiên.</li>
+                                        <li><strong>Split Query:</strong> Dùng <code>.AsSplitQuery()</code> khi có nhiều Include phức tạp để tránh việc nhân bản dữ liệu (Cartesian Explosion).</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q27 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 27:</span> .AsNoTracking() trong EF Core hoạt động như thế nào và khi nào nên dùng?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li>Mặc định, EF Core đưa mọi entity query được vào <strong>Change Tracker</strong> để theo dõi sự thay đổi phục vụ việc gọi <code>SaveChangesAsync()</code>. Quá trình này tốn bộ nhớ RAM và CPU.</li>
+                                <li>Khi gọi <code>.AsNoTracking()</code>, EF Core trả về các đối tượng POCO thuần túy mà không đưa vào Change Tracker.</li>
+                                <li><strong>Nên dùng:</strong> Cho tất cả các truy vấn chỉ đọc (Read-only queries, API GET, báo cáo, export file), giúp tăng tốc độ thực thi và tiết kiệm đáng kể dung lượng bộ nhớ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q28 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 28:</span> Deadlock trong cơ sở dữ liệu là gì? Làm sao để phòng tránh khi cập nhật đồng thời nhiều dòng?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <strong>Deadlock</strong> xảy ra khi hai hay nhiều transaction giữ khóa (Lock) trên tài nguyên mà bên kia cần, và chờ đợi lẫn nhau vô thời hạn.
+                            <br><br><strong>Cách phòng ngừa:</strong>
+                            <ul>
+                                <li><strong>Truy cập tài nguyên theo cùng một thứ tự:</strong> Luôn cập nhật các bảng/dòng theo cùng một trình tự logic (ví dụ sắp xếp theo Primary Key tăng dần trước khi update hàng loạt).</li>
+                                <li><strong>Giữ Transaction ngắn nhất có thể:</strong> Không đặt các lời gọi API bên ngoài hoặc tính toán nặng bên trong khối Transaction DB.</li>
+                                <li><strong>Sử dụng Snapshot Isolation (RCSI):</strong> Bật <code>READ_COMMITTED_SNAPSHOT</code> để việc Đọc không bao giờ block việc Ghi và việc Ghi không block Đọc.</li>
+                                <li><strong>Đánh Index đầy đủ:</strong> Tránh việc câu lệnh UPDATE bị Table Scan gây khóa toàn bộ bảng.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q29 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 29:</span> Phương thức ExecuteUpdateAsync / ExecuteDeleteAsync trong EF Core 7/8 có gì vượt trội so với cách cập nhật truyền thống?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li><strong>Cách truyền thống:</strong> Phải load toàn bộ entity về RAM -> sửa thuộc tính -> gọi <code>SaveChangesAsync()</code>. Nếu update 10,000 dòng, EF Core phải load 10,000 entity vào RAM và sinh 10,000 câu lệnh UPDATE riêng biệt.</li>
+                                <li><strong>ExecuteUpdateAsync / ExecuteDeleteAsync:</strong> Thực thi trực tiếp câu lệnh <code>UPDATE / DELETE</code> trên Database server bằng <strong>1 câu query duy nhất</strong> mà không cần tải dữ liệu về RAM và không qua Change Tracker, mang lại hiệu năng cao gấp hàng chục lần cho các tác vụ cập nhật hàng loạt.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Q30 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 30:</span> Thư viện AWSSDK.S3 được dùng như thế nào trong LSB.SellerCentral.Application?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 30:</span> Khi nào em lựa chọn Entity Framework Core và khi nào nên dùng Dapper / Raw SQL?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Trong project <code>LSB.SellerCentral.Application</code>, em cài đặt package <code>AWSSDK.S3</code> (v4.0.18.7). Khi các Worker tải về các file báo cáo tài chính lớn từ Amazon SP-API, hệ thống tạo <code>PutObjectRequest</code> truyền <code>MemoryStream</code> hoặc <code>FileStream</code> để upload trực tiếp lên S3 bucket của doanh nghiệp, sau đó lưu lại S3 Key / URL vào CSDL SQL Server để web dashboard có thể tải về khi cần.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q31 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 31:</span> Tại sao lại lưu file báo cáo trên AWS S3 thay vì lưu trực tiếp trong Database hoặc ổ cứng máy chủ?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
+                            Em thường áp dụng mô hình <strong>Hybrid (Kết hợp cả hai)</strong>:
                             <ul>
-                                <li><strong>Không làm nặng Database:</strong> Các file báo cáo và export hàng trăm MB nếu lưu dạng <code>VARBINARY(MAX)</code> trong SQL Server sẽ làm phình dung lượng file <code>.mdf</code>, khiến backup/restore CSDL rất lâu và tốn tài nguyên.</li>
-                                <li><strong>Độc lập máy chủ:</strong> Lưu trên S3 giúp máy chủ chạy ứng dụng không bị đầy ổ đĩa cục bộ và có thể dễ dàng scale hoặc thay thế server mà không lo mất file dữ liệu.</li>
+                                <li><strong>Dùng EF Core:</strong> Cho các nghiệp vụ CRUD chuẩn, quản lý Domain Entities, tận dụng tính năng Unit of Work (<code>DbContext</code>), Validation, và quản lý Database Migrations an toàn.</li>
+                                <li><strong>Dùng Dapper / Raw SQL:</strong> Cho các câu query báo cáo tổng hợp phức tạp (Reporting), dashboard thống kê cần JOIN nhiều bảng, hoặc các tác vụ Bulk Insert/Update hàng chục nghìn dòng cần tốc độ tối đa.</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q32 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 32:</span> Cơ chế mã hóa API Key của Amazon SP-API trong ConfigurationTool hoạt động ra sao?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Để tránh việc lưu trữ Plain Text các thông tin cực kỳ nhạy cảm như <code>LWA Client Secret</code>, <code>Refresh Token</code>, <code>AWS Secret Key</code> vào file <code>appsettings.json</code>, em sử dụng <strong>Windows DPAPI (Data Protection API)</strong> qua <code>ProtectedData.Protect</code> (kèm phạm vi <code>DataProtectionScope.CurrentUser</code>) hoặc mã hóa <strong>AES-256</strong>. Chỉ khi ứng dụng khởi chạy trên chính máy chủ đó, hệ thống mới giải mã ra bộ nhớ để sử dụng.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q33 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 33:</span> Em quản lý Connection String và Secrets giữa các môi trường (Dev, Staging, Prod) như thế nào?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Em sử dụng cơ chế cấu hình phân tầng của .NET Core:
-                            <ul>
-                                <li>Khi Dev: Dùng <code>appsettings.Development.json</code> hoặc công cụ <code>dotnet user-secrets</code>.</li>
-                                <li>Khi Production: Đọc từ <strong>Biến môi trường (Environment Variables)</strong> của hệ điều hành hoặc file cấu hình được phân quyền truy cập chặt chẽ trên máy chủ. Không bao giờ commit mật khẩu production lên Git repository.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Q34 -->
-                <div class="qa-card">
-                    <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 34:</span> Mã hóa mật khẩu người dùng trong LSB được thực hiện bằng thư viện nào?</div>
-                        <span class="qa-toggle-icon">▼</span>
-                    </div>
-                    <div class="qa-body">
-                        <div class="qa-answer">
-                            Trong <code>LSB.SellerCentral.Infrastructure</code>, em sử dụng thư viện <code>BCrypt.Net-Next</code> (v4.0.3) để băm mật khẩu một chiều kết hợp Salt ngẫu nhiên (<code>BCrypt.HashPassword</code>). Khi xác thực đăng nhập, em dùng <code>BCrypt.Verify(password, hashedPassword)</code>, đảm bảo an toàn tuyệt đối.
                         </div>
                     </div>
                 </div>
@@ -1005,75 +1035,73 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
             <!-- CHƯƠNG 6 -->
             <section class="chapter-section" id="chuong6">
                 <div class="chapter-header">
-                    <span class="chapter-icon">🏢</span>
-                    <h2 class="chapter-title">Chương 6: Dự án Võ Minh Thiên, Nail Salon SaaS & HQ Soft</h2>
-                    <span class="chapter-tag">Past Projects</span>
+                    <span class="chapter-icon">⚡</span>
+                    <h2 class="chapter-title">Chương 6: System Monitoring & Watchdog Services</h2>
                 </div>
 
-                <!-- Q35 -->
+                <!-- Q31 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 35:</span> Em đã làm những gì tại Công ty Võ Minh Thiên?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 31:</span> Hệ thống Watchdog (Tự phục hồi dịch vụ) hoạt động theo nguyên lý nào để đảm bảo hệ thống chạy 24/7?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Tại Võ Minh Thiên, em là .NET Developer tham gia phát triển hệ thống quản lý đơn hàng và logistics vận chuyển xuyên biên giới:
+                            Watchdog là một tiến trình/dịch vụ độc lập chạy ngầm thực hiện 3 nhiệm vụ:
                             <ul>
-                                <li>Xây dựng các RESTful Web APIs bằng ASP.NET Core để tiếp nhận đơn hàng, quản lý quy trình gom hàng và đồng bộ trạng thái vận đơn với các đơn vị vận chuyển bên ngoài.</li>
-                                <li>Áp dụng <code>async/await</code> để xử lý các luồng tích hợp với bên vận chuyển mà không nghẽn server.</li>
-                                <li>Phân tích Execution Plan trong SQL Server, tối ưu câu lệnh truy vấn và tạo Covering Index (<code>INCLUDE</code>) giúp tăng tốc độ xử lý đơn hàng.</li>
+                                <li><strong>Giám sát trạng thái sống còn (Heartbeat & Service Controller):</strong> Định kỳ kiểm tra trạng thái của các tiến trình/dịch vụ nghiệp vụ (ví dụ qua <code>System.ServiceProcess.ServiceController</code> trên Windows). Nếu phát hiện service bị Stopped bất thường, Watchdog tự động kích hoạt lệnh Start lại.</li>
+                                <li><strong>Giám sát Telemetry phần cứng:</strong> Đo đạc mức chiếm dụng CPU, RAM, Disk. Nếu một tiến trình con bị treo hoặc rò rỉ bộ nhớ vượt ngưỡng an toàn trong thời gian dài, Watchdog sẽ kill tiến trình đó và khởi động lại một instance mới sạch sẽ.</li>
+                                <li><strong>Cảnh báo & Logging:</strong> Ghi lại toàn bộ lịch sử crash/restart vào hệ thống log để kỹ thuật viên điều tra nguyên nhân gốc rễ.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Q36 -->
+                <!-- Q32 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 36:</span> Em đã xây dựng những module nào cho dự án Nail Salon SaaS (Mỹ)?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 32:</span> Sự khác biệt giữa Structured Logging (như Serilog) và Logging thông thường ra sao?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Đây là dự án SaaS quản lý chuỗi tiệm nail tại thị trường Mỹ mà em tham gia dạng Freelance:
                             <ul>
-                                <li>Xây dựng backend RESTful APIs cho tính năng đặt lịch hẹn online (Appointment Booking), phân ca thợ (Staff Scheduling), và tích điểm khách hàng thân thiết.</li>
-                                <li>Phát triển giao diện web tương tác bằng các <strong>Blazor components</strong> giúp chủ tiệm và nhân viên thao tác mượt mà trên trình duyệt.</li>
-                                <li>Thiết kế CSDL phân tách dữ liệu theo từng chi nhánh/tiệm (Multi-Tenant Isolation) và phân quyền vai trò (Role-Based Access Control - RBAC).</li>
+                                <li><strong>Logging thông thường:</strong> Ghi log dạng chuỗi văn bản (Plain Text). Nhược điểm: rất khó tìm kiếm, lọc hoặc tổng hợp thông tin khi có hàng triệu dòng log.</li>
+                                <li><strong>Structured Logging (Serilog):</strong> Lưu log dưới dạng đối tượng có cấu trúc (JSON / Key-Value properties). Cho phép dễ dàng truy vấn chính xác theo từng thuộc tính (ví dụ: tìm tất cả log có <code>OrderId = 123</code> hoặc <code>ElapsedMs &gt; 3000</code>) và tích hợp mượt mà với các hệ thống phân tích log tập trung như Seq, ElasticSearch, CloudWatch.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Q37 -->
+                <!-- Q33 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 37:</span> Kinh nghiệm của em tại HQ Soft (eSale DMS) là gì?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 33:</span> Health Checks trong ASP.NET Core được cấu hình như thế nào và phân biệt Liveness vs Readiness?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Tại HQ Soft, em là Intern .NET Developer tham gia vào hệ thống phân phối doanh nghiệp eSale DMS:
+                            ASP.NET Core cung cấp sẵn <code>services.AddHealthChecks()</code> và endpoint <code>/health</code> để kiểm tra trạng thái kết nối tới Database, Caching, Cloud Storage:
                             <ul>
-                                <li>Phát triển các API Back-Office và nghiệp vụ quản lý bán hàng sử dụng ASP.NET Core và Entity Framework Core.</li>
-                                <li>Phối hợp với Senior Developer để điều tra và sửa các lỗi (bug fixing) trong luồng tính toán chiết khấu và tối ưu các câu truy vấn báo cáo doanh số.</li>
+                                <li><strong>Liveness Check:</strong> Kiểm tra xem ứng dụng có còn "sống" không. Nếu Unhealthy (chết/treo luồng), hệ thống điều phối (Watchdog / Kubernetes) sẽ restart ứng dụng.</li>
+                                <li><strong>Readiness Check:</strong> Kiểm tra xem ứng dụng đã sẵn sàng tiếp nhận traffic người dùng chưa (đã kết nối DB xong chưa, load cache xong chưa). Nếu Unhealthy, hệ thống tạm thời ngắt không điều phối traffic vào instance này nhưng không restart.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Q38 -->
+                <!-- Q34 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 38:</span> Sự khác biệt giữa Blazor (trong Nail Salon) và React (trong LSB) theo kinh nghiệm của em?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 34:</span> Em xử lý Exception trong ứng dụng .NET như thế nào để không làm gián đoạn hệ thống?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
                             <ul>
-                                <li><strong>Blazor:</strong> Rất mạnh mẽ khi phát triển ứng dụng nội bộ/quản trị (.NET C# từ Backend đến Frontend), tái sử dụng trực tiếp các DTO và Validation logic của C#, lập trình viên .NET không cần chuyển ngữ cảnh sang JavaScript.</li>
-                                <li><strong>React 18 + Vite + TailwindCSS:</strong> Được em dùng cho dashboard SellerManager của LSB vì hệ sinh thái UI phong phú, tốc độ build Vite cực nhanh, trải nghiệm SPA mượt mà và cộng đồng hỗ trợ khổng lồ.</li>
+                                <li>Không dùng Exception cho các luồng điều khiển thông thường (Control Flow) vì chi phí tạo Stack Trace rất đắt đỏ. Sử dụng <strong>Result Pattern (<code>Result&lt;T&gt;</code>)</strong> cho các lỗi nghiệp vụ dự đoán được (Validation thất bại, không tìm thấy dữ liệu).</li>
+                                <li>Chỉ ném (throw) Exception cho các lỗi bất thường hệ thống (lỗi mạng, mất kết nối DB).</li>
+                                <li>Sử dụng <code>GlobalExceptionMiddleware</code> để bắt lỗi tập trung ở tầng biên, đảm bảo ứng dụng không bao giờ bị crash đột ngột và luôn trả về phản hồi chuẩn cho client. Khi re-throw exception, luôn dùng cú pháp <code>throw;</code> để bảo toàn Stack Trace gốc.</li>
                             </ul>
                         </div>
                     </div>
@@ -1083,9 +1111,81 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
             <!-- CHƯƠNG 7 -->
             <section class="chapter-section" id="chuong7">
                 <div class="chapter-header">
+                    <span class="chapter-icon">☁️</span>
+                    <h2 class="chapter-title">Chương 7: Cloud Storage (AWS S3) & Security</h2>
+                </div>
+
+                <!-- Q35 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 35:</span> Em tích hợp và sử dụng AWS S3 trong ứng dụng .NET để giải quyết bài toán gì?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            Em sử dụng <code>AWSSDK.S3</code> để lưu trữ các file báo cáo tài chính, file export dữ liệu, và media assets:
+                            <ul>
+                                <li><strong>Giảm tải cho Database:</strong> Không lưu các file nhị phân lớn vào SQL Server, giúp kích thước file <code>.mdf</code> gọn nhẹ, backup và phục hồi CSDL cực nhanh.</li>
+                                <li><strong>Độc lập máy chủ:</strong> Ứng dụng Backend chạy stateless, không lo đầy ổ cứng máy chủ và dễ dàng mở rộng nhiều instance mà vẫn dùng chung kho file S3.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q36 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 36:</span> S3 Pre-Signed URL là gì? Tại sao nên dùng Pre-Signed URL khi upload / download file?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <strong>Pre-Signed URL</strong> là một đường dẫn có chữ ký số mã hóa và thời hạn hết hạn xác định (ví dụ 15 phút), cho phép client truy cập trực tiếp vào một file riêng tư trên S3:
+                            <ul>
+                                <li><strong>Bảo mật:</strong> Bucket S3 vẫn được giữ hoàn toàn ở chế độ Private (không public ra internet).</li>
+                                <li><strong>Tiết kiệm băng thông Backend:</strong> Trình duyệt web có thể upload hoặc download file trực tiếp với máy chủ của Amazon S3 mà không cần trung chuyển qua server backend của mình.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q37 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 37:</span> Làm thế nào để quản lý các thông tin cấu hình nhạy cảm (API Keys, Connection Strings, Secrets) an toàn?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ul>
+                                <li>Tuyệt đối không commit Plain Text password, secret key lên Git repository.</li>
+                                <li>Khi phát triển (Local): Dùng <code>dotnet user-secrets</code> hoặc <code>appsettings.Development.json</code> (đã thêm vào <code>.gitignore</code>).</li>
+                                <li>Khi Production: Đọc từ <strong>Environment Variables (Biến môi trường)</strong> của hệ điều hành hoặc Secret Manager.</li>
+                                <li>Đối với các API Key lưu trong CSDL: Sử dụng mã hóa đối xứng <strong>AES-256</strong> hoặc Windows <strong>DPAPI</strong> để bảo vệ.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q38 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 38:</span> Em lưu trữ mật khẩu người dùng trong cơ sở dữ liệu như thế nào để đảm bảo an toàn?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            Tuyệt đối không mã hóa có thể giải mã được, mà sử dụng thuật toán băm (Hash) một chiều kèm Salt ngẫu nhiên bằng <strong>BCrypt</strong> (hoặc Argon2 / PBKDF2 của ASP.NET Core Identity). Cơ chế này chống lại các cuộc tấn công Rainbow Table và Brute-force ngay cả khi CSDL bị lộ.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHƯƠNG 8 -->
+            <section class="chapter-section" id="chuong8">
+                <div class="chapter-header">
                     <span class="chapter-icon">🤝</span>
-                    <h2 class="chapter-title">Chương 7: Quy trình Agile/Scrum & Kỹ năng làm việc</h2>
-                    <span class="chapter-tag">Agile & Softskills</span>
+                    <h2 class="chapter-title">Chương 8: Quy trình Agile / Scrum & Xử lý tình huống</h2>
                 </div>
 
                 <!-- Q39 -->
@@ -1096,12 +1196,12 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
-                            Team của em làm việc theo mô hình Scrum với chu kỳ Sprint 2 tuần:
+                            Team của em làm việc theo Sprint 2 tuần:
                             <ul>
-                                <li><strong>Sprint Planning:</strong> Nhận User Stories từ Product Owner/Tech Lead trên Jira, cùng thảo luận giải pháp kỹ thuật, estimate story points.</li>
-                                <li><strong>Daily Standup:</strong> Mỗi sáng 15 phút cập nhật tiến độ, công việc trong ngày và nêu các khó khăn (blocker) cần hỗ trợ.</li>
-                                <li><strong>Code Review (Pull Request):</strong> Trước khi merge code vào branch <code>develop</code>, PR phải được review về Clean Code, logic nghiệp vụ, xử lý async và kiểm tra không bị lỗi N+1 Query.</li>
-                                <li><strong>Sprint Review & Retrospective:</strong> Demo tính năng cho các bên liên quan và họp rút kinh nghiệm cải tiến quy trình cho sprint sau.</li>
+                                <li><strong>Sprint Planning:</strong> Nhận User Stories từ Product Owner/Tech Lead trên Jira, thảo luận giải pháp kỹ thuật và estimate story points.</li>
+                                <li><strong>Daily Standup (15 phút mỗi sáng):</strong> Cập nhật tiến độ: hôm qua đã làm gì, hôm nay làm gì, và có gặp khó khăn (blocker) gì cần hỗ trợ không.</li>
+                                <li><strong>Code Review (Pull Request):</strong> Mọi code trước khi merge vào <code>develop</code> đều phải qua review về Clean Code, xử lý async, kiểm tra lỗi N+1 query và coverage Unit Test.</li>
+                                <li><strong>Sprint Retrospective:</strong> Họp tổng kết sau mỗi sprint để rút kinh nghiệm và cải tiến quy trình.</li>
                             </ul>
                         </div>
                     </div>
@@ -1110,17 +1210,36 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
                 <!-- Q40 -->
                 <div class="qa-card">
                     <div class="qa-header">
-                        <div class="qa-question"><span class="qa-q-badge">Câu 40:</span> Khi gặp một bài toán kỹ thuật mới hoặc bug hóc búa, phương pháp giải quyết của em là gì?</div>
+                        <div class="qa-question"><span class="qa-q-badge">Câu 40:</span> Khi đang làm việc trong Sprint mà có một lỗi nghiêm trọng (Hotfix) trên Production, em xử lý ra sao?</div>
+                        <span class="qa-toggle-icon">▼</span>
+                    </div>
+                    <div class="qa-body">
+                        <div class="qa-answer">
+                            <ol>
+                                <li>Thông báo ngay cho Tech Lead / Product Owner về mức độ ảnh hưởng của lỗi.</li>
+                                <li>Tạo nhánh <code>hotfix/xxx</code> từ branch <code>main/production</code>.</li>
+                                <li>Kiểm tra log Serilog để lấy thông tin lỗi, tái hiện chính xác lỗi trên môi trường staging/local.</li>
+                                <li>Sửa lỗi, bổ sung Unit Test để tránh tái phát (No Regression), review gấp với đồng nghiệp và deploy hotfix lên production.</li>
+                                <li>Merge ngược lại code hotfix vào branch <code>develop</code> để không bị mất code ở các bản release sau.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q41 -->
+                <div class="qa-card">
+                    <div class="qa-header">
+                        <div class="qa-question"><span class="qa-q-badge">Câu 41:</span> Khi gặp một bài toán kỹ thuật mới hoặc bug hóc búa chưa từng làm, em giải quyết như thế nào?</div>
                         <span class="qa-toggle-icon">▼</span>
                     </div>
                     <div class="qa-body">
                         <div class="qa-answer">
                             Quy trình 4 bước của em:
                             <ol>
-                                <li><strong>Khoanh vùng & Tái hiện (Reproduce):</strong> Đọc log Serilog để lấy Stack Trace, CorrelationId và tái hiện lỗi chính xác trên môi trường Local.</li>
-                                <li><strong>Phân tích nguyên nhân gốc rễ (Root Cause):</strong> Dùng Visual Studio Debugger, kiểm tra biến dữ liệu, truy vấn SQL Execution Plan để xem điểm nghẽn.</li>
-                                <li><strong>Nghiên cứu giải pháp:</strong> Đọc Official Documentation của Microsoft / Amazon, kết hợp các công cụ hỗ trợ như Claude/ChatGPT/Gemini để brainstorm các phương án xử lý và so sánh ưu nhược điểm.</li>
-                                <li><strong>Kiểm thử kỹ lưỡng:</strong> Viết Unit Test bao phủ trường hợp lỗi đó để đảm bảo không bao giờ bị tái phát (No Regression) trước khi tạo Pull Request.</li>
+                                <li><strong>Khoanh vùng lỗi:</strong> Đọc log, kiểm tra Stack Trace và phân tích luồng dữ liệu.</li>
+                                <li><strong>Tìm hiểu tài liệu:</strong> Đọc Official Docs của Microsoft / Amazon, kết hợp các công cụ hỗ trợ như AI để brainstorm các phương án khả thi.</li>
+                                <li><strong>Thử nghiệm (PoC):</strong> Viết một đoạn code thử nghiệm nhỏ độc lập để kiểm chứng giải pháp trước khi áp dụng vào codebase chính.</li>
+                                <li><strong>Kiểm thử & Đóng gói:</strong> Viết Unit Test bao phủ và chia sẻ giải pháp với team.</li>
                             </ol>
                         </div>
                     </div>
@@ -1137,7 +1256,6 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
     </div>
 
     <script>
-        // Toggle Accordion functionality
         document.querySelectorAll('.qa-header').forEach(header => {
             header.addEventListener('click', () => {
                 const card = header.parentElement;
@@ -1151,13 +1269,11 @@ INCLUDE (AmazonOrderId, TotalAmount, CustomerName);</code></pre>
             });
         });
 
-        // Initialize all as open
         document.querySelectorAll('.qa-card').forEach(card => {
             card.classList.add('active');
             card.querySelector('.qa-body').style.display = 'block';
         });
 
-        // Search Filter
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
