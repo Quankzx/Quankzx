@@ -11,7 +11,7 @@
 
 ## 📌 PROFESSIONAL SUMMARY
 
-Full-Stack / .NET Developer specializing in backend systems, e-commerce automation, and API integrations. Experienced in building **Web APIs**, **Background Worker Services**, **data synchronization pipelines**, and **watchdog services**. Practical experience working in **Agile/Scrum** environments, integrating third-party platforms (Amazon SP-API), utilizing **AWS S3** for cloud storage, and optimizing **SQL Server / PostgreSQL** databases.
+Full-Stack / .NET Developer specializing in backend systems, e-commerce automation, and API integrations. Experienced in building **ASP.NET Core Web APIs**, **Background Worker Services**, and **watchdog self-healing services**. Proficient in **Amazon SP-API**, **AWS S3**, **Polly resilience**, **SQL Server / PostgreSQL** optimization, and collaborating in **Agile/Scrum** teams.
 
 ---
 
@@ -31,9 +31,9 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 ### **LSB MEDIA CO., LTD** — *Ho Chi Minh City, Vietnam*
 > **Full-Stack / .NET Developer** &nbsp;|&nbsp; *2025 – Present*  
-> 🏷️ *Domain: Amazon Seller / E-commerce Automation Platform*
+> 🏷️ *Domain: E-commerce / Amazon Seller Central Automation*
 
-*E-commerce automation platform for Amazon sellers, providing centralized tools for order management, inventory synchronization, seller account monitoring, shipping operations, and financial reconciliation.*
+*Automation platform for Amazon sellers providing order processing, inventory sync, account health monitoring, financial settlement tracking, and reporting.*
 
 * 🚀 **Data Synchronization & Background Services:** Built and maintained a Clean Architecture backend with Background Worker Services and **RESTful APIs** for automated seller data synchronization pipelines.
 * 📦 **Amazon SP-API & Ads Integration:** Integrated with Amazon SP-API (Orders, Inventory, Account Health, Finance, Shipping, Reports) and Amazon Ads API to automate seller data workflows.
@@ -47,9 +47,9 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 ### **VÕ MINH THIÊN CO., LTD** — *Ho Chi Minh City, Vietnam*
 > **.NET Developer** &nbsp;|&nbsp; *Apr 2024 – Early 2025*  
-> 🏷️ *Domain: E-commerce / Cross-Border Order Fulfillment & Logistics*
+> 🏷️ *Domain: E-commerce / Cross-Border Logistics & Order Fulfillment*
 
-*E-commerce order management and fulfillment platform supporting online sellers, cross-border shipping, and warehouse inventory operations.*
+*Cross-border logistics and order fulfillment platform supporting order workflows, carrier tracking, and warehouse operations.*
 
 * 📦 **Order Management & Logistics APIs:** Developed RESTful Web APIs using ASP.NET Core for order processing, cross-border shipping workflows, and warehouse inventory tracking.
 * ⚙️ **Asynchronous Processing:** Implemented asynchronous workflows to process high-volume order operations and external shipping carrier integrations.
@@ -60,9 +60,9 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 ### **NAIL SALON CHAIN (USA)** — *Freelance / Part-time*
 > **Freelance Full-Stack Developer** &nbsp;|&nbsp; *Apr 2024 – July 2025*  
-> 🏷️ *Domain: Salon Management SaaS Platform (U.S. Market)*
+> 🏷️ *Domain: SaaS / Multi-Location Salon Management (U.S. Market)*
 
-*SaaS-style multi-location management platform for U.S. nail salon businesses, covering appointment scheduling, staff management, customer management, promotions, and daily operations.*
+*Multi-tenant salon management SaaS platform providing appointment booking, staff scheduling, customer loyalty, and daily store operations.*
 
 * 💻 **Salon Operations & Scheduling:** Built core features for online appointment booking, dynamic staff scheduling, customer loyalty programs, and daily operations.
 * 🎨 **Web APIs & Blazor UI:** Developed backend REST APIs and responsive web interfaces using **Blazor components** for store managers and staff.
@@ -73,9 +73,9 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 
 ### **HQ SOFT** — *Ho Chi Minh City, Vietnam*
 > **Intern .NET Developer (Back Office)** &nbsp;|&nbsp; *Feb 2024 – Apr 2024*  
-> 🏷️ *Domain: Enterprise Software Development (.NET / eSale DMS)*
+> 🏷️ *Domain: Enterprise Distribution Management Software (DMS)*
 
-*Enterprise distribution management software (eSale DMS) and business management solutions.*
+*Enterprise distribution management system (eSale DMS) and back-office sales reporting solutions.*
 
 * 🛠️ **Back-Office API Development:** Developed RESTful APIs and business logic using ASP.NET Core and Entity Framework Core for the eSale DMS system.
 * 🔍 **Maintenance & Bug Investigation:** Collaborated with senior developers to analyze requirements, resolve backend bugs, and maintain sales reporting queries.
