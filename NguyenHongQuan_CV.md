@@ -22,7 +22,7 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 * **Service Monitoring & Reliability:** `Windows Services`, `Long Polling`, `Automated OTA Updates`, `Telemetry Monitoring`, `Serilog`, `Polly` *(Circuit Breaker, Retry, Timeout)*.
 * **Frontend & UI:** `React`, `TypeScript`, `Vite`, `TailwindCSS`, `JsonForms`, `Blazor`.
 * **Databases & Performance:** `PostgreSQL`, `MS SQL Server`, `Index Optimization`, `Stored Procedures`, `Data Encryption`.
-* **Methodology & Tools:** `Agile / Scrum`, `Jira`, `Sprint Planning`, `Daily Stand-ups`, `Backlog Refinement`, `Code Reviews`.
+* **Methodology & Tools:** `Agile / Scrum`, `Slack`, `Sprint Planning`, `Daily Stand-ups`, `Backlog Refinement`, `Code Reviews`.
 * **AI & Workflow:** `LLM-Assisted Development`, `Model Context Protocol (MCP) Integration`, `AI Code Review`.
 
 ---
@@ -38,7 +38,7 @@ Full-Stack / .NET Developer specializing in backend systems, e-commerce automati
 * 🚀 **Backend & Worker Services:** Built and maintained a Clean Architecture backend (.NET 8) with Background Worker Services and RESTful APIs to automate Amazon seller data synchronization.
 * 📦 **Amazon SP-API & Cloud Storage:** Integrated Amazon SP-API (Orders, Inventory, Account Health, Finances, Reports) and AWS S3 for secure financial report and media asset storage.
 * ⚡ **API Resilience & Watchdog Service:** Implemented Polly retry policies, rate-limit handling, and a 24/7 Watchdog service to monitor system health and auto-recover background processes.
-* 🗄️ **Database Tuning & Agile Teamwork:** Optimized SQL Server / PostgreSQL queries for batch processing and collaborated in an Agile/Scrum team via Jira.
+* 🗄️ **Database Tuning & Agile Teamwork:** Optimized SQL Server / PostgreSQL queries for batch processing and collaborated in an Agile/Scrum team via Slack.
 
 ---
 
