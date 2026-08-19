@@ -1,0 +1,7 @@
+# Personal Interview Prep Guides & Notes (Do not push to public GitHub)
+BO_CAU_HOI_PHONG_VAN_BACKEND_DOTNET.*
+*interview*
+*.dmp
+*.gcdump
+.DS_Store
+Thumbs.db
